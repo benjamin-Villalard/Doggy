@@ -1,0 +1,188 @@
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+const KEY = 'mon-yorkshire-v1';
+
+export type PottyKind = 'pipi' | 'caca' | 'accident-pipi' | 'accident-caca';
+export type PottyEntry = { id: string; ts: string; kind: PottyKind };
+export type WeightEntry = { id: string; date: string; grams: number };
+export type SessionEntry = {
+  id: string;
+  ts: string;
+  code: string;
+  ok: number;
+  ko: number;
+  seconds: number;
+  note?: string;
+};
+
+export type State = {
+  profile: { name: string; birthdate: string | null; arrival: string | null };
+  skills: Record<string, number>;
+  social: Record<string, string>;
+  potty: PottyEntry[];
+  weights: WeightEntry[];
+  sessions: SessionEntry[];
+  issueCounts: Record<string, Record<string, number>>;
+  watchedIssues: string[];
+  notes: Record<string, string>;
+  onboarded: boolean;
+};
+
+const initial: State = {
+  profile: { name: '', birthdate: null, arrival: null },
+  skills: {},
+  social: {},
+  potty: [],
+  weights: [],
+  sessions: [],
+  issueCounts: {},
+  watchedIssues: [],
+  notes: {},
+  onboarded: false,
+};
+
+type Ctx = {
+  state: State;
+  ready: boolean;
+  update: (fn: (s: State) => State) => void;
+  reset: () => void;
+};
+
+const StoreContext = createContext<Ctx>({ state: initial, ready: false, update: () => {}, reset: () => {} });
+
+const uid = () => Math.random().toString(36).slice(2, 10);
+export const newId = uid;
+export const today = () => new Date().toISOString().slice(0, 10);
+
+export function StoreProvider({ children }: { children: React.ReactNode }) {
+  const [state, setState] = useState<State>(initial);
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    AsyncStorage.getItem(KEY)
+      .then((raw) => {
+        if (raw) setState({ ...initial, ...JSON.parse(raw) });
+      })
+      .catch(() => {})
+      .finally(() => setReady(true));
+  }, []);
+
+  useEffect(() => {
+    if (ready) AsyncStorage.setItem(KEY, JSON.stringify(state)).catch(() => {});
+  }, [state, ready]);
+
+  const value = useMemo<Ctx>(
+    () => ({
+      state,
+      ready,
+      update: (fn) => setState((s) => fn(s)),
+      reset: () => setState(initial),
+    }),
+    [state, ready],
+  );
+
+  return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
+}
+
+export const useStore = () => useContext(StoreContext);
+
+/* ---------- actions ---------- */
+
+export function useActions() {
+  const { update } = useStore();
+  return useMemo(
+    () => ({
+      setProfile: (p: Partial<State['profile']>) =>
+        update((s) => ({ ...s, profile: { ...s.profile, ...p } })),
+      finishOnboarding: () => update((s) => ({ ...s, onboarded: true })),
+      setSkill: (code: string, score: number) =>
+        update((s) => ({ ...s, skills: { ...s.skills, [code]: score } })),
+      toggleSocial: (key: string) =>
+        update((s) => {
+          const next = { ...s.social };
+          if (next[key]) delete next[key];
+          else next[key] = today();
+          return { ...s, social: next };
+        }),
+      addPotty: (kind: PottyKind) =>
+        update((s) => ({
+          ...s,
+          potty: [{ id: uid(), ts: new Date().toISOString(), kind }, ...s.potty].slice(0, 2000),
+        })),
+      removePotty: (id: string) =>
+        update((s) => ({ ...s, potty: s.potty.filter((p) => p.id !== id) })),
+      addWeight: (date: string, grams: number) =>
+        update((s) => ({
+          ...s,
+          weights: [...s.weights.filter((w) => w.date !== date), { id: uid(), date, grams }].sort((a, b) =>
+            a.date < b.date ? -1 : 1,
+          ),
+        })),
+      removeWeight: (id: string) =>
+        update((s) => ({ ...s, weights: s.weights.filter((w) => w.id !== id) })),
+      addSession: (e: Omit<SessionEntry, 'id' | 'ts'>) =>
+        update((s) => ({
+          ...s,
+          sessions: [{ ...e, id: uid(), ts: new Date().toISOString() }, ...s.sessions].slice(0, 2000),
+        })),
+      bumpIssue: (code: string, delta: number) =>
+        update((s) => {
+          const day = today();
+          const cur = s.issueCounts[code] ?? {};
+          const n = Math.max(0, (cur[day] ?? 0) + delta);
+          return { ...s, issueCounts: { ...s.issueCounts, [code]: { ...cur, [day]: n } } };
+        }),
+      toggleWatchIssue: (code: string) =>
+        update((s) => ({
+          ...s,
+          watchedIssues: s.watchedIssues.includes(code)
+            ? s.watchedIssues.filter((c) => c !== code)
+            : [...s.watchedIssues, code],
+        })),
+      setNote: (key: string, text: string) =>
+        update((s) => ({ ...s, notes: { ...s.notes, [key]: text } })),
+    }),
+    [update],
+  );
+}
+
+/* ---------- sélecteurs ---------- */
+
+export function ageInWeeks(birthdate: string | null): number | null {
+  if (!birthdate) return null;
+  const ms = Date.now() - new Date(birthdate).getTime();
+  return Math.max(0, Math.floor(ms / (7 * 24 * 3600 * 1000)));
+}
+
+export function ageLabel(birthdate: string | null): string {
+  const w = ageInWeeks(birthdate);
+  if (w === null) return 'âge inconnu';
+  const months = Math.floor((w * 7) / 30.44);
+  return w < 16 ? `${w} semaines` : `${months} mois (${w} sem.)`;
+}
+
+export function skillTotal(skills: Record<string, number>): number {
+  return Object.values(skills).reduce((a, b) => a + b, 0);
+}
+
+export function daysWithoutAccident(potty: PottyEntry[]): number {
+  const last = potty.find((p) => p.kind.startsWith('accident'));
+  if (!last) return potty.length ? Math.floor((Date.now() - new Date(potty[potty.length - 1].ts).getTime()) / 86400000) : 0;
+  return Math.floor((Date.now() - new Date(last.ts).getTime()) / 86400000);
+}
+
+/** Heures de la journée où les accidents se répètent (≥ 2) : sortie manquante. */
+export function accidentHotHours(potty: PottyEntry[]): { hour: number; count: number }[] {
+  const map = new Map<number, number>();
+  potty
+    .filter((p) => p.kind.startsWith('accident'))
+    .forEach((p) => {
+      const h = new Date(p.ts).getHours();
+      map.set(h, (map.get(h) ?? 0) + 1);
+    });
+  return [...map.entries()]
+    .filter(([, c]) => c >= 2)
+    .map(([hour, count]) => ({ hour, count }))
+    .sort((a, b) => b.count - a.count);
+}

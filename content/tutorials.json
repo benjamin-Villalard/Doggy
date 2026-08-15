@@ -1,0 +1,934 @@
+[
+ {
+  "code": "T01",
+  "title": "Charger le marqueur (clic / « OUI »)",
+  "icon": "clicker",
+  "meta": "**Quand :** jour 2 · **Durée :** 60 s × 2/jour, 3 jours · **Matériel :** clicker ou ta voix + 15 micro-friandises",
+  "block": "Bloc A — Communication & fondations",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Chiot devant toi, calme. Clic (ou « OUI » bref et joyeux) → **puis** friandise dans la seconde. Il n'a rien à faire."
+   },
+   {
+    "n": "2",
+    "text": "Répéter 10 fois, à intervalles irréguliers. Ne jamais cliquer près de l'oreille ni deux fois de suite."
+   },
+   {
+    "n": "3",
+    "text": "Test à la 3e séance : clic quand il regarde ailleurs → s'il tourne la tête vers toi en attente, le marqueur est chargé."
+   },
+   {
+    "n": "4",
+    "text": "À partir de là : **le clic conclut un comportement**, il ne le demande pas. Le clic est une promesse : il est TOUJOURS suivi d'une récompense, même si tu as cliqué par erreur."
+   }
+  ],
+  "criteria": "Réaction d'orientation au marqueur 5/5 fois, en 3 lieux.",
+  "alea": "Peur du clic (fréquent chez les toys) → clic dans la poche ou marqueur vocal uniquement.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T02",
+  "title": "Le nom = « regarde-moi, ça vaut le coup »",
+  "icon": "ear",
+  "meta": "**Quand :** jour 2 · **Durée :** 2 min × 3/jour · **Prérequis :** T01",
+  "block": "Bloc A — Communication & fondations",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Dis son nom **une seule fois**, ton montant. Dès qu'il tourne la tête : marqueur + friandise."
+   },
+   {
+    "n": "2",
+    "text": "Varie ta position (assis, debout, autre pièce), puis la distance (1 m → 3 m → 5 m), puis les distractions faibles."
+   },
+   {
+    "n": "3",
+    "text": "Ajoute le « check-in spontané » : chaque fois qu'il te regarde **de lui-même**, marque et paie. C'est la base du rappel."
+   }
+  ],
+  "criteria": "8/10 orientations en < 2 s en intérieur, 8/10 dehors à 3 m à 12 semaines.",
+  "alea": "Nom « usé » (utilisé pour gronder, répété dans le vide) → change de nom d'appel (surnom court) et repars propre : jamais de nom sans conséquence agréable.",
+  "boxes": [
+   {
+    "variant": "stop",
+    "title": null,
+    "text": "Ne jamais utiliser le nom pour interrompre, gronder, ou avant un soin désagréable."
+   }
+  ],
+  "extra": []
+ },
+ {
+  "code": "T03",
+  "title": "Leurre & suivi de main (la « télécommande »)",
+  "icon": "hand",
+  "meta": "**Quand :** sem. 1 · **Durée :** 2 min × 2/jour · **Prérequis :** T01",
+  "block": "Bloc A — Communication & fondations",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Friandise entre pouce et index, main **au niveau de son nez** (il mesure 18 cm : accroupis-toi, ne te penche pas au-dessus de lui)."
+   },
+   {
+    "n": "2",
+    "text": "Il colle son nez → marqueur + friandise. 6 répétitions."
+   },
+   {
+    "n": "3",
+    "text": "Déplace la main de 20 cm, il suit → marque + paie. Puis 50 cm, puis un demi-cercle, puis 2 pas."
+   },
+   {
+    "n": "4",
+    "text": "**Vider la main** après 5 réussites : même geste, main vide, récompense sortie de la sacoche. Le geste devient un signal, pas un pot-de-vin."
+   }
+  ],
+  "criteria": "Suit la main vide sur 2 m, 8/10.",
+  "alea": "Il saute sur la main → la main descend trop lentement ou trop haut : baisse-la au niveau du nez et fluidifie.",
+  "boxes": [
+   {
+    "variant": "york",
+    "title": null,
+    "text": "Toujours travailler **accroupi, assis par terre ou avec le chiot sur un support surélevé stable** (marche, banc bas, table antidérapante avec surveillance). Se pencher au-dessus d'un chien de 900 g est intimidant et lui fait lever la tête en arrière (mauvaise posture pour l'assis)."
+   }
+  ],
+  "extra": []
+ },
+ {
+  "code": "T04",
+  "title": "« Assis »",
+  "icon": "sit",
+  "meta": "**Quand :** sem. 2 · **Prérequis :** T03 · **Méthodes :** capture + leurre",
+  "block": "Bloc A — Communication & fondations",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Capture :** pendant 2 min, chaque fois qu'il s'assoit spontanément → marqueur + friandise **donnée entre ses pattes avant** (pour qu'il reste assis)."
+   },
+   {
+    "n": "2",
+    "text": "**Leurre :** main au nez, remonte légèrement vers l'arrière du crâne : les fesses se posent → marque + paie. Sans jamais toucher."
+   },
+   {
+    "n": "3",
+    "text": "Vide la main (geste seul) sur 5 répétitions réussies."
+   },
+   {
+    "n": "4",
+    "text": "**Ajoute le mot** « assis » juste avant le geste, uniquement quand tu obtiens 8/10 sans mot."
+   },
+   {
+    "n": "5",
+    "text": "Généralise (10 × 10) et transforme-le en **comportement par défaut** : il s'assoit pour la gamelle, la porte, le harnais, dire bonjour, monter dans le sac."
+   }
+  ],
+  "criteria": "Assis sur mot seul, 8/10, dans 5 lieux, avant 4 mois.",
+  "alea": "Il se couche direct → tu leurres trop haut/trop en arrière. Il recule → tu es face à lui trop près, mets-toi de profil ou dos à un mur.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T05",
+  "title": "Échange & « donne » (anti-gardiennage)",
+  "icon": "toy",
+  "meta": "**Quand :** sem. 2, avant tout problème · **Durée :** 1 min × 2/jour · **Matériel :** 2 jouets identiques, friandises niveau 3",
+  "block": "Bloc A — Communication & fondations",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Il a le jouet A. Présente le jouet B **animé** (bouge-le, ne le tends pas fixement) ou une friandise de valeur supérieure."
+   },
+   {
+    "n": "2",
+    "text": "Il lâche A → marqueur → il obtient B (ou la friandise) → **puis tu lui rends A**. C'est la clé : perdre l'objet n'arrive jamais."
+   },
+   {
+    "n": "3",
+    "text": "Après 10 réussites, ajoute le mot « donne » au moment où il ouvre la gueule."
+   },
+   {
+    "n": "4",
+    "text": "Entraîne aussi le « je passe près de ta gamelle et je dépose quelque chose de meilleur » : ton approche = bonne nouvelle."
+   }
+  ],
+  "criteria": "Lâche sur mot 8/10, y compris sur objet de valeur moyenne.",
+  "alea": "Il grogne / se raidit → **arrête immédiatement, ne prends rien**, échange contre quelque chose de très supérieur, sécurise l'environnement (plus d'objets volés accessibles) et voir fiche A10.",
+  "boxes": [
+   {
+    "variant": "stop",
+    "title": null,
+    "text": "Jamais arracher de la gueule, jamais retirer la gamelle « pour montrer qui commande », jamais mettre la main dans la nourriture. Ce sont les fabriques de chiens qui mordent."
+   }
+  ],
+  "extra": []
+ },
+ {
+  "code": "T06",
+  "title": "Propreté — protocole complet",
+  "icon": "pee",
+  "meta": "**Quand :** jour 1 → 6 mois · **Matériel :** harnais+laisse, friandises niveau 3 dans un pot près de la porte, nettoyant enzymatique, journal 14 jours",
+  "block": "Bloc B — Vie quotidienne",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Toujours **le même endroit**, en laisse même dans le jardin (pour éviter qu'il joue au lieu de faire)."
+   },
+   {
+    "n": "2",
+    "text": "Silence total pendant 3–5 min : tu es un poteau. Aucune parole, aucun jeu, aucun regard insistant."
+   },
+   {
+    "n": "3",
+    "text": "Dès qu'il commence à faire, tu attends la fin, **puis** marqueur + 3 friandises exceptionnelles + fête calme + mot « pipi » associé."
+   },
+   {
+    "n": "4",
+    "text": "Puis **récompense bonus** : 3 min de balade/jeu. S'il n'a rien fait : retour immédiat à l'intérieur, dans le parc, 10 min, puis nouvelle tentative. Ainsi « faire » = accès au monde."
+   },
+   {
+    "n": "5",
+    "text": "**Accident à l'intérieur :** zéro réaction (ni voix, ni regard), on isole le chiot, on nettoie à l'enzymatique (jamais de javel : l'ammoniaque attire). On note l'heure dans le journal : 3 accidents à la même heure = une sortie manquante dans ton planning."
+   },
+   {
+    "n": "6",
+    "text": "Nuit : dernière sortie tardive, eau retirée 1–2 h avant le coucher (jamais la journée), 1 sortie nocturne les 2 premières semaines, sans lumière ni parole."
+   }
+  ],
+  "criteria": "7 jours consécutifs sans accident (attendu vers 4–6 mois chez un Yorkshire ; 6–8 mois est encore normal).",
+  "alea": "A01 (accidents persistants), A02 (refus de faire dehors).",
+  "boxes": [
+   {
+    "variant": "york",
+    "title": null,
+    "text": "**Tapis-pipi :** à éviter si tu veux une propreté extérieure — ils enseignent « faire à l'intérieur ». Exception acceptable : appartement en étage sans ascenseur les 2 premières semaines, ou nuit → dans ce cas, un seul tapis, à l'endroit le plus proche de la porte, retiré dès 12 semaines."
+   }
+  ],
+  "extra": [
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Les 6 moments obligatoires de sortie"
+   }
+  ]
+ },
+ {
+  "code": "T07",
+  "title": "Solitude progressive (prévention de l'anxiété de séparation)",
+  "icon": "alone",
+  "meta": "**Quand :** jour 3, **tous les jours sans exception** · **Durée :** 2 séances/jour · **Matériel :** parc/caisse, tapis de léchage ou jouet garni",
+  "block": "Bloc B — Vie quotidienne",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Séparation dans la pièce :** il est dans son parc avec un jouet garni, tu restes visible, assis, sans interagir. 2 min. Puis tu ouvres **sans effusion**."
+   },
+   {
+    "n": "2",
+    "text": "**Hors de vue :** tu sors de la pièce 10 s, tu reviens. Puis 30 s, 1 min, 2 min. Reviens toujours **avant** qu'il ne s'inquiète (c'est la règle centrale)."
+   },
+   {
+    "n": "3",
+    "text": "**Franchir la porte d'entrée :** même progression : 30 s → 2 min → 5 min → 10 min → 20 min → 45 min → 1 h 30 → 3 h. Progression **non linéaire** : alterne des durées courtes et longues pour que ton départ reste imprévisible."
+   },
+   {
+    "n": "4",
+    "text": "**Désamorcer les rituels de départ** : prends tes clés, mets ton manteau, ouvre la porte… et reste. 10 fois par jour. Les signaux perdent leur valeur d'annonce."
+   },
+   {
+    "n": "5",
+    "text": "Départs et retours **totalement neutres** : pas d'adieux, pas de fête au retour. Tu l'ignores 2 min en rentrant, puis tu vas le sortir calmement."
+   },
+   {
+    "n": "6",
+    "text": "Vérifie avec une caméra/téléphone : un chiot qui dort dans les 3 min = réussi. Vocalises > 30 s, halètement, grattage à la porte, absence de sieste = tu as monté trop vite → reviens à 50 % de la durée précédente."
+   }
+  ],
+  "criteria": "3 h seul, sans vocalise, sans dégât, propre, à 6 mois (2 h à 4 mois).",
+  "alea": "A06.",
+  "boxes": [
+   {
+    "variant": "warn",
+    "title": null,
+    "text": "Repère de bon sens : un chiot de 2 mois n'est pas laissé seul plus de 1–2 h ; un adulte, pas plus de 5–6 h sans sortie. Le Yorkshire est une race **hyper-attachée** : ce tutoriel est le plus important du document après la propreté."
+   }
+  ],
+  "extra": []
+ },
+ {
+  "code": "T08",
+  "title": "Caisse, sac de transport & voiture",
+  "icon": "crate",
+  "meta": "**Quand :** sem. 1–3 · **Durée :** 2 min × 2/jour · **Matériel :** caisse ouverte, sac de transport, friandises",
+  "block": "Bloc B — Vie quotidienne",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Caisse porte ouverte/retirée, coussin dedans. Tu jettes des friandises dedans, il entre et sort librement. Jamais de porte fermée cette semaine."
+   },
+   {
+    "n": "2",
+    "text": "Nourris-le **dans** la caisse pendant 3 jours. Ajoute un mot (« maison ») quand il y entre seul."
+   },
+   {
+    "n": "3",
+    "text": "Ferme la porte 3 s pendant qu'il mastique, rouvre avant qu'il ne demande. Puis 10 s, 30 s, 2 min, 10 min (tu es présent)."
+   },
+   {
+    "n": "4",
+    "text": "Même protocole pour le **sac de transport**, posé ouvert dans le salon comme un meuble pendant une semaine."
+   },
+   {
+    "n": "5",
+    "text": "Voiture : 1) sac dans la voiture moteur éteint, friandises, 2 min. 2) moteur allumé, 2 min. 3) 500 m aller-retour. 4) 5 min **vers un lieu agréable**. Jamais un premier trajet = vétérinaire."
+   }
+  ],
+  "criteria": "Entre seul sur signal, s'endort porte fermée, trajet 20 min sans halètement ni vocalise.",
+  "alea": "Bave/vomi en voiture → trajets très courts, à jeun 2 h, position basse et calée ; en parler au vétérinaire si ça persiste.",
+  "boxes": [
+   {
+    "variant": "stop",
+    "title": null,
+    "text": "La caisse ne sert JAMAIS de punition, et jamais plus de 3–4 h en journée. Un chiot enfermé qui hurle apprend à paniquer, pas à se calmer."
+   }
+  ],
+  "extra": []
+ },
+ {
+  "code": "T09",
+  "title": "Harnais & marche en laisse détendue",
+  "icon": "harness",
+  "meta": "**Quand :** sem. 2–3 en intérieur, puis dehors · **Matériel :** harnais en Y, laisse 1,2 m légère",
+  "block": "Bloc B — Vie quotidienne",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Harnais au sol + friandises dessus, 2 jours. Puis tu tiens l'ouverture, il passe la tête **lui-même** pour attraper la friandise → marque + paie. 10 fois."
+   },
+   {
+    "n": "2",
+    "text": "Tu clipses, tu retires aussitôt, tu paies. Puis harnais gardé 30 s pendant un jeu, 2 min, 10 min. Le harnais annonce toujours quelque chose d'agréable."
+   },
+   {
+    "n": "3",
+    "text": "En intérieur, laisse accrochée, tu ne tiens rien : il s'habitue au poids et au frottement (5 min, surveillé)."
+   },
+   {
+    "n": "4",
+    "text": "Tu tiens la laisse, tu attends. Dès qu'il vient près de toi ou que la laisse se détend : marqueur + friandise **donnée à la couture de ton pantalon** (côté choisi, toujours le même)."
+   },
+   {
+    "n": "5",
+    "text": "« Un pas = un paiement », puis 2 pas, 5 pas, 10 pas. Tu paies **pendant** la marche, pas seulement à l'arrêt."
+   },
+   {
+    "n": "6",
+    "text": "**Règle de la laisse tendue :** elle se tend → **tu t'arrêtes net** (statue). Tu ne tires pas, tu ne parles pas. Il relâche/te regarde → marqueur, et on repart. Tirer n'avance jamais."
+   },
+   {
+    "n": "7",
+    "text": "Dehors, accepte que les 3 premières séances soient des séances de **reniflage** : 20 m en 10 min est une réussite. Le flair est un besoin, pas une désobéissance."
+   }
+  ],
+  "criteria": "50 m laisse détendue en environnement calme à 4 mois, 200 m à 6 mois avec 2 arrêts flair.",
+  "alea": "A07 (se fige, refuse d'avancer), A08 (refuse le harnais), A12 (tire fort).",
+  "boxes": [
+   {
+    "variant": "york",
+    "title": null,
+    "text": "**Trachée :** harnais en Y obligatoire, jamais de collier en traction, aucun « coup de laisse ». Une toux sèche en quinte pendant l'effort ou l'excitation = consultation. Le harnais doit laisser passer 1 doigt et ne pas frotter les aisselles (peau fine, poil long)."
+   }
+  ],
+  "extra": [
+   {
+    "type": "h",
+    "level": 4,
+    "text": "A. Accepter le harnais"
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "B. Marcher en laisse détendue"
+   }
+  ]
+ },
+ {
+  "code": "T10",
+  "title": "Manipulation, toilettage & consentement au soin",
+  "icon": "brush",
+  "meta": "**Quand :** jour 2 → à vie, **60 s/jour** · **Matériel :** brosse douce, peigne, coupe-griffes, coton, pâte à lécher ou friandises",
+  "block": "Bloc B — Vie quotidienne",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Le « start button » :** tu présentes la brosse, tu attends. Il avance le nez / se pose = « oui, vas-y ». Il se détourne = « non » → tu arrêtes 10 s. Ce consentement rend le toilettage à vie non conflictuel."
+   },
+   {
+    "n": "2",
+    "text": "Compter jusqu'à 3 : tu touches une zone 3 secondes → marqueur → friandise → tu retires la main. Zones dans l'ordre : épaules, dos, poitrail, cou, oreilles, pattes avant, pattes arrière, queue, ventre, museau, babines."
+   },
+   {
+    "n": "3",
+    "text": "Une zone nouvelle par jour ; on ne passe à la suivante que si la précédente est acceptée sans raidissement (oreilles et pattes sont les plus dures)."
+   },
+   {
+    "n": "4",
+    "text": "**Brosse :** 1 coup de brosse → friandise. Puis 3 coups, 10 coups, une zone entière. Toujours dans le sens du poil, démêler mèche par mèche en tenant la base (jamais tirer sur la peau)."
+   },
+   {
+    "n": "5",
+    "text": "**Griffes :** 1) toucher l'outil, 2) outil contre la griffe sans couper, 3) **une seule griffe** par jour, puis fête et fin. Une patte complète seulement au bout de 2 semaines."
+   },
+   {
+    "n": "6",
+    "text": "**Yeux/oreilles :** essuyage au coton humide, 1 s → paie. Chez le Yorkshire, larmoiement et poils devant les yeux → habitue-le tôt à la pince/élastique de toupet et au nettoyage."
+   },
+   {
+    "n": "7",
+    "text": "**Bain :** baignoire sèche + friandises (2 jours), puis 2 cm d'eau tiède, puis douchette au débit minimum, jamais sur la tête directement, tapis antidérapant, séchage à basse température et à distance."
+   }
+  ],
+  "criteria": "Brossage complet 3 min sans contrainte ; toutes les griffes coupées en une séance à 6 mois ; toiletteur professionnel sans sédation ni panique.",
+  "alea": "Il grogne/pince pendant le soin → tu es allé trop vite : reviens 3 étapes en arrière, réduis à 1 s, augmente la valeur alimentaire (pâte à lécher pendant le soin).",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T11",
+  "title": "Mastication : le besoin qu'on oublie",
+  "icon": "bite",
+  "meta": "**Quand :** quotidien, dès jour 1 · **Pourquoi :** la mastication libère l'apaisement, réduit stress, mordillement et destructions",
+  "block": "Bloc B — Vie quotidienne",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Propose **1 à 2 sessions/jour** de 10–20 min, dans la caisse ou sur le tapis, souvent avant une sieste ou avant une absence."
+   },
+   {
+    "n": "2",
+    "text": "Rotation (jamais deux jours le même) : jouet en caoutchouc garni et congelé, tapis de léchage, carotte crue réfrigérée, friandise à mâcher adaptée aux petites races, jouet distributeur, gamelle-puzzle."
+   },
+   {
+    "n": "3",
+    "text": "Surveille les 5 premières minutes de tout nouvel objet à mâcher (risque d'ingestion chez un chien de 1 kg) et retire tout morceau < 3 cm."
+   }
+  ],
+  "criteria": "S'endort après mastication, ne cherche pas les pieds de chaise.",
+  "alea": "Destruction de meubles → dette de mastication et/ou de sommeil, pas de la vengeance. **Interdits :** os cuits, bois, sabots durs, cornes, bâtons (dents fragiles chez les toys), peluches éventrées.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T12",
+  "title": "Brossage des dents (enjeu majeur chez le Yorkshire)",
+  "icon": "tooth",
+  "meta": "**Quand :** sem. 2 → à vie, 30 s/jour · **Matériel :** brosse à doigt puis petite brosse, dentifrice enzymatique vétérinaire (jamais humain)",
+  "block": "Bloc B — Vie quotidienne",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Laisse-le lécher le dentifrice sur ton doigt, 3 jours (c'est bon, c'est tout)."
+   },
+   {
+    "n": "2",
+    "text": "Doigt qui soulève la babine 1 s → paie. Puis frotte une canine 2 s → paie."
+   },
+   {
+    "n": "3",
+    "text": "Brosse à doigt : 3 dents, puis un côté, puis les deux côtés (extérieur seulement suffit). 30 s au total."
+   }
+  ],
+  "criteria": "Brossage quotidien accepté, gencives roses, pas de tartre à 12 mois.",
+  "alea": "Refus → reviens au léchage ; utilise un dentifrice plus appétent ; jamais de contention forcée.",
+  "boxes": [
+   {
+    "variant": "york",
+    "title": null,
+    "text": "Les races toy sont les plus touchées par la maladie parodontale : dents serrées, dents de lait persistantes, mâchoire étroite. Un brossage quotidien installé avant 4 mois épargne des détartrages sous anesthésie — anesthésies qui sont, elles, le vrai risque chez un chien de 2 kg."
+   }
+  ],
+  "extra": []
+ },
+ {
+  "code": "T13",
+  "title": "Le rappel — protocole en 6 niveaux",
+  "icon": "recall",
+  "meta": "**Quand :** sem. 2 → à vie · **Matériel :** longe 5 m, sifflet (optionnel), friandises niveau 3 exclusivement",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Charger le mot** (« ici ! » — choisis un mot neuf, jamais utilisé/usé) : à 1 m, tu dis le mot, tu montres la friandise, il arrive, marqueur + **5 friandises données une à une** (le retour doit être un jackpot, pas un bonbon)."
+   },
+   {
+    "n": "2",
+    "text": "**Le jeu du ping-pong** : à deux personnes, 5 m d'écart, chacun appelle à son tour et paie. 10 allers-retours, dans le couloir puis le jardin."
+   },
+   {
+    "n": "3",
+    "text": "**Rappel-surprise** : au hasard dans la journée, tu appelles depuis une autre pièce. Il arrive → jackpot. 5 fois/jour pendant 8 semaines : c'est ce qui construit un réflexe."
+   },
+   {
+    "n": "4",
+    "text": "**Prendre le harnais avant de payer** : tu touches le harnais, **puis** tu paies, puis tu le relâches. Sans ça, tu obtiens un chien qui vient sans se laisser attraper."
+   },
+   {
+    "n": "5",
+    "text": "**Longe** : niveaux 1→6 du tableau de la phase 3. Ne passe au niveau suivant qu'à 8–9/10. Si échec 2 fois de suite : niveau précédent."
+   },
+   {
+    "n": "6",
+    "text": "**Proofing** : appeler pendant qu'il renifle, pendant qu'il joue avec un chien (d'abord à 15 m), quand un vélo passe. Toujours en longe pour ces premières fois."
+   }
+  ],
+  "criteria": "9/10 en longe, 5 contextes, à 6 mois ; 9/10 en liberté sécurisée à 12 mois.",
+  "alea": "A11 (ne revient plus).",
+  "boxes": [
+   {
+    "variant": "stop",
+    "title": null,
+    "text": "Ne jamais : gronder un chien qui revient (même après 10 min), appeler pour partir/laver/rentrer, courir après lui (fuir en riant marche mieux), utiliser le rappel quand tu sais qu'il ne viendra pas (tu l'entraînes à échouer)."
+   }
+  ],
+  "extra": []
+ },
+ {
+  "code": "T14",
+  "title": "« Couché »",
+  "icon": "down",
+  "meta": "**Quand :** sem. 3 · **Prérequis :** T03, T04",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Depuis l'assis, main-leurre du nez vers le sol, entre les pattes avant, puis légèrement vers toi (en « L »). Coudes au sol → marqueur + friandise **au sol**."
+   },
+   {
+    "n": "2",
+    "text": "Variante utile pour un chien de 18 cm : leurre sous une jambe tendue ou sous une chaise basse ; il doit ramper, donc se coucher."
+   },
+   {
+    "n": "3",
+    "text": "Vide la main, puis ajoute le mot, puis passe le geste de la main pleine au simple index vers le sol, puis au mot seul."
+   },
+   {
+    "n": "4",
+    "text": "Renforce la **durée** avant tout : paie 1 s, 3 s, 5 s, 10 s couché, une friandise à la fois, calmement."
+   }
+  ],
+  "criteria": "Couché sur mot 8/10 + 30 s de maintien à 6 mois.",
+  "alea": "Il se relève pour manger → donne la récompense entre ses pattes au sol, sans lever la main. Refus sur sol dur/froid/glissant → tapis (les toys détestent le carrelage froid).",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T15",
+  "title": "« Pas bouger » (les 3 D)",
+  "icon": "stay",
+  "meta": "**Quand :** sem. 4 · **Règle :** une seule variable augmentée à la fois",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Durée** : assis ou couché, tu comptes 1 s → marqueur → paie → mot de libération (« ok ! »). Puis 2, 3, 5, 8, 12, 20 s. **Le libérateur est obligatoire**, sinon il se libère seul."
+   },
+   {
+    "n": "2",
+    "text": "**Distance** : durée ramenée à 2 s, tu fais 1 pas en arrière, tu reviens, tu paies **en revenant à lui** (ne l'appelle pas). Puis 2 pas, 5 pas, sortir du champ 2 s."
+   },
+   {
+    "n": "3",
+    "text": "**Distraction** : durée et distance ramenées au minimum, tu ajoutes une friandise lancée à côté, un rebond de balle, une porte qui s'ouvre, une personne qui passe."
+   },
+   {
+    "n": "4",
+    "text": "Si le chien bouge : aucun reproche, tu replaces le contexte plus facile (« trop dur pour lui » = information sur toi, pas sur lui)."
+   }
+  ],
+  "criteria": "30 s à 3 m avec une distraction moyenne à 9 mois. [Applications vitales] Attendre au trottoir, ne pas sortir de la voiture, ne pas franchir la porte d'entrée, rester posé chez le vétérinaire.",
+  "alea": null,
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T16",
+  "title": "Marche au pied (position choisie)",
+  "icon": "leash",
+  "meta": "**Quand :** 3–4 mois · **Prérequis :** T09 · **Note :** à distinguer de la balade libre, qui reste du reniflage",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Choisis un côté définitif. Récompense donnée **toujours** à la couture de la jambe de ce côté : la position devient un aimant."
+   },
+   {
+    "n": "2",
+    "text": "Marche 2 pas → marqueur → paie à la couture. Puis 4, 6, 10 pas. Ton corps reste droit (ne te penche pas vers lui)."
+   },
+   {
+    "n": "3",
+    "text": "Ajoute les changements de direction : demi-tours, cercles, zigzags. C'est ça qui apprend à te suivre, pas la ligne droite."
+   },
+   {
+    "n": "4",
+    "text": "Ajoute un mot (« au pied ») seulement pour les passages courts (traversée, croisement, foule). Le reste du temps : laisse détendue libre."
+   }
+  ],
+  "criteria": "20 pas au pied + 2 changements de direction, en extérieur calme, 8/10.",
+  "alea": "Il se met devant/te coupe la route → accélère légèrement et paie plus souvent, réduis à 3 pas.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T17",
+  "title": "« Laisse ça » / renoncement (peut lui sauver la vie)",
+  "icon": "cross",
+  "meta": "**Quand :** sem. 4 → 6 mois · **Matériel :** friandise ordinaire au sol, friandise niveau 3 en main",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Poing fermé contenant une friandise, présenté au chiot. Il lèche, gratte, mordille : **tu ne bouges pas**. Dès qu'il recule ou détourne la tête : marqueur + friandise **de l'autre main**. Renoncer paie mieux que d'insister."
+   },
+   {
+    "n": "2",
+    "text": "Main ouverte, paume vers le haut, friandise visible. S'il plonge, tu refermes. Il attend → marqueur + paiement de l'autre main."
+   },
+   {
+    "n": "3",
+    "text": "Friandise **au sol**, ta main juste au-dessus, puis sans la main. Il détourne → jackpot."
+   },
+   {
+    "n": "4",
+    "text": "Ajoute le mot « laisse » quand il détourne 8/10 fois. Puis objet en mouvement (friandise roulée, jouet lancé, sachet)."
+   },
+   {
+    "n": "5",
+    "text": "En balade, en longe : mégot, papier gras, crotte, croûton. Il détourne sur signal → jackpot niveau 3 + on continue."
+   }
+  ],
+  "criteria": "Renonce sur signal à un aliment au sol en extérieur, 8/10, à 6 mois.",
+  "alea": "A09 (avale tout). **Complément vital** : entraîner l'échange (T05) pour récupérer sans conflit ce qu'il a déjà en gueule.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T18",
+  "title": "Le tapis de relaxation (« bouton pause »)",
+  "icon": "mat",
+  "meta": "**Quand :** sem. 4 → à vie · **Matériel :** un tapis dédié, transportable · **La compétence la plus utile au quotidien**",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Tapis au sol. Tout contact avec le tapis (une patte suffit) = marqueur + friandise **déposée sur le tapis**. Aucun ordre. 10 répétitions."
+   },
+   {
+    "n": "2",
+    "text": "Attends un peu plus : il s'assoit sur le tapis → paie. Il se couche → paie ×3 et lentement (les friandises lentes créent le calme)."
+   },
+   {
+    "n": "3",
+    "text": "Renforce les signes de **relâchement** : soupir, hanche qui bascule, tête posée, clignements → paie discrètement, sans exciter."
+   },
+   {
+    "n": "4",
+    "text": "Ajoute la durée pendant que tu vis normalement (tu cuisines, tu regardes un film) : 1 min, 5 min, 10 min, avec des dépôts espacés et imprévisibles."
+   },
+   {
+    "n": "5",
+    "text": "Transporte le tapis : autre pièce, jardin, chez des amis, terrasse de café, salle d'attente du vétérinaire. Le tapis devient un signal portable de « ici on se pose »."
+   }
+  ],
+  "criteria": "10 min couché détendu au tapis avec activité familiale autour, à 6 mois ; 20 min à 12 mois, y compris en terrasse.",
+  "alea": null,
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T19",
+  "title": "« Au panier » à distance (gestion visiteurs & repas)",
+  "icon": "home",
+  "meta": "**Quand :** 3–4 mois · **Prérequis :** T18",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "À 1 m du tapis, tu montres la direction, il y va → marqueur + paie sur le tapis. Ajoute le mot « panier » après 8/10."
+   },
+   {
+    "n": "2",
+    "text": "Augmente la distance : 2 m, 4 m, depuis une autre pièce, en passant une porte."
+   },
+   {
+    "n": "3",
+    "text": "Chaîne le contexte : sonnette → « panier » → il y va → tu ouvres. Répète 20 fois **à froid** (avec un complice qui sonne pour l'exercice) avant de compter dessus en vrai."
+   }
+  ],
+  "criteria": "Va au tapis sur signal depuis 4 m, y reste pendant l'accueil d'un visiteur.",
+  "alea": "Aboiement à la sonnette → A05 + gestion (sonnette coupée pendant l'apprentissage).",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T20",
+  "title": "Inhibition de la morsure (mordillement du chiot)",
+  "icon": "bite",
+  "meta": "**Quand :** jour 1 → 5 mois · **Rappel :** mordiller est **normal** et nécessaire ; l'objectif est d'apprendre le contrôle, pas de supprimer",
+  "block": "Bloc C — Obéissance",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Prévention** : un jouet toujours à portée de main. Toute main qui approche est accompagnée d'un jouet les premières semaines."
+   },
+   {
+    "n": "2",
+    "text": "**Redirection** : dents sur la peau → tu proposes le jouet et tu l'animes → il mord le jouet → tu joues 20 s. Le message : « les dents vont là »."
+   },
+   {
+    "n": "3",
+    "text": "**Retrait de l'attention** : s'il insiste, tu te lèves, tu croises les bras, tu te détournes 10 s, en silence (pas de cri aigu : ça excite souvent les terriers). Il se calme → tu reprends."
+   },
+   {
+    "n": "4",
+    "text": "**Pause obligatoire** : mordillement frénétique + pupilles dilatées + course folle = **fatigue**. Caisse + mastication + noir. Résultat en 3 min dans 9 cas sur 10."
+   },
+   {
+    "n": "5",
+    "text": "**Chevilles/pantalon** (spécialité terrier) : tu t'immobilises (une jambe qui bouge est une proie), tu attends, tu redirige sur un jouet à tirer, puis tu reprends la marche. À la maison, prévois un jouet-corde traînant que tu peux animer."
+   }
+  ],
+  "criteria": "Plus aucune dent sur la peau à 5 mois ; jeu de tug possible sans contact peau (T25).",
+  "alea": "A04. **Jamais** : tenir la gueule fermée, taper le museau, plaquer au sol — cela crée de vraies morsures plus tard.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T21",
+  "title": "Croisements (chiens, humains, vélos) — protocole LAT",
+  "icon": "eye",
+  "meta": "**Quand :** sem. 3 → à vie · **Le tutoriel le plus important pour éviter un Yorkshire réactif en laisse**",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Repère ta **distance de confort** : celle où il mange encore et peut détourner le regard seul. Souvent 15–30 m au début. Travaille toujours à cette distance ou plus loin."
+   },
+   {
+    "n": "2",
+    "text": "Il regarde le stimulus **calmement** → marqueur → friandise près de toi. Il regarde encore → recommence. Objectif : « voir un chien = mon humain paie »."
+   },
+   {
+    "n": "3",
+    "text": "Puis renforce le **désengagement** : il regarde puis revient vers toi de lui-même → jackpot."
+   },
+   {
+    "n": "4",
+    "text": "Réduis la distance **de 2 m par séance**, jamais plus, et seulement s'il mange et reste souple. Utilise les croisements en parallèle (même trottoir, en marchant), pas frontaux."
+   },
+   {
+    "n": "5",
+    "text": "**Manœuvre d'évitement** à connaître : demi-tour joyeux (« on y va ! ») dès que tu vois un chien tirant sur sa laisse. Éviter n'est pas échouer, c'est protéger l'apprentissage — et un chien de 2 kg."
+   },
+   {
+    "n": "6",
+    "text": "**Rencontres réelles** : uniquement avec des chiens choisis, de taille et de style de jeu compatibles, en longe détendue, 3 min max, puis on se sépare avant l'excès."
+   }
+  ],
+  "criteria": "Croise un chien à 3 m sans aboyer ni tirer, 8/10, à 9 mois.",
+  "alea": "A13 (réactivité en laisse). **Interdits :** laisse tendue au croisement, forcer un nez-à-nez, parcs à chiens, laisser un grand chien « dire bonjour » en fonçant.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T22",
+  "title": "Les 4 pattes au sol (anti « syndrome du petit chien »)",
+  "icon": "paw",
+  "meta": "**Quand :** dès jour 1, toute la famille · **Enjeu :** autonomie, sécurité, absence d'agressivité défensive",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Règle : **on ne porte que sur signal** (« hop ») et jamais en réponse à la peur, au grognement, à l'aboiement ou à la demande."
+   },
+   {
+    "n": "2",
+    "text": "Sauts sur les jambes / demandes de bras : tu te détournes, bras croisés, aucun regard. 4 pattes au sol ou assis → marqueur + attention + caresse. Il apprend que le sol paie."
+   },
+   {
+    "n": "3",
+    "text": "Visiteurs : ils s'accroupissent, ne le prennent pas, attendent qu'il vienne. Aucun visiteur ne le soulève pendant les 3 premiers mois."
+   },
+   {
+    "n": "4",
+    "text": "**S'il a peur :** tu ne le portes pas, tu **augmentes la distance** et tu paies (T21). Si le porter est indispensable (danger réel), fais-le calmement, sans mots rassurants excessifs, et repose-le dès que possible."
+   },
+   {
+    "n": "5",
+    "text": "Apprends aussi le contraire : « hop » (être soulevé) et « stand » (se tenir debout sur une table de toilettage) sont des signaux entraînés, prévenus, payés — jamais des surprises."
+   }
+  ],
+  "criteria": "Marche 100 % de la balade (sauf raison de sécurité), ne saute plus sur les jambes, se laisse porter sans se raidir sur signal.",
+  "alea": null,
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T23",
+  "title": "« Stop » d'urgence à distance",
+  "icon": "stay",
+  "meta": "**Quand :** 4–5 mois · **Prérequis :** T04, T15 · **Sert le jour où le rappel ne suffira pas**",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Signal **unique et très saillant** (un coup de sifflet long, ou « STOP ! » très fort) → suivi **immédiatement** d'un jackpot de 10 friandises, même s'il ne fait rien. 5 fois/jour pendant 2 semaines : tu crées un réflexe pavlovien."
+   },
+   {
+    "n": "2",
+    "text": "Puis prononce-le pendant qu'il marche vers toi : il se figera naturellement → jackpot énorme + fête."
+   },
+   {
+    "n": "3",
+    "text": "Teste en longe pendant qu'il s'éloigne : signal → il s'arrête ou revient → jackpot. **Réserve ce signal aux urgences** (max 1 usage réel/semaine) pour qu'il ne s'use jamais."
+   }
+  ],
+  "criteria": "Arrêt ou retour immédiat, 9/10 en longe, à 12 mois.",
+  "alea": null,
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T24",
+  "title": "Jeux de flair (fatigue mentale, idéal pour un terrier)",
+  "icon": "nose",
+  "meta": "**Quand :** dès sem. 2 · **Effet :** 10 min de flair ≈ 1 h de marche en fatigue mentale ; baisse mesurable de l'excitation",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Niveau 1 — le repas éparpillé :** jette sa ration dans l'herbe ou sur un tapis de fouille. Ajoute le mot « cherche »."
+   },
+   {
+    "n": "2",
+    "text": "**Niveau 2 — les boîtes :** 5 boîtes/pots retournés, une friandise sous l'un d'eux. Il cherche seul, tu ne l'aides pas."
+   },
+   {
+    "n": "3",
+    "text": "**Niveau 3 — la piste :** traîne une friandise sur 3 m dans l'herbe, cache-la au bout, lâche-le au départ. Allonge à 10 m, ajoute des virages."
+   },
+   {
+    "n": "4",
+    "text": "**Niveau 4 — retrouver un objet/une personne :** un membre de la famille se cache, tu dis « cherche », il trouve → grosse fête."
+   }
+  ],
+  "criteria": "Cherche 5 min de façon autonome et se pose ensuite spontanément. **Bonus :** à utiliser avant une absence ou un moment calme requis.",
+  "alea": null,
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T25",
+  "title": "Tug (jeu de tirage) avec règles",
+  "icon": "toy",
+  "meta": "**Quand :** 3 mois+ · **Pourquoi :** canalise l'instinct terrier, crée une récompense non alimentaire puissante, renforce ta complicité",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Le jeu ne commence que sur ton signal (« prends ») et sur un jouet long et souple (jamais un vêtement, jamais tes mains)."
+   },
+   {
+    "n": "2",
+    "text": "Tire **horizontalement**, en douceur, jamais de secousses verticales ni de soulèvement (cou, dents, colonne d'un chien de 2 kg)."
+   },
+   {
+    "n": "3",
+    "text": "« Donne » (T05) toutes les 20 s : il lâche → tu relances aussitôt le jeu. Lâcher = le jeu continue, jamais il s'arrête."
+   },
+   {
+    "n": "4",
+    "text": "Toute dent sur la peau = le jeu s'arrête net 15 s. Reprise après un assis."
+   }
+  ],
+  "criteria": "Prend et lâche sur signal, 9/10 ; le tug peut remplacer la friandise comme récompense en extérieur.",
+  "alea": null,
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T26",
+  "title": "Escaliers, canapé, rampe : protéger les articulations",
+  "icon": "stairs",
+  "meta": "**Quand :** dès l'arrivée · **Enjeu :** luxation de rotule, hernies, fractures — les plaies du Yorkshire",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [
+   {
+    "n": "1",
+    "text": "Barrières en haut et en bas des escaliers jusqu'à 6 mois. Montée limitée, **descente évitée** (la descente est la plus traumatisante) : tu le portes."
+   },
+   {
+    "n": "2",
+    "text": "Apprends la **rampe/marche** pour le canapé ou le lit s'ils sont autorisés : friandises tous les 10 cm, montée puis descente guidée, 10 répétitions/jour pendant 5 jours."
+   },
+   {
+    "n": "3",
+    "text": "Interdis les sauts depuis les bras, le canapé, la voiture : tu le poses au sol, toujours."
+   },
+   {
+    "n": "4",
+    "text": "Tapis antidérapants sur les trajets carrelés/parquets glissants (départs en dérapage = luxations)."
+   }
+  ],
+  "criteria": "Utilise la rampe spontanément ; ne saute plus de hauteur > 20 cm. [Signes à faire voir au véto] Sautillement sur 3 pattes, patte arrière tenue en l'air quelques pas, craquement, refus de sauter alors qu'il le faisait.",
+  "alea": null,
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T27",
+  "title": "Vétérinaire & toiletteur sans stress (cooperative care)",
+  "icon": "vet",
+  "meta": "**Quand :** sem. 1 → à vie · **Prérequis :** T10, T18",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [
+   {
+    "n": "1",
+    "text": "**Visites à blanc** : 1 par mois. On entre, pesée, friandises, caresses par l'équipe, on repart. Aucun soin. Préviens la clinique : la plupart adorent."
+   },
+   {
+    "n": "2",
+    "text": "**Entraîne les positions** à la maison : sur la table (tapis antidérapant), debout maintenu 5 s, couché sur le côté 3 s, museau tenu 2 s, patte tendue, thermomètre simulé (touche sous la queue), stéthoscope simulé (objet froid sur le poitrail)."
+   },
+   {
+    "n": "3",
+    "text": "**Le tapis voyage** avec vous (T18) : en salle d'attente, il se pose sur son tapis, sur tes genoux si le sol est un risque (autres chiens), et mastique/mange."
+   },
+   {
+    "n": "4",
+    "text": "**Pendant l'acte** : pâte à lécher en continu. Après : un lieu agréable, 5 min de jeu. La visite finit toujours bien."
+   }
+  ],
+  "criteria": "Se laisse examiner et vacciner sans contention forcée ; toilettage complet chez un professionnel sans panique.",
+  "alea": "A14.",
+  "boxes": [],
+  "extra": []
+ },
+ {
+  "code": "T28",
+  "title": "Tricks utiles (et pourquoi ils comptent)",
+  "icon": "target",
+  "meta": "**Quand :** 4 mois+ · **Pourquoi :** les tricks entretiennent la motivation, la coopération et le mental — et remplacent la dépense physique interdite",
+  "block": "Bloc D — Autocontrôle & vie sociale",
+  "steps": [],
+  "criteria": null,
+  "alea": null,
+  "boxes": [
+   {
+    "variant": "tip",
+    "title": null,
+    "text": "**Interdits sportifs avant 12 mois :** sauts d'obstacle, slalom serré, sortie de virage à vitesse, jogging accompagné. Autorisés : cavaletti au sol, tunnels, équilibre sur coussin, marche lente en terrain varié."
+   }
+  ],
+  "extra": []
+ }
+]

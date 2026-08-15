@@ -1,0 +1,37 @@
+[
+ {
+  "type": "step",
+  "n": "1",
+  "text": "**Douleur ou maladie ?** Tout changement soudain (propreté, agressivité, refus de sauter, apathie, appétit) = **vétérinaire d'abord**. Chez un toy : dents, rotules, trachée, hypoglycémie, luxation du cristallin, oreilles."
+ },
+ {
+  "type": "step",
+  "n": "2",
+  "text": "**Besoin non couvert ?** Sommeil (18–20 h), mastication, flair, sorties toilettes, contacts sociaux, chaleur. 70 % des « problèmes de comportement » d'un chiot sont des besoins non couverts."
+ },
+ {
+  "type": "step",
+  "n": "3",
+  "text": "**Qu'est-ce qui paie le comportement ?** Attention, nourriture, fuite d'un stimulus, jeu, accès à quelque chose. Supprime le paiement **et** paie l'alternative."
+ },
+ {
+  "type": "step",
+  "n": "4",
+  "text": "**Peur ou excitation ?** Peur → distance + contre-conditionnement (jamais de punition, jamais de flooding). Excitation → autocontrôle + gestion + baisse du niveau d'excitation ambiant."
+ },
+ {
+  "type": "step",
+  "n": "5",
+  "text": "**Gestion immédiate** : empêche la répétition (barrière, longe, porte, rangement) pendant que tu réentraînes. Sinon tu entraînes le problème en parallèle de la solution."
+ },
+ {
+  "type": "step",
+  "n": "6",
+  "text": "**Mesure** : note la fréquence par jour dans le carnet pendant 7 jours avant/après. Sans chiffre, tu ne sais pas si ça marche — et l'impression est mauvaise conseillère."
+ },
+ {
+  "type": "step",
+  "n": "7",
+  "text": "**Seuil d'appel à un pro** : agressivité (grognement répété, morsure), peur intense, anxiété de séparation vraie, comportement en aggravation malgré 3 semaines de protocole → éducateur/comportementaliste en méthodes positives, ou vétérinaire comportementaliste."
+ }
+]

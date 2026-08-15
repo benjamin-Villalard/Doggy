@@ -1,0 +1,617 @@
+[
+ {
+  "title": "Sommaire & mode d'emploi",
+  "icon": "book",
+  "blocks": [
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Partie I — Comprendre avant d'éduquer",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "1. Comment utiliser ce programme",
+     "2. Fiche race : le Yorkshire et ses 11 implications éducatives",
+     "3. Les 10 lois de l'apprentissage (bases scientifiques)",
+     "4. Matériel : la liste juste, ce qu'il faut bannir",
+     "5. Calendrier des périodes sensibles (2 → 12 mois)",
+     "6. La journée type d'un chiot de 2 mois"
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Partie II — Le programme par phases",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "Phase 0 — Les 72 premières heures",
+     "Phase 1 — 8 à 12 semaines : fondations & socialisation",
+     "Phase 2 — 3 à 4 mois : obéissance de base & extérieur",
+     "Phase 3 — 4 à 6 mois : généralisation & autocontrôles",
+     "Phase 4 — 6 à 9 mois : adolescence & régressions",
+     "Phase 5 — 9 à 12 mois : consolidation & fiabilité"
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Partie III — Tutoriels illustrés (T01 → T28)",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "Bloc A — Communication & fondations (T01–T05)",
+     "Bloc B — Vie quotidienne (T06–T12)",
+     "Bloc C — Obéissance (T13–T20)",
+     "Bloc D — Autocontrôle & social (T21–T28)"
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Partie IV — Les aléas (A01 → A14)",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "Arbre de décision « mon chiot fait X »",
+     "14 fiches problèmes : propreté, aboiement, solitude, morsures, peurs, laisse, gardiennage, adolescence…"
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Partie V — Carnet de suivi",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "Grille de compétences 0→5 (bilans M3, M4, M6, M9, M12)",
+     "Checklist socialisation « 120 expériences »",
+     "Journal propreté 14 jours · Journal séances",
+     "Suivi santé, poids, dents, vermifuge/vaccins"
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Annexes",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "Langage corporel & signaux de stress (planche illustrée)",
+     "Toxiques & sécurisation du logement",
+     "Les 10 améliorations proposées à ta demande"
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "1. Comment utiliser ce programme",
+    "icon": null
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": "La règle des 3 colonnes",
+    "icon": "check",
+    "text": null,
+    "blocks": [
+     {
+      "type": "p",
+      "text": "Un chiot qui n'apprend que des « ordres » devient obéissant et anxieux. Un chiot bien socialisé mais sans cadre devient ingérable. Les trois colonnes se tiennent."
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "Le format des séances",
+    "icon": "clock",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": false,
+      "items": [
+       "**2 minutes** par séance à 2 mois, 3–5 min à 4 mois, 8 min max à 8 mois.",
+       "**3 à 5 séances/jour**, dispersées, toujours **arrêtées par toi** et sur une réussite.",
+       "**Règle 80 %** : on ne complexifie que si le chiot réussit ≥ 8 fois sur 10.",
+       "**Une seule variable à la fois** : durée ou distance ou distraction (les 3 D). Jamais deux ensemble."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "york",
+    "title": "Notation utilisée dans tout le document",
+    "icon": "paw",
+    "text": "[Objectif] compétence visée\n[Critère] preuve de réussite mesurable\n[Aléa] ce qui déraille et quoi faire\nencadré « spécial Yorkshire »\npoint de vigilance\nà ne jamais faire",
+    "blocks": []
+   }
+  ]
+ },
+ {
+  "title": "2. Fiche race — le Yorkshire et ses implications éducatives",
+  "icon": "dog",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Le Yorkshire Terrier est un **terrier de travail miniaturisé** (chasse au rat en filature), pas un chien de compagnie décoratif. Tout son comportement découle de trois faits : il est **très petit**, il est **terrier**, et il est **presque toujours porté et sur-protégé** par ses humains. Le programme corrige ces trois biais."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Caractéristique",
+       "Conséquence comportementale",
+       "Ce que le programme impose"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Poids adulte 2–3,2 kg**, ossature fine",
+       "Le monde est un lieu de géants ; risque réel d'écrasement, de chute, de peur généralisée",
+       "Socialisation **au sol** mais sécurisée ; jamais de contact avec grands chiens excités ; T21 « bulle de sécurité »"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Trachée fragile** (collapsus trachéal fréquent)",
+       "Toux, réflexe de tirer/tousser, associations négatives à la balade",
+       "**Harnais en Y obligatoire**, jamais de collier étrangleur, semi-étrangleur ni de coup de laisse (T09)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Luxation de la rotule, Legg-Perthes**",
+       "Douleur silencieuse → refus d'obéir interprété comme « caprice »",
+       "Pas de saut du canapé, escaliers limités jusqu'à 6 mois, rampe/tapis antidérapant ; tout « il ne veut plus » = check véto"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Hypoglycémie du chiot toy** (avant 4 mois)",
+       "Coup de fatigue, tremblements, apathie pendant/après séances",
+       "3–4 repas/jour, séances **après** ou pendant le repas (croquettes = récompenses), jamais à jeun prolongé"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Instinct terrier** : alerte, poursuite, creusage, tue-nuisibles",
+       "Aboiement d'alerte +++, réactivité aux mouvements rapides (vélos, chats, oiseaux)",
+       "Canalisation par jeux légitimes (T24 flair, T25 tug avec règles), protocole aboiement A05, rappel proofé A11"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Ténacité / indépendance du terrier**",
+       "Il négocie, il insiste, l'extinction est longue : il « teste » plus qu'un labrador",
+       "Cohérence absolue de la famille (contrat familial p. carnet), renforcement variable, zéro comportement renforcé par accident"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Vessie minuscule**",
+       "Propreté plus lente que chez un grand chien : compter **4 à 8 mois**, pas 3 semaines",
+       "Protocole propreté T06 + journal 14 jours ; sorties toutes les 45–60 min éveillées à 2 mois"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Persistance des dents de lait, tartre précoce**",
+       "Douleur de dentition 3–6 mois → mordillement, mastication de tout",
+       "Rotation de mastications adaptées (T11) + brossage dentaire conditionné (T12) dès 2 mois"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Poil long à croissance continue**",
+       "Toilettage à vie → source n°1 de conflits/manipulations subies",
+       "Protocole de **consentement au soin** (T10) : brossage/oreilles/pattes/nœuds, 60 s par jour"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Adorable et portable**",
+       "« Syndrome du petit chien » : porté au moindre stress → apprend que le monde est dangereux et que grogner marche",
+       "Règle des 4 pattes au sol (T22), portage seulement sur signal, jamais en réponse à la peur ou à un grognement"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**Grande sensibilité au froid / pluie**",
+       "Refus de faire ses besoins dehors l'hiver → régression propreté",
+       "Manteau imperméable conditionné (T10 var.), coin extérieur abrité, plan B hiver documenté (A02)"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "stop",
+    "title": "Les 6 pratiques à exclure définitivement avec cette race",
+    "icon": "cross",
+    "text": "1. Collier + laisse tendue, licol ou étrangleur (trachée).\n\n2. Prendre le chiot dans les bras dès qu'il a peur ou grogne (renforce l'évitement et la garde).\n\n3. Sanction physique, secouer la nuque, « dominer », mettre sur le dos de force (aggrave peur et morsure).\n\n4. Laisser des enfants le porter ou le poursuivre (chutes = fractures, méfiance durable).\n\n5. Sauts répétés canapé/lit et escaliers avant 6 mois (rotules).\n\n6. Attendre la fin des vaccins pour socialiser : la fenêtre se ferme vers 12–14 semaines, on socialise **portage/sol propre/bras d'ami** en attendant l'aval véto.",
+    "blocks": []
+   }
+  ]
+ },
+ {
+  "title": "3. Les 10 lois de l'apprentissage à maîtriser",
+  "icon": "brain",
+  "blocks": [
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "1 · Le comportement suit la conséquence",
+    "icon": null,
+    "text": "Ce qui est renforcé se répète. Ton chiot n'est ni gentil ni méchant : il fait **ce qui a payé**. Avant de corriger un comportement, cherche ce qui le paie (attention, nourriture, fuite, jeu).",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "2 · Fenêtre de 0,5 seconde",
+    "icon": null,
+    "text": "La récompense doit tomber dans la demi-seconde suivant le comportement, sinon tu renforces autre chose. D'où le **marqueur** (clic ou « OUI ») qui gèle l'instant (T01).",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "3 · Capturer > forcer",
+    "icon": null,
+    "text": "On récompense un comportement **spontané** (capture), on le guide (leurre), on le façonne par étapes (shaping). On ne place jamais le chien à la main.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "4 · Le mot vient en dernier",
+    "icon": null,
+    "text": "Le signal verbal ne s'ajoute que quand le comportement est **déjà fluide** (≥ 8/10). Sinon le mot est associé au ratage.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "5 · Le seuil (threshold)",
+    "icon": null,
+    "text": "Un chiot qui ne mange plus, halète, se fige ou tire est **au-dessus de son seuil** : il n'apprend plus rien. Reculer, baisser l'intensité, terminer. La distance est ton meilleur outil.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "6 · Les 3 D et la généralisation",
+    "icon": null,
+    "text": "Durée, Distance, Distraction : une seule à la fois. Un « assis » appris au salon n'existe pas dans la rue tant qu'il n'a pas été réappris dans **10 lieux différents**.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "7 · Renforcement continu puis variable",
+    "icon": null,
+    "text": "Apprentissage = récompense à chaque fois. Consolidation = récompense imprévisible (1 fois sur 2, puis 1 sur 4) : c'est ce qui rend le comportement résistant.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "8 · Extinction et « pic d'extinction »",
+    "icon": null,
+    "text": "Quand tu cesses de payer un comportement (aboyer pour un câlin), il **empire 2 à 4 jours** avant de disparaître. Craquer à ce moment = renforcer très fort. Tenir, ou ne pas commencer.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "9 · Toujours enseigner l'alternative",
+    "icon": null,
+    "text": "« Non » n'apprend rien. On remplace : au lieu de sauter → assis ; au lieu de mordre la main → prendre le jouet ; au lieu d'aboyer à la porte → aller au tapis (T18).",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "10 · Gestion > volonté",
+    "icon": null,
+    "text": "Barrières, parc, longe, portes fermées, chaussures rangées : tant que le comportement n'est pas appris, on **empêche l'erreur**. Chaque répétition d'une bêtise l'entraîne.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "york",
+    "title": "Traduction Yorkshire",
+    "icon": "paw",
+    "text": "Petit chien = renforcement accidentel constant : on le regarde, on le prend, on rit, on lui parle. **Ton attention est la récompense la plus puissante de sa vie**. 90 % de l'éducation d'un Yorkshire consiste à contrôler où va ton attention, pas à donner des ordres.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Hiérarchie des récompenses (à établir la première semaine)",
+    "icon": "treat"
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Niveau",
+       "Exemples (portion micro : 3 mm — c'est un chien de 1 kg)",
+       "Usage"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "1 — Ordinaire",
+       "Ses croquettes du repas",
+       "Répétitions faciles à la maison, propreté, jeux de flair"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "2 — Bonne",
+       "Émietté de friandise sèche, carotte cuite, morceau de pomme",
+       "Nouvel apprentissage en intérieur"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "3 — Exceptionnelle",
+       "Poulet cuit, jambon sans sel, fromage frais, pâtée en tube",
+       "Extérieur, rappel, croisement chien/inconnu, soins, vétérinaire"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Non alimentaire",
+       "Jeu de tug 10 s, course-poursuite avec toi, fouille dans un tapis",
+       "Chiot repu, gestion du surpoids, motivation « terrier »"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "p",
+    "text": "Budget calorique : un Yorkshire de 1,2 kg mange ~90–130 kcal/jour. Les friandises = **10 % maximum** → prélève sur la ration du repas. Pèse la ration du jour le matin dans un sachet unique : tu ne peux pas suralimenter par accident."
+   }
+  ]
+ },
+ {
+  "title": "4. Matériel & environnement",
+  "icon": "crate",
+  "blocks": [
+   {
+    "type": "h",
+    "level": 3,
+    "text": "L'indispensable",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Objet",
+       "Spécification Yorkshire"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Harnais en Y",
+       "Sangles souples, tour de poitrine ~28–36 cm, attache dorsale ; à retailler 3 fois en un an"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Laisse 1,2 m + longe 5 m",
+       "Laisse légère (< 100 g), longe fine pour le rappel ; **pas d'enrouleur**"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Parc (2 m²) + caisse",
+       "Le parc est le lieu de vie sécurisé ; la caisse, ouverte et confortable, est un refuge — jamais une punition"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Tapis de relaxation",
+       "Support mobile, transportable partout : c'est ton « bouton pause » (T18)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Clicker",
+       "Modèle à bouton (son doux) ; sinon marqueur vocal « OUI » très court"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Sacoche à friandises",
+       "À la ceinture, remplie en permanence les 3 premiers mois"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "8 jouets en rotation",
+       "2 tug corde, 2 mastication, 2 distributeurs, 2 peluches à couiner (taille toy, sans petites pièces)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Kit toilettage",
+       "Brosse douce, peigne métal fin, coupe-griffes petit modèle, brosse à dents doigt + dentifrice enzymatique"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Sac de transport rigide + harnais auto",
+       "À conditionner comme un refuge (T08) avant tout trajet non urgent"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Balance de cuisine",
+       "Pesée hebdomadaire : le meilleur indicateur de santé d'un chiot toy"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "stop",
+    "title": null,
+    "icon": null,
+    "text": "**À bannir :** collier étrangleur/semi-étrangleur/à pointes, collier électrique ou spray, laisse enrouleur, bombe anti-aboiement, tapis-pipi permanents (retardent la propreté extérieure), os cuits, bâtons, jouets de grand chien.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Aménagement en 3 zones",
+    "icon": "home"
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": "Sécurisation (chiot de 900 g)",
+    "icon": "warn",
+    "text": "Câbles gainés · plantes toxiques hors sol (dieffenbachia, yucca, ficus, muguet, laurier-rose) · fenêtres et balcons grillagés (barreaux < 5 cm) · sèche-linge/lave-linge fermés · **vérifier les canapés avant de s'asseoir** et sous les pieds en cuisine (cause n°1 d'accident domestique chez les toys) · escaliers barrés · portes de chambre fermées la nuit non — voir sommeil.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "6. Journée type — chiot de 8–10 semaines",
+    "icon": "sun"
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Heure",
+       "Séquence"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "7 h 00",
+       "Sortie pipi (avant tout le reste) → repas 1 → 15 min de jeu calme → **sieste 1–2 h**"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "9 h 30",
+       "Sortie → séance 2 min (T01/T02) → habituation (1 item de la checklist) → sieste"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "12 h 00",
+       "Sortie → repas 2 → mastication 10 min dans la caisse → sieste longue"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "15 h 00",
+       "Sortie → séance 2 min → 10 min de solitude progressive (T07) → sieste"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "17 h 30",
+       "Sortie → jeu de flair (T24) → toilettage 60 s (T10) → repas 3"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "19 h 30",
+       "Sortie → moment câlin calme sur le tapis → mastication"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "22 h 30",
+       "Dernière sortie, pas de jeu, lumière basse, coucher"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Nuit",
+       "1 sortie vers 3 h les 2 premières semaines, sans parler ni jouer, puis suppression progressive"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": null,
+    "icon": null,
+    "text": "**Quota sommeil : 18 à 20 h/24.** 80 % des « chiots hyperactifs, mordeurs, ingérables le soir » sont des chiots en dette de sommeil. Si ton chiot devient fou et pince : ce n'est pas « il a besoin de se dépenser », c'est **il doit dormir** → caisse + mastication.",
+    "blocks": []
+   }
+  ]
+ }
+]
