@@ -19,7 +19,7 @@ export default function Programme() {
     <ScrollView contentContainerStyle={s.wrap} showsVerticalScrollIndicator={false}>
       <ScreenHeader
         title="Ton parcours"
-        subtitle={`${phases.length} phases · phase ${idx + 1} en cours${weeks !== null ? ` (${weeks} sem.)` : ''}`}
+        subtitle={`${phases.length} phases · phase ${idx} en cours${weeks !== null ? ` (${weeks} sem.)` : ''}`}
         icon="target"
       />
 
