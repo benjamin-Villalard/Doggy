@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextStyle } from 'react-native';
 import { colors } from '../lib/theme';
+import { useVoice } from '../lib/voice';
 
 /** Rend le markup léger produit par l'extracteur : **gras** et retours ligne. */
 export default function Rich({
@@ -12,7 +13,8 @@ export default function Rich({
   style?: TextStyle;
   bold?: string;
 }) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g).filter((p) => p !== '');
+  const voice = useVoice();
+  const parts = voice.t(text).split(/(\*\*[^*]+\*\*)/g).filter((p) => p !== '');
   return (
     <Text style={[s.base, style]}>
       {parts.map((p, i) =>

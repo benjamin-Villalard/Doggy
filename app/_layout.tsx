@@ -30,6 +30,11 @@ export default function RootLayout() {
           <Stack.Screen name="suivi/proprete" options={{ title: 'Propreté' }} />
           <Stack.Screen name="suivi/poids" options={{ title: 'Poids & croissance' }} />
           <Stack.Screen name="suivi/seances" options={{ title: 'Historique des séances' }} />
+          <Stack.Screen name="sante/vaccins" options={{ title: 'Vaccins & vermifuges' }} />
+          <Stack.Screen name="sante/nutrition" options={{ title: 'Nutrition & ration' }} />
+          <Stack.Screen name="sante/carnet" options={{ title: 'Carnet de santé' }} />
+          <Stack.Screen name="sante/urgences" options={{ title: "Gestes d'urgence" }} />
+          <Stack.Screen name="sante/signes" options={{ title: 'Signes cliniques' }} />
           <Stack.Screen name="reglages" options={{ title: 'Réglages' }} />
         </Stack>
       </StoreProvider>

@@ -2,13 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import { useActions, useStore } from '../lib/store';
 import { colors, type } from '../lib/theme';
+import { useVoice } from '../lib/voice';
 import { Button, Card, Pill, Ring, Row, Sub } from './UI';
-
-const DURATION = 120;
 
 export default function SessionRunner({ code }: { code: string }) {
   const { state } = useStore();
+  const DURATION = state.prefs.sessionSeconds;
   const { addSession } = useActions();
+  const voice = useVoice();
   const [running, setRunning] = useState(false);
   const [left, setLeft] = useState(DURATION);
   const [ok, setOk] = useState(0);
@@ -34,6 +35,11 @@ export default function SessionRunner({ code }: { code: string }) {
     };
   }, [running]);
 
+  useEffect(() => {
+    setRunning(false);
+    setLeft(DURATION);
+  }, [DURATION]);
+
   const attempts = ok + ko;
   const rate = attempts > 0 ? Math.round((ok / attempts) * 100) : 0;
   const history = state.sessions.filter((s) => s.code === code).slice(0, 5);
@@ -53,7 +59,7 @@ export default function SessionRunner({ code }: { code: string }) {
   return (
     <Card>
       <Row>
-        <Text style={s.h}>Séance minutée (2 min)</Text>
+        <Text style={s.h}>Séance minutée ({Math.round(DURATION / 60) || 1} min)</Text>
         <Pill tone={rate >= 80 ? 'green' : attempts ? 'orange' : 'grey'}>
           {attempts ? `${ok}/${attempts} · ${rate}%` : '—'}
         </Pill>
@@ -111,7 +117,7 @@ export default function SessionRunner({ code }: { code: string }) {
         multiline
       />
       <Button small title="Enregistrer la séance" onPress={save} disabled={attempts === 0} />
-      {saved ? <Sub>Séance enregistrée dans le carnet.</Sub> : null}
+      {saved ? <Sub>{voice.fun ? voice.praise(attempts) : 'Séance enregistrée dans le carnet.'}</Sub> : null}
 
       {history.length > 0 ? (
         <View style={{ gap: 4, marginTop: 4 }}>

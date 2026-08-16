@@ -2,20 +2,27 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { EmojiPicker, Segmented } from '../components/Form';
 import Icon from '../components/Icon';
 import { Button, Card, FadeIn, Row, Sub } from '../components/UI';
 import { issues, socialization, tutorials } from '../lib/content';
-import { useActions } from '../lib/store';
+import { useActions, type Sex, type Tone } from '../lib/store';
 import { colors, grad, gradients, type } from '../lib/theme';
 
 const isoValid = (v: string) => /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(new Date(v).getTime());
 
+const AVATARS = ['🐶', '🐕', '🦴', '🐾', '🎀', '👑', '⭐️', '🍀', '🧸', '🐻'];
+
 export default function Onboarding() {
-  const { setProfile, finishOnboarding } = useActions();
+  const { setProfile, setPrefs, finishOnboarding } = useActions();
   const router = useRouter();
   const [name, setName] = useState('');
   const [birth, setBirth] = useState('');
   const [arrival, setArrival] = useState('');
+  const [owner, setOwner] = useState('');
+  const [sex, setSex] = useState<Sex>('inconnu');
+  const [avatar, setAvatar] = useState('🐶');
+  const [tone, setTone] = useState<Tone>('fun');
 
   const ok = name.trim().length > 0 && isoValid(birth);
   const socialTotal = socialization.reduce((a, c) => a + c.items.length, 0);
@@ -73,6 +80,37 @@ export default function Onboarding() {
               placeholderTextColor={colors.ink3}
               keyboardType="numbers-and-punctuation"
             />
+            <Text style={s.label}>Ton prénom (optionnel)</Text>
+            <TextInput
+              style={s.input}
+              value={owner}
+              onChangeText={setOwner}
+              placeholder="Ex. Benjamin"
+              placeholderTextColor={colors.ink3}
+            />
+            <Segmented<Sex>
+              label="Sexe"
+              value={sex}
+              options={[
+                { value: 'male', label: 'Mâle' },
+                { value: 'female', label: 'Femelle' },
+                { value: 'inconnu', label: 'Plus tard' },
+              ]}
+              onChange={setSex}
+              hint="Les tutoriels s'accordent automatiquement."
+            />
+            <EmojiPicker label="Son avatar" value={avatar} options={AVATARS} onChange={setAvatar} />
+            <Segmented<Tone>
+              label="Ton du coach"
+              value={tone}
+              options={[
+                { value: 'fun', label: 'Ludique' },
+                { value: 'neutre', label: 'Neutre' },
+                { value: 'expert', label: 'Expert' },
+              ]}
+              onChange={setTone}
+              hint="Modifiable à tout moment dans les réglages, avec 15 autres options."
+            />
             <Sub>L'âge sert à placer automatiquement la phase en cours, les objectifs du jour et les rappels.</Sub>
             <Button
               title="Commencer l'aventure"
@@ -84,7 +122,11 @@ export default function Onboarding() {
                   name: name.trim(),
                   birthdate: birth,
                   arrival: isoValid(arrival) ? arrival : null,
+                  ownerName: owner.trim(),
+                  sex,
+                  avatar,
                 });
+                setPrefs({ tone });
                 finishOnboarding();
                 router.replace('/');
               }}

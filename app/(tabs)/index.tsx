@@ -9,8 +9,10 @@ import { Card, FadeIn, Pill, Row, SectionTitle, Stat, Sub } from '../../componen
 import { currentPhaseIndex, lateKeySkills, nextMilestone, todaysFocus } from '../../lib/coach';
 import { phases, socialization } from '../../lib/content';
 import { badges, dailyGoals } from '../../lib/gamification';
+import { frDate, healthAlerts } from '../../lib/health';
 import { accidentHotHours, ageInWeeks, daysWithoutAccident, skillTotal, today, useActions, useStore } from '../../lib/store';
 import { colors, grad, gradients, radius, shadow, type } from '../../lib/theme';
+import { useVoice } from '../../lib/voice';
 
 function QuickAction({
   label,
@@ -37,6 +39,7 @@ export default function Dashboard() {
   const { state } = useStore();
   const { addPotty } = useActions();
   const router = useRouter();
+  const voice = useVoice();
 
   const weeks = ageInWeeks(state.profile.birthdate) ?? 8;
   const idx = currentPhaseIndex(state.profile.birthdate);
@@ -56,6 +59,7 @@ export default function Dashboard() {
   const goalsDone = goals.filter((g) => g.done).length;
   const gotBadges = badges(state).filter((b) => b.got);
   const nextBadge = badges(state).find((b) => !b.got);
+  const alerts = healthAlerts(state).slice(0, 3);
 
   return (
     <ScrollView contentContainerStyle={s.wrap} showsVerticalScrollIndicator={false}>
@@ -71,7 +75,9 @@ export default function Dashboard() {
         <FadeIn>
           <Card>
             <Row>
-              <Text style={s.h}>Quêtes du jour</Text>
+              <Text style={s.h}>
+                {voice.fun ? `Les quêtes de ${voice.name}` : 'Objectifs du jour'} {voice.emoji('🎯')}
+              </Text>
               <Pill tone={goalsDone === goals.length ? 'green' : 'accent'} solid={goalsDone === goals.length}>
                 {goalsDone}/{goals.length}
               </Pill>
@@ -129,6 +135,21 @@ export default function Dashboard() {
             <QuickAction label="Accident" icon="warn" gradient={gradients.coral} onPress={() => addPotty('accident-pipi')} />
           </Row>
         </Card>
+
+        {alerts.length > 0 ? (
+          <Card style={{ backgroundColor: colors.blueSoft }} onPress={() => router.push('/sante')}>
+            <Row>
+              <Icon name="syringe" size={19} color={colors.blue} />
+              <Text style={[s.cardTitle, { color: colors.blue, flex: 1 }]}>Santé : {alerts.length} rappel(s)</Text>
+            </Row>
+            {alerts.map((a) => (
+              <Text key={`${a.kind}-${a.label}-${a.due}`} style={s.meta}>
+                {a.label} · {a.days < 0 ? `en retard de ${-a.days} j` : a.days === 0 ? "aujourd'hui" : `dans ${a.days} j`} (
+                {frDate(a.due)})
+              </Text>
+            ))}
+          </Card>
+        ) : null}
 
         {hot.length > 0 ? (
           <Card style={{ backgroundColor: colors.amberSoft }}>
@@ -190,7 +211,8 @@ export default function Dashboard() {
           <Row>
             <Icon name="clicker" size={17} />
             <Text style={s.meta}>
-              {sessionsToday} séance{sessionsToday > 1 ? 's' : ''} aujourd'hui — objectif 3 à 5 séances de 2 minutes.
+              {sessionsToday} séance{sessionsToday > 1 ? 's' : ''} aujourd'hui — objectif {state.prefs.goalSessions}{' '}
+              séances de {Math.round(state.prefs.sessionSeconds / 60) || 1} min.
             </Text>
           </Row>
           <Row>
@@ -201,11 +223,11 @@ export default function Dashboard() {
           </Row>
           <Row>
             <Icon name="brush" size={17} />
-            <Text style={s.meta}>Manipulation / toilettage : 60 secondes (T10).</Text>
+            <Rich text="Manipulation / toilettage de {name} : 60 secondes (T10)." style={s.meta} />
           </Row>
           <Row>
             <Icon name="nose" size={17} />
-            <Text style={s.meta}>Un jeu de flair et une mastication avant la crise du soir.</Text>
+            <Rich text="Un jeu de flair et une mastication avant la crise du soir." style={s.meta} />
           </Row>
         </Card>
       </View>

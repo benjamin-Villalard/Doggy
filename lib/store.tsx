@@ -16,8 +16,81 @@ export type SessionEntry = {
   note?: string;
 };
 
+export type Sex = 'male' | 'female' | 'inconnu';
+export type Tone = 'fun' | 'neutre' | 'expert';
+
+export type Profile = {
+  name: string;
+  nickname: string;
+  sex: Sex;
+  birthdate: string | null;
+  arrival: string | null;
+  avatar: string;
+  ownerName: string;
+  adultWeightG: number | null;
+};
+
+/** Tout ce que l'utilisateur peut personnaliser (mots, objectifs, affichage). */
+export type Prefs = {
+  tone: Tone;
+  emoji: boolean;
+  recallWord: string;
+  marker: string;
+  releaseWord: string;
+  treatWord: string;
+  matWord: string;
+  sessionSeconds: number;
+  goalSessions: number;
+  goalPotty: number;
+  goalSocialWeek: number;
+  weightUnit: 'g' | 'kg';
+  showToyBoxes: boolean;
+  showCriteria: boolean;
+  reduceMotion: boolean;
+};
+
+export type HealthKind =
+  | 'vaccin'
+  | 'vermifuge'
+  | 'antiparasitaire'
+  | 'visite'
+  | 'traitement'
+  | 'soin'
+  | 'autre';
+
+export type HealthEntry = {
+  id: string;
+  date: string;
+  kind: HealthKind;
+  label: string;
+  /** Code du protocole de référence (ex. « V2 » pour la 2e injection). */
+  ref?: string | null;
+  nextDate?: string | null;
+  note?: string;
+};
+
+export type SymptomEntry = { id: string; ts: string; code: string; note?: string };
+
+export type Health = {
+  entries: HealthEntry[];
+  symptoms: SymptomEntry[];
+  vetName: string;
+  vetPhone: string;
+  emergencyName: string;
+  emergencyPhone: string;
+  chip: string;
+  insurance: string;
+  allergies: string;
+  foodBrand: string;
+  foodKcal: number | null;
+  meals: number;
+  sterilized: boolean;
+};
+
 export type State = {
-  profile: { name: string; birthdate: string | null; arrival: string | null };
+  profile: Profile;
+  prefs: Prefs;
+  health: Health;
   skills: Record<string, number>;
   social: Record<string, string>;
   potty: PottyEntry[];
@@ -29,8 +102,55 @@ export type State = {
   onboarded: boolean;
 };
 
+export const defaultPrefs: Prefs = {
+  tone: 'fun',
+  emoji: true,
+  recallWord: 'Viens',
+  marker: 'Oui',
+  releaseWord: 'Ok',
+  treatWord: 'friandise',
+  matWord: 'panier',
+  sessionSeconds: 120,
+  goalSessions: 3,
+  goalPotty: 6,
+  goalSocialWeek: 7,
+  weightUnit: 'g',
+  showToyBoxes: true,
+  showCriteria: true,
+  reduceMotion: false,
+};
+
+export const defaultHealth: Health = {
+  entries: [],
+  symptoms: [],
+  vetName: '',
+  vetPhone: '',
+  emergencyName: '',
+  emergencyPhone: '',
+  chip: '',
+  insurance: '',
+  allergies: '',
+  foodBrand: '',
+  foodKcal: null,
+  meals: 4,
+  sterilized: false,
+};
+
+const defaultProfile: Profile = {
+  name: '',
+  nickname: '',
+  sex: 'inconnu',
+  birthdate: null,
+  arrival: null,
+  avatar: '🐶',
+  ownerName: '',
+  adultWeightG: 2600,
+};
+
 const initial: State = {
-  profile: { name: '', birthdate: null, arrival: null },
+  profile: defaultProfile,
+  prefs: defaultPrefs,
+  health: defaultHealth,
   skills: {},
   social: {},
   potty: [],
@@ -41,6 +161,18 @@ const initial: State = {
   notes: {},
   onboarded: false,
 };
+
+/** Fusionne un état sauvegardé (possiblement d'une version antérieure) avec les valeurs par défaut. */
+function hydrate(raw: unknown): State {
+  const saved = (raw ?? {}) as Partial<State>;
+  return {
+    ...initial,
+    ...saved,
+    profile: { ...defaultProfile, ...(saved.profile ?? {}) },
+    prefs: { ...defaultPrefs, ...(saved.prefs ?? {}) },
+    health: { ...defaultHealth, ...(saved.health ?? {}) },
+  };
+}
 
 type Ctx = {
   state: State;
@@ -62,7 +194,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     AsyncStorage.getItem(KEY)
       .then((raw) => {
-        if (raw) setState({ ...initial, ...JSON.parse(raw) });
+        if (raw) setState(hydrate(JSON.parse(raw)));
       })
       .catch(() => {})
       .finally(() => setReady(true));
@@ -93,8 +225,29 @@ export function useActions() {
   const { update } = useStore();
   return useMemo(
     () => ({
-      setProfile: (p: Partial<State['profile']>) =>
-        update((s) => ({ ...s, profile: { ...s.profile, ...p } })),
+      setProfile: (p: Partial<Profile>) => update((s) => ({ ...s, profile: { ...s.profile, ...p } })),
+      setPrefs: (p: Partial<Prefs>) => update((s) => ({ ...s, prefs: { ...s.prefs, ...p } })),
+      setHealth: (h: Partial<Health>) => update((s) => ({ ...s, health: { ...s.health, ...h } })),
+      addHealthEntry: (e: Omit<HealthEntry, 'id'>) =>
+        update((s) => ({
+          ...s,
+          health: {
+            ...s.health,
+            entries: [{ ...e, id: uid() }, ...s.health.entries].sort((a, b) => (a.date < b.date ? 1 : -1)),
+          },
+        })),
+      removeHealthEntry: (id: string) =>
+        update((s) => ({ ...s, health: { ...s.health, entries: s.health.entries.filter((e) => e.id !== id) } })),
+      addSymptom: (code: string, note?: string) =>
+        update((s) => ({
+          ...s,
+          health: {
+            ...s.health,
+            symptoms: [{ id: uid(), ts: new Date().toISOString(), code, note }, ...s.health.symptoms].slice(0, 500),
+          },
+        })),
+      removeSymptom: (id: string) =>
+        update((s) => ({ ...s, health: { ...s.health, symptoms: s.health.symptoms.filter((e) => e.id !== id) } })),
       finishOnboarding: () => update((s) => ({ ...s, onboarded: true })),
       setSkill: (code: string, score: number) =>
         update((s) => ({ ...s, skills: { ...s.skills, [code]: score } })),
@@ -155,6 +308,11 @@ export function ageInWeeks(birthdate: string | null): number | null {
   return Math.max(0, Math.floor(ms / (7 * 24 * 3600 * 1000)));
 }
 
+export function ageInDays(birthdate: string | null): number | null {
+  if (!birthdate) return null;
+  return Math.max(0, Math.floor((Date.now() - new Date(birthdate).getTime()) / 86400000));
+}
+
 export function ageLabel(birthdate: string | null): string {
   const w = ageInWeeks(birthdate);
   if (w === null) return 'âge inconnu';
@@ -164,6 +322,14 @@ export function ageLabel(birthdate: string | null): string {
 
 export function skillTotal(skills: Record<string, number>): number {
   return Object.values(skills).reduce((a, b) => a + b, 0);
+}
+
+export function lastWeightG(weights: WeightEntry[]): number | null {
+  return weights.length ? weights[weights.length - 1].grams : null;
+}
+
+export function formatWeight(grams: number, unit: 'g' | 'kg'): string {
+  return unit === 'kg' ? `${(grams / 1000).toFixed(2)} kg` : `${Math.round(grams)} g`;
 }
 
 export function daysWithoutAccident(potty: PottyEntry[]): number {

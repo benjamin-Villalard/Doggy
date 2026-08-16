@@ -37,7 +37,7 @@ export default function TabsLayout() {
           paddingTop: 6,
           ...shadow.card,
         },
-        tabBarLabelStyle: { fontSize: 10.5, fontWeight: '800', letterSpacing: -0.1 },
+        tabBarLabelStyle: { fontSize: 10, fontWeight: '800', letterSpacing: -0.2 },
         tabBarItemStyle: { paddingVertical: 2 },
       }}
     >
@@ -46,6 +46,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="tutos" options={{ title: 'Tutos', tabBarIcon: tab('clicker') }} />
       <Tabs.Screen name="aleas" options={{ title: 'Aléas', tabBarIcon: tab('warn') }} />
       <Tabs.Screen name="suivi" options={{ title: 'Suivi', tabBarIcon: tab('chart') }} />
+      <Tabs.Screen name="sante" options={{ title: 'Santé', tabBarIcon: tab('heart') }} />
       <Tabs.Screen name="livre" options={{ title: 'Livre', tabBarIcon: tab('book') }} />
     </Tabs>
   );
@@ -53,7 +54,7 @@ export default function TabsLayout() {
 
 const s = StyleSheet.create({
   tabIcon: {
-    width: 42,
+    width: 38,
     height: 30,
     borderRadius: 12,
     alignItems: 'center',

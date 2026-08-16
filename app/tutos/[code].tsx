@@ -8,6 +8,7 @@ import SessionRunner from '../../components/SessionRunner';
 import { Card, Pill, Row, SectionTitle, Sub } from '../../components/UI';
 import { issueByCode, skillByCode, tutorialByCode } from '../../lib/content';
 import { useActions, useStore } from '../../lib/store';
+import { useVoice } from '../../lib/voice';
 import { LinearGradient } from 'expo-linear-gradient';
 import { boxStyles, colors, grad, gradients, radius, shadow, type } from '../../lib/theme';
 
@@ -17,11 +18,13 @@ export default function TutoDetail() {
   const { state } = useStore();
   const { setSkill, setNote } = useActions();
   const router = useRouter();
+  const voice = useVoice();
 
   if (!t) return <Text style={s.wrap}>Tutoriel introuvable.</Text>;
   const skill = skillByCode(t.code);
   const score = state.skills[t.code] ?? 0;
   const linkedIssues = [...new Set((t.alea ?? '').match(/A\d\d/g) ?? [])];
+  const flavor = voice.flavor(t.code);
 
   return (
     <ScrollView contentContainerStyle={s.wrap} keyboardShouldPersistTaps="handled">
@@ -42,6 +45,28 @@ export default function TutoDetail() {
         </Row>
         {t.block ? <Text style={s.heroMeta}>{t.block}</Text> : null}
       </LinearGradient>
+
+      {flavor ? (
+        <Card style={{ backgroundColor: colors.accentSoft }}>
+          <Row>
+            <Icon name="sparkle" size={18} color={colors.accent} />
+            <Text style={[s.h, { color: colors.accentDeep }]}>
+              {flavor.game} {voice.emoji('\u{1F3AF}')}
+            </Text>
+          </Row>
+          <Rich text={flavor.pitch} />
+          <View style={s.missionRow}>
+            <Pill tone="accent" solid>
+              Mission du jour
+            </Pill>
+          </View>
+          <Rich text={flavor.mission} />
+          <Row style={{ alignItems: 'flex-start' }}>
+            <Icon name="trophy" size={16} color={colors.green} />
+            <Rich text={`**C'est gagné quand :** ${flavor.win}`} style={{ flex: 1 }} />
+          </Row>
+        </Card>
+      ) : null}
 
       {t.meta ? (
         <Card>
@@ -69,7 +94,7 @@ export default function TutoDetail() {
         ))}
       </Card>
 
-      {t.criteria ? (
+      {t.criteria && state.prefs.showCriteria ? (
         <Card style={{ backgroundColor: boxStyles.tip.bg, borderColor: boxStyles.tip.border }}>
           <Row>
             <Icon name="check" size={18} color={colors.green} />
@@ -97,7 +122,9 @@ export default function TutoDetail() {
         </Card>
       ) : null}
 
-      {t.boxes.map((b, i) => {
+      {t.boxes
+        .filter((b) => state.prefs.showToyBoxes || b.variant !== 'york')
+        .map((b, i) => {
         const v = boxStyles[b.variant] ?? boxStyles.neutral;
         return (
           <Card key={i} style={{ backgroundColor: v.bg, borderColor: v.border }}>
@@ -118,7 +145,7 @@ export default function TutoDetail() {
           style={s.input}
           value={state.notes[t.code] ?? ''}
           onChangeText={(v) => setNote(t.code, v)}
-          placeholder="Ce qui marche avec lui, ses friandises préférées, les lieux déjà validés…"
+          placeholder={`Ce qui marche avec ${voice.name}, ses ${state.prefs.treatWord}s préférées, les lieux déjà validés…`}
           placeholderTextColor={colors.ink3}
           multiline
         />
@@ -163,6 +190,7 @@ const s = StyleSheet.create({
   },
   numText: { color: '#fff', fontWeight: '800', fontSize: 12 },
   link: { color: colors.accent, fontWeight: '700', fontSize: 13.5, marginTop: 4 },
+  missionRow: { flexDirection: 'row', marginTop: 2 },
   input: {
     borderWidth: 1.5,
     borderColor: colors.line,

@@ -6,6 +6,7 @@ import Svg, { Circle } from 'react-native-svg';
 import { level, streak } from '../lib/gamification';
 import { ageLabel, useStore } from '../lib/store';
 import { colors, grad, gradients, shadow } from '../lib/theme';
+import { useVoice } from '../lib/voice';
 import Icon from './Icon';
 
 function MiniRing({ value, max, label }: { value: number; max: number; label: string }) {
@@ -57,7 +58,9 @@ export default function Hero({
   const router = useRouter();
   const lvl = level(state);
   const st = streak(state);
-  const initial = (state.profile.name || '?').trim().charAt(0).toUpperCase();
+  const voice = useVoice();
+  const avatar = state.profile.avatar || (state.profile.name || '?').trim().charAt(0).toUpperCase();
+  const owner = state.profile.ownerName.trim();
 
   return (
     <LinearGradient colors={grad(gradients.hero)} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.wrap}>
@@ -66,14 +69,16 @@ export default function Hero({
 
       <View style={s.topRow}>
         <View style={s.avatar}>
-          <Text style={s.avatarTxt}>{initial}</Text>
+          <Text style={s.avatarTxt}>{avatar}</Text>
         </View>
         <View style={{ flex: 1 }}>
-          <Text style={s.hello}>Salut {state.profile.name || 'toi'} !</Text>
+          <Text style={s.hello} numberOfLines={1}>
+            {owner ? `${owner} & ${voice.name}` : voice.name || 'Mon chiot'}
+          </Text>
           <Text style={s.age}>{ageLabel(state.profile.birthdate)}</Text>
         </View>
         <Pressable onPress={() => router.push('/reglages')} style={s.iconBtn} hitSlop={8}>
-          <Icon name="hand" size={18} color="#fff" />
+          <Icon name="settings" size={18} color="#fff" />
         </Pressable>
       </View>
 

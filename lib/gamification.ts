@@ -61,18 +61,30 @@ export function streak(state: State): number {
 
 export type DailyGoal = { key: string; label: string; done: boolean; icon: string };
 
-/** Les 4 objectifs quotidiens du livre : 3 séances, 1 socialisation, 1 manipulation, journal propreté. */
+/** Objectifs quotidiens, calés sur les objectifs personnalisés des réglages. */
 export function dailyGoals(state: State): DailyGoal[] {
   const d = dayKey(new Date());
+  const { goalSessions, goalPotty, sessionSeconds } = state.prefs;
+  const minutes = Math.round(sessionSeconds / 60) || 1;
   const sessionsToday = state.sessions.filter((s) => s.ts.slice(0, 10) === d).length;
   const socialToday = Object.values(state.social).filter((v) => v === d).length;
   const pottyToday = state.potty.filter((p) => p.ts.slice(0, 10) === d).length;
   const handlingToday = state.sessions.some((s) => s.ts.slice(0, 10) === d && ['T10', 'T21', 'T22'].includes(s.code));
   return [
-    { key: 'sessions', label: `3 séances de 2 min (${Math.min(sessionsToday, 3)}/3)`, done: sessionsToday >= 3, icon: 'clock' },
+    {
+      key: 'sessions',
+      label: `${goalSessions} séances de ${minutes} min (${Math.min(sessionsToday, goalSessions)}/${goalSessions})`,
+      done: sessionsToday >= goalSessions,
+      icon: 'clock',
+    },
     { key: 'social', label: `1 nouvelle socialisation (${socialToday})`, done: socialToday >= 1, icon: 'people' },
     { key: 'handling', label: 'Manipulation / toilettage 60 s', done: handlingToday, icon: 'brush' },
-    { key: 'potty', label: `Journal propreté tenu (${pottyToday})`, done: pottyToday >= 1, icon: 'drop' },
+    {
+      key: 'potty',
+      label: `${goalPotty} sorties propreté (${Math.min(pottyToday, goalPotty)}/${goalPotty})`,
+      done: pottyToday >= goalPotty,
+      icon: 'drop',
+    },
   ];
 }
 

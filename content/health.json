@@ -1,0 +1,387 @@
+{
+  "disclaimer": "Ces repères suivent les recommandations vétérinaires courantes (WSAVA pour les vaccins, ESCCAP pour les vermifuges, NRC/FEDIAF pour l'énergie). Ils ne remplacent jamais l'avis de TON vétérinaire, qui adapte tout au cas de ton chiot.",
+  "vaccines": [
+    {
+      "code": "V1",
+      "label": "1re injection CHPPiL",
+      "weeks": 8,
+      "valences": "Carré, hépatite de Rubarth, parvovirose, parainfluenza, leptospirose",
+      "note": "Premier examen clinique complet. Tant que le protocole n'est pas fini, on socialise en portant le chiot et sur terrains privés propres, pas dans les parcs à chiens ni les animaleries.",
+      "optional": false
+    },
+    {
+      "code": "V2",
+      "label": "2e injection CHPPiL",
+      "weeks": 12,
+      "valences": "Mêmes valences, rappel de primo-vaccination",
+      "note": "Injection clé : elle protège les chiots dont les anticorps maternels avaient neutralisé la 1re dose. C'est aussi l'âge minimum pour la valence rage.",
+      "optional": false
+    },
+    {
+      "code": "V3",
+      "label": "3e injection CHPPi (± L)",
+      "weeks": 16,
+      "valences": "Rappel final de primo-vaccination",
+      "note": "Recommandée par la WSAVA : environ 1 chiot sur 10 n'est pas correctement immunisé après seulement deux injections.",
+      "optional": false
+    },
+    {
+      "code": "VR",
+      "label": "Rage (si voyage, pension, camping)",
+      "weeks": 12,
+      "valences": "Antirabique",
+      "note": "Non obligatoire en France pour la vie courante, mais exigée pour voyager à l'étranger et par beaucoup de pensions et campings. Valide 21 jours après l'injection.",
+      "optional": true
+    },
+    {
+      "code": "VT",
+      "label": "Toux du chenil (Bordetella + parainfluenza)",
+      "weeks": 12,
+      "valences": "Bb + Pi, souvent en intranasal",
+      "note": "Conseillée si ton Yorkshire va croiser beaucoup de chiens : pension, éducation collective, expositions, toilettage fréquent.",
+      "optional": true
+    },
+    {
+      "code": "VB",
+      "label": "Rappel de fin de première année",
+      "weeks": 65,
+      "valences": "CHPPiL (± rage)",
+      "note": "Vers 15-16 mois : il verrouille l'immunité de l'adulte. Ensuite : leptospirose et toux du chenil chaque année, valences CHP souvent tous les 3 ans selon le vaccin.",
+      "optional": false
+    }
+  ],
+  "vaccineRules": [
+    "On ne commence pas avant 8 semaines : les anticorps maternels neutraliseraient le vaccin.",
+    "Les injections doivent être espacées de 3 à 4 semaines. Un retard important peut obliger à reprendre le protocole.",
+    "L'immunité complète est acquise environ 1 à 2 semaines après la dernière injection : c'est le vrai feu vert pour les lieux à forte densité canine.",
+    "Un rappel oublié depuis plus de 18 mois impose généralement de recommencer une primo-vaccination.",
+    "Seuls le carnet de santé et le passeport européen prouvent le statut vaccinal : garde-les à jour et scanne-les."
+  ],
+  "deworming": [
+    {
+      "code": "D1",
+      "label": "À l'arrivée à la maison",
+      "note": "Vermifuge dès l'arrivée si l'éleveur n'a pas traité dans les 15 jours (demande-lui la date et le produit)."
+    },
+    {
+      "code": "D2",
+      "label": "Toutes les 2 semaines jusqu'à 2 semaines après le sevrage",
+      "note": "Protocole ESCCAP pour les chiots élevés à la maison : premier traitement dès 2 semaines d'âge."
+    },
+    {
+      "code": "D3",
+      "label": "Puis tous les mois jusqu'à 6 mois",
+      "note": "Cible principale : Toxocara canis, transmissible à l'humain. Un chiot rond du ventre et au poil terne est souvent parasité."
+    },
+    {
+      "code": "D4",
+      "label": "Puis 2 à 4 fois par an à l'âge adulte",
+      "note": "4 fois par an si accès libre au jardin, promenades en nature, chasse de proies, alimentation crue ou enfants à la maison."
+    },
+    {
+      "code": "D5",
+      "label": "Antiparasitaires externes toute l'année",
+      "note": "Puces, tiques, aoûtats. Chez un Yorkshire à poil long, brosse et inspecte après chaque sortie en herbe : aisselles, oreilles, entre les doigts."
+    }
+  ],
+  "nutrition": {
+    "rules": [
+      "Croquettes chiot **petite race** (kibble minuscule) : un Yorkshire de 8 semaines a une bouche de 2 cm et des dents de lait fragiles.",
+      "Fractionne : **4 repas/jour jusqu'à 4 mois**, 3 jusqu'à 6 mois, puis 2 à vie. Un toy ne doit jamais rester le ventre vide plus de 6 h avant 4 mois : risque d'hypoglycémie.",
+      "Pèse la ration avec une **balance de cuisine**, pas au verre : 10 g d'erreur sur 90 g, c'est 11 % de la journée.",
+      "Transition alimentaire sur **7 jours** (75/25, 50/50, 25/75) pour éviter la diarrhée.",
+      "Les friandises d'éducation comptent dans la ration : prélève **10 % maximum** de la ration quotidienne et retire-le des repas.",
+      "Eau fraîche à volonté, gamelle basse et stable. Évite la gamelle surélevée chez un toy.",
+      "Interdits absolus : chocolat, raisin et raisin sec, oignon, ail, xylitol, alcool, os cuits, noix de macadamia, pâte à pain crue."
+    ],
+    "treats": [
+      "Morceaux de la taille d'un grain de riz : c'est le nombre de récompenses qui compte, pas la taille.",
+      "Idées basses calories : croquette de la ration, dé de blanc de poulet cuit sans sel, lamelle de carotte cuite, une miette de fromage frais.",
+      "Garde une friandise « jackpot » (poulet, foie séché) uniquement pour le rappel et les manipulations difficiles."
+    ],
+    "meals": [
+      { "untilWeeks": 17, "meals": 4, "label": "jusqu'à 4 mois" },
+      { "untilWeeks": 26, "meals": 3, "label": "de 4 à 6 mois" },
+      { "untilWeeks": 999, "meals": 2, "label": "après 6 mois" }
+    ]
+  },
+  "emergency": [
+    {
+      "code": "U1",
+      "title": "Hypoglycémie (le risque n°1 du chiot toy)",
+      "icon": "bolt",
+      "signs": [
+        "Chiot mou, titubant, regard vague, tremblements",
+        "Gencives pâles, froid au toucher",
+        "Refuse de jouer puis de se lever, jusqu'aux convulsions et au coma"
+      ],
+      "doNow": [
+        "Frotte **du miel ou du sirop de glucose sur les gencives** (pas dans la gorge s'il ne déglutit pas).",
+        "Réchauffe-le enveloppé dans une serviette tiède, contre toi.",
+        "Dès qu'il redresse la tête : petit repas hyper-digestible.",
+        "Appelle le vétérinaire même si ça va mieux : une rechute est fréquente dans les heures qui suivent."
+      ],
+      "never": [
+        "Ne verse jamais de liquide dans la gueule d'un chiot inconscient (fausse route).",
+        "Ne laisse jamais un chiot toy de moins de 4 mois à jeun plus de 6 h."
+      ]
+    },
+    {
+      "code": "U2",
+      "title": "Étouffement / corps étranger dans la gueule",
+      "icon": "warn",
+      "signs": [
+        "Toux violente, panique, pattes à la gueule",
+        "Gencives et langue qui bleuissent",
+        "Efforts respiratoires bruyants"
+      ],
+      "doNow": [
+        "Ouvre la gueule et regarde : retire l'objet **uniquement si tu le vois et peux l'attraper**.",
+        "Sinon : tiens-le tête en bas, 5 tapes fermes entre les omoplates avec le plat de la main.",
+        "Chiot toy : compressions abdominales douces (2 doigts, sous les côtes, vers l'avant), 5 fois.",
+        "Direction la clinique en gardant la tête plus basse que le corps."
+      ],
+      "never": ["N'enfonce pas les doigts à l'aveugle : tu risques de pousser l'objet plus loin."]
+    },
+    {
+      "code": "U3",
+      "title": "Chute, boiterie brutale, patte qui pend",
+      "icon": "stairs",
+      "signs": [
+        "Cri puis refus de poser la patte",
+        "Patte arrière tenue en l'air quelques pas puis reprise (typique de la luxation de rotule)",
+        "Gonflement, déformation, membre pendant"
+      ],
+      "doNow": [
+        "Immobilise : porte-le, pas de marche, pas d'escalier, pas de canapé.",
+        "Glace enveloppée dans un linge, 10 min maximum.",
+        "Cage ou parc au calme, puis vétérinaire dans la journée.",
+        "Une boiterie intermittente qui revient = radio de rotule à demander."
+      ],
+      "never": [
+        "Aucun anti-inflammatoire humain : ibuprofène et paracétamol sont **toxiques** pour le chien.",
+        "Ne tire pas sur le membre pour « remettre » quoi que ce soit."
+      ]
+    },
+    {
+      "code": "U4",
+      "title": "Ingestion toxique ou d'un objet",
+      "icon": "cross",
+      "signs": [
+        "Emballage éventré, plante mordue, médicament manquant",
+        "Vomissements, bave, tremblements, abattement",
+        "Ventre tendu, vomissements en jet, refus de manger : suspicion d'occlusion"
+      ],
+      "doNow": [
+        "Note **quoi, quelle quantité, quand** et garde l'emballage.",
+        "Appelle immédiatement le vétérinaire ou un centre antipoison vétérinaire.",
+        "Chez un chien de 2 kg, une dose minuscule suffit à intoxiquer : ne temporise pas.",
+        "Emmène l'objet ou une photo à la clinique."
+      ],
+      "never": [
+        "Ne fais **jamais** vomir sans avis vétérinaire (produits caustiques, moussants, objets pointus = aggravation).",
+        "Pas de lait « pour absorber » : ça ne fonctionne pas."
+      ]
+    },
+    {
+      "code": "U5",
+      "title": "Détresse respiratoire / trachée",
+      "icon": "shield",
+      "signs": [
+        "Toux sèche en « cornage d'oie », déclenchée par la traction du collier ou l'excitation",
+        "Respiration sifflante, cou tendu, gencives bleutées",
+        "Épisode qui ne se calme pas en quelques minutes"
+      ],
+      "doNow": [
+        "Retire immédiatement collier et laisse : passe au **harnais** pour toujours.",
+        "Calme, air frais, aucune manipulation du cou, pas de portage sous les aisselles.",
+        "Si gencives bleues ou pauses respiratoires : urgence vétérinaire immédiate."
+      ],
+      "never": ["Jamais de collier étrangleur, semi-étrangleur ou de laisse au collier chez un Yorkshire."]
+    },
+    {
+      "code": "U6",
+      "title": "Coup de chaud ou coup de froid",
+      "icon": "flame",
+      "signs": [
+        "Chaud : halètement extrême, bave épaisse, gencives rouge vif, titubation",
+        "Froid : tremblements, chiot recroquevillé, extrémités glacées, apathie"
+      ],
+      "doNow": [
+        "Chaud : à l'ombre, linges **tièdes** (jamais glacés) sur pattes, ventre, cou, ventilation, eau à petites gorgées, puis clinique.",
+        "Froid : sèche-le, serviette tiède, contre toi, pièce chauffée, puis petit repas sucré si le chiot est mou.",
+        "Dans les deux cas, un chiot de moins de 3 kg se décompense en quelques minutes : appelle le vétérinaire."
+      ],
+      "never": [
+        "Pas de bain d'eau glacée (vasoconstriction, choc).",
+        "Pas de sèche-cheveux brûlant sur la peau."
+      ]
+    },
+    {
+      "code": "U7",
+      "title": "Plaie, saignement, coussinet coupé",
+      "icon": "hand",
+      "signs": ["Saignement continu", "Boiterie avec trace de sang", "Plaie souillée ou morsure"],
+      "doNow": [
+        "Compression avec une compresse propre pendant 5 min sans regarder toutes les 30 s.",
+        "Rince au sérum physiologique, pas d'alcool ni d'eau oxygénée.",
+        "Toute morsure de chien, même minuscule, se voit dans la journée : l'infection est sous la peau."
+      ],
+      "never": ["Pas de garrot improvisé, pas de coton pelucheux directement sur la plaie."]
+    }
+  ],
+  "signs": [
+    {
+      "code": "S1",
+      "title": "Refuse de manger plus de 12 h",
+      "urgency": "urgent",
+      "why": "Chez un toy de moins de 4 mois, l'anorexie mène vite à l'hypoglycémie et à la déshydratation."
+    },
+    {
+      "code": "S2",
+      "title": "Vomissements répétés ou diarrhée liquide",
+      "urgency": "urgent",
+      "why": "Parvovirose, parasites, indiscrétion alimentaire, occlusion. Un chiot de 1,5 kg se déshydrate en quelques heures. Diarrhée noire ou sanglante = urgence."
+    },
+    {
+      "code": "S3",
+      "title": "Abattement, chiot qui ne joue plus",
+      "urgency": "urgent",
+      "why": "Un chiot en forme joue par salves. L'apathie est un signal d'alarme fiable, même sans fièvre."
+    },
+    {
+      "code": "S4",
+      "title": "Gencives pâles, blanches ou bleutées",
+      "urgency": "urgent",
+      "why": "Anémie, choc, manque d'oxygène. Compare avec la couleur habituelle : apprends-la quand il va bien."
+    },
+    {
+      "code": "S5",
+      "title": "Toux sèche en « cornage »",
+      "urgency": "rapide",
+      "why": "Collapsus trachéal ou toux du chenil. Passe au harnais et fais examiner la trachée."
+    },
+    {
+      "code": "S6",
+      "title": "Boiterie qui revient par épisodes",
+      "urgency": "rapide",
+      "why": "Signature de la luxation de rotule, fréquente chez le Yorkshire. Radio et évaluation orthopédique."
+    },
+    {
+      "code": "S7",
+      "title": "Tête penchée, tourne en rond, perte d'équilibre",
+      "urgency": "urgent",
+      "why": "Atteinte neurologique, otite interne, hydrocéphalie (surreprésentée chez les toys)."
+    },
+    {
+      "code": "S8",
+      "title": "Fontanelle molle qui ne se ferme pas",
+      "urgency": "rapide",
+      "why": "Fréquente chez les toys. À faire vérifier : le crâne reste vulnérable, protège-le des chocs."
+    },
+    {
+      "code": "S9",
+      "title": "Dent de lait encore là après 7 mois",
+      "urgency": "rapide",
+      "why": "Persistance dentaire classique chez le Yorkshire : elle déplace la dent définitive et retient le tartre. Extraction souvent conseillée, parfois pendant la stérilisation."
+    },
+    {
+      "code": "S10",
+      "title": "Mauvaise haleine, gencives rouges, tartre",
+      "urgency": "surveiller",
+      "why": "Le Yorkshire est très prédisposé à la maladie parodontale. Brossage quotidien dès maintenant, détartrage sur avis vétérinaire."
+    },
+    {
+      "code": "S11",
+      "title": "Œil qui pleure, qui plisse, ou opaque",
+      "urgency": "urgent",
+      "why": "Ulcère cornéen, corps étranger, poils frottant sur l'œil. Un œil ne s'attend jamais."
+    },
+    {
+      "code": "S12",
+      "title": "Se gratte l'oreille, secoue la tête, odeur",
+      "urgency": "rapide",
+      "why": "Otite, souvent liée aux poils dans le conduit chez le Yorkshire."
+    },
+    {
+      "code": "S13",
+      "title": "Poil terne, ventre ballonné, croissance lente",
+      "urgency": "rapide",
+      "why": "Parasitisme intestinal ou ration inadaptée. Coproscopie et bilan de croissance."
+    },
+    {
+      "code": "S14",
+      "title": "Boit et urine énormément",
+      "urgency": "rapide",
+      "why": "Diabète, atteinte rénale ou hépatique (le shunt porto-systémique est plus fréquent chez le Yorkshire)."
+    },
+    {
+      "code": "S15",
+      "title": "Se traîne l'arrière-train, léchages du périnée",
+      "urgency": "surveiller",
+      "why": "Glandes anales engorgées ou parasites. Facile à traiter tôt."
+    },
+    {
+      "code": "S16",
+      "title": "Stagne ou perd du poids sur 2 pesées",
+      "urgency": "rapide",
+      "why": "Un chiot doit grossir chaque semaine jusqu'à 8-9 mois. Une courbe plate mérite un examen."
+    }
+  ],
+  "kit": [
+    "Miel ou sirop de glucose en dosette (hypoglycémie)",
+    "Thermomètre digital + vaseline (38,0 à 39,2 °C au repos)",
+    "Compresses stériles, bande auto-adhésive, sparadrap",
+    "Sérum physiologique en unidoses (yeux, plaies, nez)",
+    "Antiseptique chlorhexidine, sans alcool",
+    "Pince à tiques (crochet) et pince à échardes",
+    "Ciseaux à bouts ronds, gants jetables",
+    "Couverture de survie + petite serviette polaire",
+    "Seringue sans aiguille de 2 ml (donner de l'eau sucrée)",
+    "Balance de cuisine au gramme (ration + suivi de poids)",
+    "Copie du carnet de santé, numéro de puce, numéros véto et véto de garde",
+    "Caisse de transport rigide : elle sert d'ambulance et de lit d'infirmerie"
+  ],
+  "yorkSpecific": [
+    {
+      "title": "Trachée fragile",
+      "icon": "shield",
+      "text": "Harnais obligatoire, jamais de traction sur le cou. Toux en cornage à faire examiner."
+    },
+    {
+      "title": "Rotules qui luxent",
+      "icon": "stairs",
+      "text": "Pas d'escaliers ni de sauts du canapé avant 6 mois. Tapis antidérapants, ongles courts, poids maîtrisé."
+    },
+    {
+      "title": "Hypoglycémie",
+      "icon": "bolt",
+      "text": "Repas fractionnés, jamais plus de 6 h de jeûne avant 4 mois, miel dans la trousse."
+    },
+    {
+      "title": "Dents et gencives",
+      "icon": "tooth",
+      "text": "Brossage quotidien dès l'arrivée, contrôle des dents de lait vers 7 mois."
+    },
+    {
+      "title": "Sensibilité au froid",
+      "icon": "flame",
+      "text": "Peu de graisse et un seul poil : manteau sous 10 °C, sorties courtes et actives en hiver."
+    },
+    {
+      "title": "Poil qui pousse en continu",
+      "icon": "brush",
+      "text": "Brossage quotidien, contrôle des yeux et des conduits d'oreille, toilettage toutes les 6 à 8 semaines."
+    },
+    {
+      "title": "Foie et shunt",
+      "icon": "drop",
+      "text": "Race prédisposée au shunt porto-systémique : croissance lente, vomissements, désorientation après les repas = bilan hépatique."
+    },
+    {
+      "title": "Fontanelle et crâne",
+      "icon": "brain",
+      "text": "Fontanelle parfois ouverte : protège la tête, pas de jeux brusques avec de grands chiens."
+    }
+  ]
+}
