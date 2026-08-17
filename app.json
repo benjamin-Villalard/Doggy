@@ -29,6 +29,13 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6fec3032-fcbf-4d9b-9496-e29bb6067f49"
+      }
+    },
+    "owner": "benjamin.simoes"
   }
 }
