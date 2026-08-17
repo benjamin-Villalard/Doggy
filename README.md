@@ -30,3 +30,25 @@ npm run lint     # tsc --noEmit
 ```
 
 Node >= 20.19.4 requis (Expo SDK 57).
+
+## Builds installables (EAS)
+
+`eas.json` définit trois profils :
+
+| Profil | Sortie | Usage |
+| --- | --- | --- |
+| `preview` | APK Android + IPA ad hoc iOS | installation directe sur ses propres appareils |
+| `preview-ios-simulator` | build simulateur iOS | test sans compte Apple Developer |
+| `production` | AAB Android + IPA App Store | soumission aux stores |
+
+```bash
+npx eas-cli login                            # compte Expo (gratuit)
+npx eas-cli build --platform android --profile preview   # APK à installer directement
+npx eas-cli build --platform ios --profile preview       # nécessite un compte Apple Developer (99 $/an)
+```
+
+Identifiants d'application : `com.benjamin.monyorkshire` (iOS et Android).
+
+Android n'exige qu'un compte Expo : l'APK produit s'installe directement depuis le lien de build.
+iOS exige un compte Apple Developer payant pour signer l'app, même pour un usage personnel ;
+sans lui, l'app reste utilisable via Expo Go ou le build simulateur.
