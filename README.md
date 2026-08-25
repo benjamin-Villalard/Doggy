@@ -52,3 +52,18 @@ Identifiants d'application : `com.benjamin.monyorkshire` (iOS et Android).
 Android n'exige qu'un compte Expo : l'APK produit s'installe directement depuis le lien de build.
 iOS exige un compte Apple Developer payant pour signer l'app, même pour un usage personnel ;
 sans lui, l'app reste utilisable via Expo Go ou le build simulateur.
+
+## Installer sur iPhone sans compte Apple (PWA)
+
+L'export web est une PWA installable : `manifest.json`, service worker (`public/sw.js`) pour le hors ligne,
+icônes `public/pwa/`, métadonnées dans `app/+html.tsx`. `experiments.baseUrl` vaut `/Doggy` pour GitHub Pages.
+
+```bash
+npm run build:web    # génère dist/ prêt à héberger
+```
+
+Déploiement : branche `gh-pages` (contenu de `dist/`) ou workflow `.github/workflows/deploy-pwa.yml`
+(Settings → Pages → Source : GitHub Actions).
+
+URL publique : https://benjamin-villalard.github.io/Doggy/
+Sur iPhone : ouvrir l'URL dans Safari → Partager → « Sur l'écran d'accueil ».
