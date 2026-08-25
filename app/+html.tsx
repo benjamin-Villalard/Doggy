@@ -14,6 +14,7 @@ export default function Root({ children }: { children: ReactNode }) {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover, shrink-to-fit=no"
         />
+        <title>Mon Yorkshire</title>
         <meta name="description" content="Programme d'éducation et suivi santé d'un Yorkshire Terrier de 2 à 12 mois." />
         <meta name="theme-color" content="#6d3fd6" />
         <meta name="mobile-web-app-capable" content="yes" />
