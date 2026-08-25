@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { Linking, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Icon from '../../components/Icon';
@@ -9,6 +10,7 @@ import { colors, type } from '../../lib/theme';
 
 export default function Urgences() {
   const { state } = useStore();
+  const router = useRouter();
   const [open, setOpen] = useState<string | null>(health.emergency[0]?.code ?? null);
 
   const call = (phone: string) => {
@@ -51,6 +53,21 @@ export default function Urgences() {
         </Row>
         {!state.health.vetPhone ? <Sub>Renseigne les numéros dans le carnet de santé pour les avoir ici en un geste.</Sub> : null}
       </Card>
+
+      {state.prefs.clinicianMode ? (
+        <Card onPress={() => router.push('/sante/clinique')} style={{ backgroundColor: colors.accentSoft }}>
+          <Row>
+            <Icon name="stethoscope" size={18} color={colors.accent} />
+            <View style={{ flex: 1 }}>
+              <Text style={[s.h, { color: colors.accentDeep }]}>Mode clinicien</Text>
+              <Sub>
+                Triage ABCDE, protocoles détaillés (RCP RECOVER, hypoglycémie, toxiques), posologies au poids et score
+                de douleur.
+              </Sub>
+            </View>
+          </Row>
+        </Card>
+      ) : null}
 
       <SectionTitle icon="bolt">7 fiches d'urgence</SectionTitle>
       {health.emergency.map((e) => {

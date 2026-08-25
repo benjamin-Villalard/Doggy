@@ -114,6 +114,21 @@ export default function Reglages() {
         />
       </Card>
 
+      <SectionTitle icon="stethoscope">Mode clinicien</SectionTitle>
+      <Card>
+        <Toggle
+          label="Activer le mode clinicien"
+          value={prefs.clinicianMode}
+          onChange={(v) => setPrefs({ clinicianMode: v })}
+          hint="Réservé à un usage soignant : protocoles d'urgence détaillés, triage ABCDE, posologies en mg/kg avec volume calculé, calculateur toxicologique, constantes et score de douleur."
+        />
+        <Sub>
+          Contenu documentaire à visée d'aide-mémoire : il ne remplace ni l'examen de l'animal, ni la prescription d'un
+          vétérinaire, ni un protocole local. Les doses affichées sont des ordres de grandeur de la littérature
+          vétérinaire, à valider avant toute administration.
+        </Sub>
+      </Card>
+
       <SectionTitle icon="whistle">Mes mots d'éducation</SectionTitle>
       <Card>
         <Sub>Ces mots remplacent ceux du livre dans tous les tutoriels : utilise exactement ceux que tu dis à la maison.</Sub>

@@ -5,6 +5,7 @@ import { Linking, Platform, ScrollView, StyleSheet, Text, View } from 'react-nat
 import Icon from '../../components/Icon';
 import ScreenHeader from '../../components/ScreenHeader';
 import { Card, Pill, Row, SectionTitle, Sub } from '../../components/UI';
+import { clinical } from '../../lib/clinical';
 import { expectedWeightRange } from '../../lib/coach';
 import { frDate, health, healthAlerts, mealsForAge, nextDeworming, rationPlan, vaccinePlan } from '../../lib/health';
 import { ageInWeeks, formatWeight, lastWeightG, useStore } from '../../lib/store';
@@ -139,6 +140,45 @@ export default function Sante() {
           sub={`${health.signs.length} signes triés par urgence · ${state.health.symptoms.length} notés`}
           onPress={() => router.push('/sante/signes')}
         />
+        {state.prefs.clinicianMode ? (
+          <>
+            <Item
+              icon="stethoscope"
+              tone={gradients.hero}
+              title="Mode clinicien : urgences & protocoles"
+              sub={`${clinical.protocols.length} protocoles · triage ABCDE · spécificités de la race`}
+              onPress={() => router.push('/sante/clinique')}
+            />
+            <Item
+              icon="pill"
+              tone={gradients.sky}
+              title="Doses au poids & toxicologie"
+              sub={`${clinical.drugs.length} molécules en mg/kg avec volume · ${clinical.toxins.length} toxiques chiffrés`}
+              onPress={() => router.push('/sante/doses')}
+            />
+            <Item
+              icon="pulse"
+              tone={gradients.pink}
+              title="Constantes, douleur et relevés"
+              sub={`CMPS-SF · ${state.health.vitals.length} relevés enregistrés`}
+              onPress={() => router.push('/sante/constantes')}
+            />
+          </>
+        ) : (
+          <Card tone="flat" onPress={() => router.push('/reglages')}>
+            <Row>
+              <Icon name="stethoscope" size={17} color={colors.ink3} />
+              <View style={{ flex: 1 }}>
+                <Text style={s.title}>Mode clinicien</Text>
+                <Text style={s.meta}>
+                  Protocoles d'urgence détaillés, doses en mg/kg, toxicologie, constantes et score de douleur — à
+                  activer dans les réglages.
+                </Text>
+              </View>
+              <Text style={s.chev}>›</Text>
+            </Row>
+          </Card>
+        )}
 
         <SectionTitle icon="scale">Poids et croissance</SectionTitle>
         <Card onPress={() => router.push('/suivi/poids')}>

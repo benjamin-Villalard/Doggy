@@ -4,8 +4,10 @@ import {
   phases,
   skillTargetWeeks,
   skills,
+  tricks,
   tutorialByCode,
   type Section,
+  type Trick,
   type Tutorial,
 } from './content';
 import { ageInWeeks, type State } from './store';
@@ -70,6 +72,50 @@ export const MILESTONES = [
 export function nextMilestone(birthdate: string | null) {
   const w = ageInWeeks(birthdate) ?? 0;
   return MILESTONES.find((m) => w <= m.weeks) ?? MILESTONES[MILESTONES.length - 1];
+}
+
+/** Numéro de semaine ISO, utilisé pour faire tourner le plan d'entraînement. */
+export function isoWeek(d = new Date()): number {
+  const t = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const day = t.getUTCDay() || 7;
+  t.setUTCDate(t.getUTCDate() + 4 - day);
+  const start = new Date(Date.UTC(t.getUTCFullYear(), 0, 1));
+  return Math.ceil(((t.getTime() - start.getTime()) / 86400000 + 1) / 7);
+}
+
+/**
+ * Plan d'entraînement de la semaine : 3 tours accessibles à l'âge du chien,
+ * en priorisant ceux déjà entamés puis les plus faciles, avec une rotation
+ * hebdomadaire pour ne pas proposer toujours les mêmes.
+ */
+export function weeklyTrickPlan(state: State, count = 3): { trick: Trick; level: number; reason: string }[] {
+  const weeks = ageInWeeks(state.profile.birthdate);
+  const eligible = tricks.filter((t) => weeks === null || weeks >= t.minAgeWeeks);
+  const pool = eligible.filter((t) => (state.tricks[t.code] ?? 0) < 3);
+  const source = pool.length ? pool : eligible;
+  const scored = source
+    .map((t) => {
+      const level = state.tricks[t.code] ?? 0;
+      return { trick: t, level, weight: level > 0 ? 0 : 1 };
+    })
+    .sort((a, b) => a.weight - b.weight || a.trick.stars - b.trick.stars || a.trick.code.localeCompare(b.trick.code));
+
+  const started = scored.filter((x) => x.level > 0).slice(0, count);
+  const fresh = scored.filter((x) => x.level === 0);
+  const offset = fresh.length ? (isoWeek() * count) % fresh.length : 0;
+  const rotated = fresh.slice(offset).concat(fresh.slice(0, offset));
+  const picked = [...started, ...rotated].slice(0, count);
+
+  return picked.map(({ trick, level }) => ({
+    trick,
+    level,
+    reason:
+      level === 0
+        ? 'à découvrir cette semaine'
+        : level < 3
+          ? `palier ${level + 1} à valider : ${trick.levels[level]?.goal ?? ''}`
+          : 'à entretenir',
+  }));
 }
 
 /** Poids indicatif d'un Yorkshire standard (g) selon l'âge, pour situer la courbe. */

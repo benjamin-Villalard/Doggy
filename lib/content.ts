@@ -1,5 +1,7 @@
 import icons from '../content/icons.json';
 import iconsExtra from '../content/icons-extra.json';
+import iconsTricks from '../content/icons-tricks.json';
+import tricksRaw from '../content/tricks.json';
 import intro from '../content/intro.json';
 import phasesRaw from '../content/phases.json';
 import tutorialsRaw from '../content/tutorials.json';
@@ -41,12 +43,33 @@ export type Tutorial = {
   boxes: { variant: string; title?: string | null; text: string }[];
 };
 
+export type Trick = {
+  code: string;
+  title: string;
+  icon: string;
+  category: string;
+  stars: number;
+  minAgeWeeks: number;
+  why: string;
+  gear: string;
+  cue: string;
+  steps: string[];
+  levels: { name: string; goal: string; criteria: string }[];
+  criteria: string;
+  fix: { problem: string; solution: string }[];
+  toy: string;
+};
+
+export const tricks = tricksRaw as Trick[];
+export const trickByCode = (code: string) => tricks.find((t) => t.code === code);
+export const trickCategories = Array.from(new Set(tricks.map((t) => t.category)));
+
 export type Issue = { code: string; title: string; lines: string[] };
 export type Skill = { code: string; name: string; key: boolean; target: string };
 export type SocialCategory = { name: string; icon: string | null; items: string[] };
 
 export type IconShape = { viewBox: string; els: { tag: string; attrs: Record<string, string | undefined> }[] };
-export const iconLibrary = { ...icons, ...iconsExtra } as unknown as Record<string, IconShape>;
+export const iconLibrary = { ...icons, ...iconsExtra, ...iconsTricks } as unknown as Record<string, IconShape>;
 export const tutorials = tutorialsRaw as Tutorial[];
 export const issues = issuesRaw as Issue[];
 export const issueTree = issueTreeRaw as Block[];

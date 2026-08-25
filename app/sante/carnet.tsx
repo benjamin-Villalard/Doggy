@@ -66,6 +66,22 @@ export default function Carnet() {
           placeholder="01 23 45 67 89"
           keyboardType="phone-pad"
         />
+        <Field
+          label="Clinique de référence (imagerie, chirurgie)"
+          value={state.health.clinicPhone}
+          onChangeText={(v) => setHealth({ clinicPhone: v })}
+          placeholder="01 23 45 67 89"
+          keyboardType="phone-pad"
+          hint="Structure vers laquelle tu réfères en cas de plateau technique nécessaire."
+        />
+        <Field
+          label="Centre antipoison vétérinaire"
+          value={state.health.poisonPhone}
+          onChangeText={(v) => setHealth({ poisonPhone: v })}
+          placeholder="Numéro du CAPAE / centre le plus proche"
+          keyboardType="phone-pad"
+          hint="À appeler avant toute décontamination : la conduite dépend de la molécule."
+        />
         <Row>
           {state.health.vetPhone ? (
             <View style={{ flex: 1 }}>

@@ -47,6 +47,8 @@ export type Prefs = {
   showToyBoxes: boolean;
   showCriteria: boolean;
   reduceMotion: boolean;
+  /** Mode clinicien : déverrouille constantes, protocoles détaillés et calculateur de doses. */
+  clinicianMode: boolean;
 };
 
 export type HealthKind =
@@ -71,9 +73,28 @@ export type HealthEntry = {
 
 export type SymptomEntry = { id: string; ts: string; code: string; note?: string };
 
+/** Relevé de constantes (mode clinicien). */
+export type VitalEntry = {
+  id: string;
+  ts: string;
+  weightG: number | null;
+  temp: number | null;
+  hr: number | null;
+  rr: number | null;
+  crt: number | null;
+  glycemia: number | null;
+  mucosa: string;
+  pain: number | null;
+  context: string;
+  note?: string;
+};
+
 export type Health = {
   entries: HealthEntry[];
   symptoms: SymptomEntry[];
+  vitals: VitalEntry[];
+  clinicPhone: string;
+  poisonPhone: string;
   vetName: string;
   vetPhone: string;
   emergencyName: string;
@@ -92,6 +113,8 @@ export type State = {
   prefs: Prefs;
   health: Health;
   skills: Record<string, number>;
+  /** Palier atteint par tour (0 = pas commencé, 3 = maîtrisé). */
+  tricks: Record<string, number>;
   social: Record<string, string>;
   potty: PottyEntry[];
   weights: WeightEntry[];
@@ -118,11 +141,15 @@ export const defaultPrefs: Prefs = {
   showToyBoxes: true,
   showCriteria: true,
   reduceMotion: false,
+  clinicianMode: false,
 };
 
 export const defaultHealth: Health = {
   entries: [],
   symptoms: [],
+  vitals: [],
+  clinicPhone: '',
+  poisonPhone: '',
   vetName: '',
   vetPhone: '',
   emergencyName: '',
@@ -152,6 +179,7 @@ const initial: State = {
   prefs: defaultPrefs,
   health: defaultHealth,
   skills: {},
+  tricks: {},
   social: {},
   potty: [],
   weights: [],
@@ -168,6 +196,7 @@ function hydrate(raw: unknown): State {
   return {
     ...initial,
     ...saved,
+    tricks: saved.tricks ?? {},
     profile: { ...defaultProfile, ...(saved.profile ?? {}) },
     prefs: { ...defaultPrefs, ...(saved.prefs ?? {}) },
     health: { ...defaultHealth, ...(saved.health ?? {}) },
@@ -251,6 +280,18 @@ export function useActions() {
       finishOnboarding: () => update((s) => ({ ...s, onboarded: true })),
       setSkill: (code: string, score: number) =>
         update((s) => ({ ...s, skills: { ...s.skills, [code]: score } })),
+      setTrickLevel: (code: string, level: number) =>
+        update((s) => ({ ...s, tricks: { ...s.tricks, [code]: Math.max(0, Math.min(3, level)) } })),
+      addVital: (v: Omit<VitalEntry, 'id' | 'ts'>) =>
+        update((s) => ({
+          ...s,
+          health: {
+            ...s.health,
+            vitals: [{ ...v, id: uid(), ts: new Date().toISOString() }, ...s.health.vitals].slice(0, 500),
+          },
+        })),
+      removeVital: (id: string) =>
+        update((s) => ({ ...s, health: { ...s.health, vitals: s.health.vitals.filter((v) => v.id !== id) } })),
       toggleSocial: (key: string) =>
         update((s) => {
           const next = { ...s.social };
