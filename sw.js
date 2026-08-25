@@ -32,8 +32,12 @@ self.addEventListener('fetch', (event) => {
         const cached = await caches.match(request);
         if (cached) return cached;
         if (request.mode === 'navigate') {
-          const shell = await caches.match('./');
-          if (shell) return shell;
+          const url = new URL(request.url);
+          const base = url.pathname.replace(/\/$/, '');
+          for (const candidate of [`${base}/`, `${base}/index.html`, `${base}.html`, './']) {
+            const hit = await caches.match(candidate);
+            if (hit) return hit;
+          }
         }
         return new Response('Hors ligne', { status: 503, headers: { 'Content-Type': 'text/plain' } });
       }),
