@@ -20,6 +20,20 @@ livre PDF `docs/Programme-education-Yorkshire.pdf` (43 pages).
 - Notes personnelles par tutoriel, compteur d'occurrences par aléa sur 7 jours
 - Persistance locale via AsyncStorage, aucun backend
 
+## Sauvegarde automatique sur GitHub (facultative)
+
+Écran `Réglages → Sauvegarde automatique sur GitHub` (`app/sauvegarde.tsx`, logique dans `lib/sync.tsx`).
+
+1. Créer un dépôt GitHub **privé** dédié aux données (ex. `Doggy-data`) — jamais ce dépôt public.
+2. Créer un token fine-grained limité à ce dépôt, permission `Contents: Read and write` uniquement.
+3. Renseigner dépôt, chemin du fichier, branche et token, puis « Vérifier ».
+4. Activer la sauvegarde automatique : l'état complet est envoyé via l'API Contents (`PUT`) 4 s après la dernière
+   modification, avec le `sha` du fichier distant pour éviter les écrasements involontaires.
+
+La persistance locale reste la source de vérité : hors ligne, l'app fonctionne normalement et l'envoi repart à la
+prochaine modification. « Restaurer depuis GitHub » remplace tout l'état local (pas de fusion). Le token est stocké sur
+l'appareil, jamais commité ni journalisé.
+
 ## Lancer le projet
 
 ```bash

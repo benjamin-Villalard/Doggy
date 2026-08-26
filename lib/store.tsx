@@ -208,9 +208,17 @@ type Ctx = {
   ready: boolean;
   update: (fn: (s: State) => State) => void;
   reset: () => void;
+  /** Remplace tout l'état par une sauvegarde restaurée. */
+  replace: (raw: unknown) => void;
 };
 
-const StoreContext = createContext<Ctx>({ state: initial, ready: false, update: () => {}, reset: () => {} });
+const StoreContext = createContext<Ctx>({
+  state: initial,
+  ready: false,
+  update: () => {},
+  reset: () => {},
+  replace: () => {},
+});
 
 const uid = () => Math.random().toString(36).slice(2, 10);
 export const newId = uid;
@@ -239,6 +247,7 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
       ready,
       update: (fn) => setState((s) => fn(s)),
       reset: () => setState(initial),
+      replace: (raw) => setState(hydrate(raw)),
     }),
     [state, ready],
   );

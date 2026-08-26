@@ -197,6 +197,12 @@ export default function Reglages() {
           {state.health.entries.length} actes de santé. Tout est stocké localement sur l'appareil, sans compte ni
           serveur.
         </Sub>
+        <Button
+          small
+          tone="ghost"
+          title="Sauvegarde automatique sur GitHub"
+          onPress={() => router.push('/sauvegarde')}
+        />
         <Row>
           <View style={{ flex: 1 }}>
             <Button small tone="ghost" title="Page santé" onPress={() => router.push('/sante')} />

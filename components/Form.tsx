@@ -11,6 +11,7 @@ export function Field({
   hint,
   keyboardType,
   multiline,
+  secure,
 }: {
   label: string;
   value: string;
@@ -19,6 +20,7 @@ export function Field({
   hint?: string;
   keyboardType?: 'default' | 'numeric' | 'phone-pad';
   multiline?: boolean;
+  secure?: boolean;
 }) {
   return (
     <View style={{ gap: 4 }}>
@@ -31,6 +33,9 @@ export function Field({
         placeholderTextColor={colors.ink3}
         keyboardType={keyboardType}
         multiline={multiline}
+        secureTextEntry={secure}
+        autoCapitalize={secure ? 'none' : undefined}
+        autoCorrect={secure ? false : undefined}
       />
       {hint ? <Text style={s.hint}>{hint}</Text> : null}
     </View>
