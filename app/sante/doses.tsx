@@ -1,5 +1,5 @@
 import { Stack } from 'expo-router';
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Field } from '../../components/Form';
 import Icon from '../../components/Icon';
@@ -13,6 +13,12 @@ export default function Doses() {
   const { state } = useStore();
   const stored = lastWeightG(state.weights);
   const [w, setW] = useState(stored ? (stored / 1000).toFixed(2) : '');
+  const edited = useRef(false);
+
+  useEffect(() => {
+    if (!edited.current && stored) setW((stored / 1000).toFixed(2));
+  }, [stored]);
+
   const kg = Number(w.replace(',', '.'));
   const valid = isFinite(kg) && kg > 0;
 
@@ -58,7 +64,10 @@ export default function Doses() {
         <Field
           label="Poids utilisé pour les calculs (kg)"
           value={w}
-          onChangeText={setW}
+          onChangeText={(v) => {
+            edited.current = true;
+            setW(v);
+          }}
           keyboardType="numeric"
           placeholder="2.30"
           hint={
