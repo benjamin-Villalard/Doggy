@@ -20,6 +20,20 @@ livre PDF `docs/Programme-education-Yorkshire.pdf` (43 pages).
 - Notes personnelles par tutoriel, compteur d'occurrences par aléa sur 7 jours
 - Persistance locale via AsyncStorage, aucun backend
 
+## Sauvegarde automatique sur GitHub (facultative)
+
+Écran `Réglages → Sauvegarde automatique sur GitHub` (`app/sauvegarde.tsx`, logique dans `lib/sync.tsx`).
+
+1. Créer un dépôt GitHub **privé** dédié aux données (ex. `Doggy-data`) — jamais ce dépôt public.
+2. Créer un token fine-grained limité à ce dépôt, permission `Contents: Read and write` uniquement.
+3. Renseigner dépôt, chemin du fichier, branche et token, puis « Vérifier ».
+4. Activer la sauvegarde automatique : l'état complet est envoyé via l'API Contents (`PUT`) 4 s après la dernière
+   modification, avec le `sha` du fichier distant pour éviter les écrasements involontaires.
+
+La persistance locale reste la source de vérité : hors ligne, l'app fonctionne normalement et l'envoi repart à la
+prochaine modification. « Restaurer depuis GitHub » remplace tout l'état local (pas de fusion). Le token est stocké sur
+l'appareil, jamais commité ni journalisé.
+
 ## Lancer le projet
 
 ```bash
@@ -30,3 +44,40 @@ npm run lint     # tsc --noEmit
 ```
 
 Node >= 20.19.4 requis (Expo SDK 57).
+
+## Builds installables (EAS)
+
+`eas.json` définit trois profils :
+
+| Profil | Sortie | Usage |
+| --- | --- | --- |
+| `preview` | APK Android + IPA ad hoc iOS | installation directe sur ses propres appareils |
+| `preview-ios-simulator` | build simulateur iOS | test sans compte Apple Developer |
+| `production` | AAB Android + IPA App Store | soumission aux stores |
+
+```bash
+npx eas-cli login                            # compte Expo (gratuit)
+npx eas-cli build --platform android --profile preview   # APK à installer directement
+npx eas-cli build --platform ios --profile preview       # nécessite un compte Apple Developer (99 $/an)
+```
+
+Identifiants d'application : `com.benjamin.monyorkshire` (iOS et Android).
+
+Android n'exige qu'un compte Expo : l'APK produit s'installe directement depuis le lien de build.
+iOS exige un compte Apple Developer payant pour signer l'app, même pour un usage personnel ;
+sans lui, l'app reste utilisable via Expo Go ou le build simulateur.
+
+## Installer sur iPhone sans compte Apple (PWA)
+
+L'export web est une PWA installable : `manifest.json`, service worker (`public/sw.js`) pour le hors ligne,
+icônes `public/pwa/`, métadonnées dans `app/+html.tsx`. `experiments.baseUrl` vaut `/Doggy` pour GitHub Pages.
+
+```bash
+npm run build:web    # génère dist/ prêt à héberger
+```
+
+Déploiement : branche `gh-pages` (contenu de `dist/`) ou workflow `.github/workflows/deploy-pwa.yml`
+(Settings → Pages → Source : GitHub Actions).
+
+URL publique : https://benjamin-villalard.github.io/Doggy/
+Sur iPhone : ouvrir l'URL dans Safari → Partager → « Sur l'écran d'accueil ».

@@ -1,0 +1,44 @@
+{
+  "expo": {
+    "name": "Mon Yorkshire",
+    "slug": "mon-yorkshire",
+    "scheme": "monyorkshire",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.benjamin.monyorkshire"
+    },
+    "android": {
+      "package": "com.benjamin.monyorkshire",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "baseUrl": "/Doggy"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "6fec3032-fcbf-4d9b-9496-e29bb6067f49"
+      }
+    },
+    "owner": "benjamin.simoes"
+  }
+}

@@ -1,0 +1,859 @@
+{
+  "disclaimer": "Aide-mémoire clinique destiné à un utilisateur soignant, à visée documentaire. Les valeurs et posologies citées sont des ordres de grandeur issus de la littérature vétérinaire courante : elles ne remplacent ni l'examen de l'animal, ni la prescription d'un vétérinaire, ni un protocole local. Toute administration doit être validée par un vétérinaire ; les spécialités humaines sont fréquemment toxiques chez le chien.",
+  "vitals": [
+    {
+      "label": "Température rectale",
+      "range": "38,3 – 39,2 °C",
+      "note": "> 39,5 °C : fièvre ou hyperthermie. < 37,5 °C : hypothermie, fréquente chez le chiot toy en détresse — réchauffer AVANT toute autre chose sauf urgence vitale.",
+      "icon": "thermometer"
+    },
+    {
+      "label": "Fréquence cardiaque — chiot < 3 mois",
+      "range": "120 – 180 /min (jusqu'à 220 en stress)",
+      "note": "Le chiot n'a quasiment pas de réserve de contractilité : son débit dépend de la fréquence. Une bradycardie relative chez un chiot est un signe grave.",
+      "icon": "pulse"
+    },
+    {
+      "label": "Fréquence cardiaque — petit chien adulte",
+      "range": "100 – 160 /min",
+      "note": "Plus rapide que les 70–120 /min des grandes races. Interpréter avec la qualité du pouls fémoral.",
+      "icon": "heart"
+    },
+    {
+      "label": "Fréquence respiratoire au repos",
+      "range": "18 – 34 /min",
+      "note": "Compter au repos ou endormi. > 40 /min au repos de façon répétée = signe d'appel cardio-respiratoire à explorer.",
+      "icon": "pulse"
+    },
+    {
+      "label": "Temps de recoloration capillaire (TRC)",
+      "range": "1 – 2 s",
+      "note": "> 2 s : vasoconstriction / hypoperfusion. Immédiat + muqueuses rouge brique : vasodilatation (choc distributif, hyperthermie).",
+      "icon": "drop"
+    },
+    {
+      "label": "Muqueuses",
+      "range": "Rose pâle à rose",
+      "note": "Pâles (hémorragie, anémie, choc), blanches (urgence), grises/cyanosées (hypoxie), ictériques (hépatique/hémolyse), pétéchies (hémostase).",
+      "icon": "eye"
+    },
+    {
+      "label": "Glycémie",
+      "range": "0,8 – 1,2 g/L (4,4 – 6,6 mmol/L)",
+      "note": "Hypoglycémie < 0,6 g/L (3,3 mmol/L) : très fréquente chez le chiot toy de moins de 4 mois, et chez le Yorkshire avec shunt porto-systémique. Un lecteur humain est utilisable en dépannage mais sous-estime souvent le chien.",
+      "icon": "bolt"
+    },
+    {
+      "label": "Pression artérielle moyenne (doppler / oscillo)",
+      "range": "PAS 90 – 140 mmHg",
+      "note": "PAS < 90 mmHg = hypotension. Brassard = 40 % de la circonférence du membre : chez un Yorkshire, la taille du brassard est la première source d'erreur.",
+      "icon": "pulse"
+    },
+    {
+      "label": "Diurèse",
+      "range": "1 – 2 ml/kg/h",
+      "note": "< 1 ml/kg/h après restauration volémique : oligurie à explorer.",
+      "icon": "drop"
+    },
+    {
+      "label": "Poids de référence (Yorkshire adulte)",
+      "range": "2,0 – 3,2 kg (standard : ≤ 3,2 kg)",
+      "note": "Toute posologie doit reposer sur un poids pesé du jour, pas estimé : 200 g d'erreur = 10 % de dose chez un chien de 2 kg.",
+      "icon": "scale"
+    }
+  ],
+  "triage": [
+    {
+      "step": "A",
+      "title": "Voies aériennes",
+      "checks": [
+        "Bruit inspiratoire, stridor, toux en « corne de brume » (collapsus trachéal)",
+        "Position en extension du cou, refus de s'allonger",
+        "Corps étranger visible en oro-pharynx (ne pas explorer à l'aveugle avec les doigts)"
+      ],
+      "red": "Effort inspiratoire majeur, cyanose, silence auscultatoire : dégager / oxygéner immédiatement, transport en urgence."
+    },
+    {
+      "step": "B",
+      "title": "Respiration",
+      "checks": [
+        "FR, amplitude, composante abdominale, orthopnée",
+        "Auscultation : crépitants, sifflements, abolition d'un champ",
+        "SpO2 si disponible (objectif > 95 % en air ambiant)"
+      ],
+      "red": "FR > 60 /min au repos, dyspnée abdominale, SpO2 < 90 % : oxygène en flow-by, manipulation minimale."
+    },
+    {
+      "step": "C",
+      "title": "Circulation",
+      "checks": [
+        "Pouls fémoral (qualité, symétrie), FC, TRC, couleur des muqueuses, extrémités froides",
+        "Rechercher un souffle (fréquent avec l'âge chez le Yorkshire)",
+        "Signes d'hémorragie interne : abdomen tendu, pâleur, tachycardie"
+      ],
+      "red": "TRC > 2 s + muqueuses pâles + tachycardie + extrémités froides : choc — voie veineuse et transport."
+    },
+    {
+      "step": "D",
+      "title": "Neurologique",
+      "checks": [
+        "Vigilance, réponse aux stimuli, taille et symétrie pupillaire",
+        "Convulsions, myoclonies, ataxie, tourner en rond, pousser au mur",
+        "Glycémie capillaire SYSTÉMATIQUE chez un chiot altéré",
+        "Chez un Yorkshire : évoquer un shunt porto-systémique (signes post-prandiaux) et une hypoglycémie"
+      ],
+      "red": "Convulsion > 5 min, convulsions en série, coma : urgence absolue."
+    },
+    {
+      "step": "E",
+      "title": "Exposition / environnement",
+      "checks": [
+        "Température, hypothermie (fréquente et sous-estimée chez le toy)",
+        "Plaies, morsures (toujours plus profondes qu'elles ne paraissent chez un petit chien), fractures",
+        "Toxique accessible : emballage, plante, médicament, dose et heure d'ingestion",
+        "Douleur : évaluer avec une grille (CMPS-SF)"
+      ],
+      "red": "T° < 37 °C, morsure par un grand chien, ingestion toxique certaine : consultation même si l'animal paraît normal."
+    }
+  ],
+  "protocols": [
+    {
+      "code": "P01",
+      "title": "Arrêt cardio-respiratoire — RCP (RECOVER 2024)",
+      "icon": "heart",
+      "urgency": "vitale",
+      "indication": "Absence de conscience + apnée ou gasps + absence de pouls fémoral franc. Ne pas perdre plus de 10 s à confirmer.",
+      "steps": [
+        "Débuter les compressions IMMÉDIATEMENT : 100–120 /min, sans interruption, chien en décubitus latéral.",
+        "Chez un chien < 10 kg à thorax en tonneau : compression circonférentielle du thorax d'une main, ou technique cardiaque directe sur le point d'impulsion maximale.",
+        "Profondeur : 1/3 à 1/2 de la largeur du thorax, relâchement complet entre deux compressions.",
+        "Cycles de 2 minutes, changement d'opérateur à chaque cycle (la qualité s'effondre après 2 min).",
+        "Ventilation : 10 insufflations/min (1 toutes les 6 s) si intubé ; sinon 30 compressions : 2 insufflations au ballon-masque.",
+        "Analyse du rythme UNIQUEMENT entre deux cycles (< 5 s d'interruption) : asystolie/DEM → adrénaline ; FV/TV sans pouls → défibrillation.",
+        "Adrénaline (dose standard) 0,01 mg/kg IV/IO toutes les 3 à 5 min (soit 1 cycle sur 2). La dose élevée 0,1 mg/kg n'est plus recommandée en routine.",
+        "Atropine 0,04 mg/kg IV/IO si arrêt d'origine vagale ou bradycardie/asystolie.",
+        "Rechercher et traiter les causes réversibles : hypoxie, hypovolémie, hypo/hyperkaliémie, hypoglycémie (chiot toy !), hypothermie, hypocalcémie, toxiques, tamponnade, pneumothorax."
+      ],
+      "pitfalls": [
+        "Interrompre les compressions pour intuber, poser une voie ou auscultér : chaque pause fait chuter la perfusion coronaire.",
+        "Hyperventiler : augmente la pression intrathoracique et diminue le retour veineux.",
+        "Oublier la glycémie et la température chez un chiot de 1–2 kg."
+      ],
+      "ref": "RECOVER CPR Guidelines 2024"
+    },
+    {
+      "code": "P02",
+      "title": "Hypoglycémie du chiot toy",
+      "icon": "bolt",
+      "urgency": "vitale",
+      "indication": "Chiot < 4 mois abattu, ataxique, convulsivant, hypotherme. Glycémie < 0,6 g/L (3,3 mmol/L), ou tableau évocateur sans lecteur disponible.",
+      "steps": [
+        "Mesurer la glycémie capillaire si possible, mais ne pas retarder le traitement.",
+        "Conscient et déglutition présente : glucose per os (sirop, miel) — puis repas hyper-digestible dès la reprise.",
+        "Inconscient ou convulsivant : rien par la bouche. Glucose 50 % dilué au 1/4 (soit 12,5 %) : 0,5–1 ml/kg IV lent sur 5 min, en veine avec bon retour (irritant).",
+        "Sans voie veineuse : frictionner la muqueuse buccale au sirop (absorption faible mais utile), en décubitus latéral, tête basse, sans jamais verser de liquide dans la gorge.",
+        "Relais : perfusion glucosée 2,5–5 % et repas fractionnés toutes les 3–4 h.",
+        "Réchauffer progressivement (l'hypothermie entretient l'hypoglycémie).",
+        "Recontrôler la glycémie à 30 min, 1 h, 2 h : les rechutes sont la règle.",
+        "Chercher la cause : jeûne, stress, parasitisme, sepsis, shunt porto-systémique, insuffisance hépatique juvénile, hypoglycémie de la race toy."
+      ],
+      "pitfalls": [
+        "Administrer du glucose 50 % pur en bolus : nécrose veineuse et hyperosmolarité.",
+        "Renvoyer l'animal à domicile sans recontrôle : la récidive dans les 6 h est fréquente.",
+        "Attribuer une convulsion à une épilepsie sans avoir mesuré la glycémie."
+      ],
+      "ref": "Merck Vet Manual — Hypoglycemia in toy breed puppies"
+    },
+    {
+      "code": "P03",
+      "title": "Collapsus / hypoplasie trachéale — crise respiratoire",
+      "icon": "warn",
+      "urgency": "vitale",
+      "indication": "Toux sèche « en corne de brume », déclenchée par l'excitation, la traction du collier, la chaleur. Détresse inspiratoire ou expiratoire selon le segment atteint.",
+      "steps": [
+        "Rompre le cercle vicieux excitation → toux → œdème : isoler, calmer, refroidir l'ambiance.",
+        "Oxygène en flow-by ou cage à oxygène, manipulation minimale.",
+        "Sédation légère (butorphanol 0,2–0,4 mg/kg IM/IV sur prescription) : elle est souvent plus efficace que tout le reste.",
+        "Antitussif si prescrit (butorphanol, hydrocodone) ; corticoïde anti-inflammatoire de courte durée si œdème laryngo-trachéal.",
+        "Contrôler le poids, retirer définitivement le collier au profit d'un harnais.",
+        "Grader ensuite en imagerie / fluoroscopie ou trachéoscopie (grades I à IV selon la réduction de lumière) pour discuter les stents ou anneaux extraluminaux."
+      ],
+      "pitfalls": [
+        "Manipuler ou contraindre un chien en crise : peut précipiter l'asphyxie.",
+        "Traiter au long cours par corticoïdes sans prise en charge du poids et des irritants.",
+        "Utiliser un collier ou une laisse de cou chez un Yorkshire : contre-indiqué à vie."
+      ],
+      "ref": "Merck Vet Manual — Tracheal collapse"
+    },
+    {
+      "code": "P04",
+      "title": "Obstruction des voies aériennes par corps étranger",
+      "icon": "cross",
+      "urgency": "vitale",
+      "indication": "Détresse brutale, efforts de toux non productifs, panique, port de tête en extension, cyanose.",
+      "steps": [
+        "Ouvrir la gueule, tirer la langue, regarder : retirer l'objet SEULEMENT s'il est visible et saisissable (pince, pas les doigts à l'aveugle).",
+        "Chien conscient, petit gabarit : le maintenir tête vers le bas, 5 tapes fermes entre les omoplates.",
+        "Si échec : compressions abdominales sous le sternum (manœuvre de Heimlich adaptée), 5 poussées brèves vers l'avant et le haut, force adaptée à 2 kg.",
+        "Alterner 5 tapes dorsales / 5 poussées abdominales jusqu'à expulsion.",
+        "Perte de conscience : ouvrir la gueule, contrôler l'oro-pharynx, débuter la RCP (P01) et transporter sous ventilation.",
+        "Après expulsion : consultation systématique (risque d'œdème laryngé secondaire et de pneumopathie d'inhalation)."
+      ],
+      "pitfalls": [
+        "Explorer à l'aveugle avec les doigts : on enfonce l'objet.",
+        "Compressions abdominales trop violentes chez un toy : rupture d'organe.",
+        "Considérer l'épisode comme terminé une fois l'objet sorti."
+      ],
+      "ref": "Merck Vet Manual — Airway obstruction"
+    },
+    {
+      "code": "P05",
+      "title": "Convulsions / état de mal",
+      "icon": "brain",
+      "urgency": "vitale",
+      "indication": "Crise > 3–5 min, ou ≥ 2 crises en 24 h, ou crises subintrantes.",
+      "steps": [
+        "Sécuriser l'environnement, ne rien mettre dans la gueule, chronométrer.",
+        "Glycémie capillaire immédiate (hypoglycémie et shunt = causes majeures chez le jeune Yorkshire) ; corriger si basse (P02).",
+        "Température : l'hyperthermie de crise est une cause de décès — refroidir si > 40 °C.",
+        "Anticonvulsivant sur prescription : diazépam 0,5 mg/kg IV ou 1 mg/kg par voie rectale ; midazolam 0,2 mg/kg IV/IM/intranasal, répétable 2 fois.",
+        "Si les crises persistent : relais phénobarbital / perfusion continue en structure.",
+        "Transport dès la fin de la crise, dans le calme et l'obscurité relative.",
+        "Bilan : glycémie, ionogramme, calcémie, ammoniémie et acides biliaires (shunt), toxique, imagerie encéphalique (encéphalite nécrosante du Yorkshire)."
+      ],
+      "pitfalls": [
+        "Oublier la glycémie chez un chiot ou un Yorkshire.",
+        "Mettre la main dans la gueule : morsure réflexe.",
+        "Répéter les benzodiazépines sans surveiller la ventilation."
+      ],
+      "ref": "Merck Vet Manual — Seizures / status epilepticus"
+    },
+    {
+      "code": "P06",
+      "title": "Ingestion toxique — décontamination",
+      "icon": "pill",
+      "urgency": "élevée",
+      "indication": "Ingestion documentée ou fortement suspectée. La fenêtre utile de vidange gastrique est d'environ 1 à 2 h.",
+      "steps": [
+        "Documenter : molécule, dose totale, poids réel, heure exacte. Calculer la dose en mg/kg avant tout geste.",
+        "Appeler un centre antipoison vétérinaire : la conduite dépend de la molécule, pas du symptôme.",
+        "Émèse SEULEMENT si indiquée, animal conscient et < 1–2 h : apomorphine (voie conjonctivale/IV, en structure) ou peroxyde d'hydrogène 3 % 1–2 ml/kg PO, max 45 ml, une seule répétition.",
+        "Charbon activé 1–2 g/kg PO, à répéter selon la molécule (cycle entéro-hépatique).",
+        "Traitement spécifique s'il existe : N-acétylcystéine (paracétamol), vitamine K1 (anticoagulants), éthanol/fomépizole (éthylène glycol), lipides IV (toxiques lipophiles).",
+        "Surveillance ciblée : glycémie (xylitol), ECG (méthylxanthines, digitaliques), fonction hépatique (xylitol, amanites, paracétamol), fonction rénale (AINS, raisin, lys)."
+      ],
+      "pitfalls": [
+            "Faire vomir en cas de produit caustique, moussant, hydrocarbure, objet pointu, animal convulsivant, dyspnéique ou inconscient : contre-indiqué.",
+        "Utiliser du sel, de la moutarde ou de l'eau salée comme émétique : inefficace et dangereux (hypernatrémie).",
+        "Donner du lait « pour absorber » : sans effet.",
+        "Attendre les symptômes pour agir."
+      ],
+      "ref": "Merck Vet Manual — Toxicology / decontamination ; ASPCA APCC"
+    },
+    {
+      "code": "P07",
+      "title": "Choc hypovolémique / hémorragie",
+      "icon": "drop",
+      "urgency": "vitale",
+      "indication": "Tachycardie, pouls filant, TRC allongé, muqueuses pâles, hypothermie, altération de la vigilance.",
+      "steps": [
+        "Hémostase par compression directe ; garrot uniquement en dernier recours sur un membre.",
+        "Oxygène, réchauffement passif, décubitus latéral.",
+        "Voie veineuse (ou intra-osseuse si l'abord veineux est impossible — fréquent chez un chiot de 1,5 kg).",
+        "Réanimation volémique par petits bolus titrés : cristalloïde isotonique 10–20 ml/kg sur 15–20 min, réévalué après chaque bolus (le chien de très petit format se surcharge vite).",
+        "Analgésie par opioïde (méthadone 0,1–0,3 mg/kg IV, ou butorphanol) : jamais d'AINS en état de choc.",
+        "Recherche d'un saignement interne : échographie abdominale ciblée (AFAST), hématocrite/protéines totales, lactates.",
+        "Transfusion si anémie aiguë mal tolérée."
+      ],
+      "pitfalls": [
+        "Perfuser « au débit d'entretien » un animal en choc, ou au contraire à 90 ml/kg d'emblée chez un toy.",
+        "Utiliser un AINS chez un animal hypovolémique : insuffisance rénale.",
+        "Réchauffer activement avant restauration volémique : vasodilatation et collapsus."
+      ],
+      "ref": "Merck Vet Manual — Shock ; RECOVER"
+    },
+    {
+      "code": "P08",
+      "title": "Hyperthermie / coup de chaleur",
+      "icon": "flame",
+      "urgency": "vitale",
+      "indication": "T° > 40,5 °C avec contexte (chaleur, voiture, effort) et signes neurologiques ou digestifs.",
+      "steps": [
+        "Sortir de l'environnement chaud, mouiller à l'eau fraîche (pas glacée) et ventiler activement.",
+        "Refroidir jusqu'à 39,2 °C puis ARRÊTER le refroidissement (risque d'hypothermie de rebond).",
+        "Oxygène, voie veineuse, cristalloïdes en bolus titrés.",
+        "Surveiller : conscience, glycémie, coagulation (CIVD), fonction rénale, arythmies, diarrhée hémorragique.",
+        "Hospitalisation 24–48 h même en cas d'amélioration rapide : les défaillances sont différées."
+      ],
+      "pitfalls": [
+        "Immersion glacée ou alcool : vasoconstriction cutanée, refroidissement paradoxal.",
+        "Arrêter la surveillance dès la température normalisée.",
+        "Antipyrétique : inutile, l'hyperthermie n'est pas une fièvre."
+      ],
+      "ref": "Merck Vet Manual — Heat stroke"
+    },
+    {
+      "code": "P09",
+      "title": "Hypothermie du chiot / petit gabarit",
+      "icon": "snow",
+      "urgency": "élevée",
+      "indication": "T° < 37,5 °C. Rapport surface/volume défavorable, poil fin : le Yorkshire chiot se refroidit en quelques minutes.",
+      "steps": [
+        "Séchage, isolation du sol, couverture, contact corporel.",
+        "Réchauffement actif externe progressif : 0,5–1 °C par heure (bouillotte tiède enveloppée, couverture chauffante à distance de la peau).",
+        "Rien par la bouche tant que T° < 36 °C (motricité digestive nulle, risque de fausse route).",
+        "Glycémie : hypothermie et hypoglycémie vont ensemble chez le chiot.",
+        "Fluides tiédis si perfusion nécessaire.",
+        "Recontrôler la température toutes les 15 min."
+      ],
+      "pitfalls": [
+        "Réchauffer trop vite : vasodilatation périphérique, collapsus, acidose.",
+        "Appliquer une source chaude directement sur la peau : brûlures.",
+        "Alimenter un chiot hypotherme."
+      ],
+      "ref": "Merck Vet Manual — Hypothermia / neonatal care"
+    },
+    {
+      "code": "P10",
+      "title": "Luxation de rotule / boiterie aiguë",
+      "icon": "stairs",
+      "urgency": "modérée",
+      "indication": "Boiterie brutale intermittente, membre postérieur tenu en flexion, « saut de lapin » puis reprise normale. Prévalence élevée chez le Yorkshire (luxation médiale).",
+      "steps": [
+        "Repos strict et confinement, pas d'escalier, pas de saut, pas de canapé.",
+        "Examen : grade de Putnam I (réductible, rare) à IV (luxation permanente avec déformation), en comparant les deux genoux.",
+        "Analgésie sur prescription : AINS vétérinaire (meloxicam, robenacoxibe) si hydratation et fonction rénale correctes ; jamais d'AINS humain.",
+        "Glace 10 min, 2–3 fois par jour, les 48 premières heures.",
+        "Radiographies (fémoro-tibio-patellaire, alignement) et avis chirurgical si grade ≥ II ou récidives.",
+        "Différentiel chez le jeune : Legg-Calvé-Perthes (nécrose de la tête fémorale), fracture, ostéopathie nutritionnelle."
+      ],
+      "pitfalls": [
+        "Réduire de force une rotule douloureuse sans analgésie.",
+        "Autoriser la reprise d'activité dès la disparition de la boiterie.",
+        "Ibuprofène ou paracétamol : toxiques chez le chien."
+      ],
+      "ref": "Merck Vet Manual — Patellar luxation"
+    },
+    {
+      "code": "P11",
+      "title": "Traumatisme (chute, écrasement, morsure par un grand chien)",
+      "icon": "warn",
+      "urgency": "vitale",
+      "indication": "Tout traumatisme chez un chien de 1–3 kg est potentiellement grave, y compris sans plaie visible.",
+      "steps": [
+        "Immobiliser dans un contenant rigide, limiter les mouvements du rachis.",
+        "ABCDE (voir triage), puis score de traumatisme et recherche de pneumothorax, contusion pulmonaire, hémoabdomen.",
+        "Analgésie opioïde d'emblée : la douleur aggrave le choc.",
+        "Morsure : plaies en « iceberg » (dégâts sous-cutanés majeurs sous une peau intacte) — exploration chirurgicale, lavage abondant, antibiothérapie, jamais de simple suture cutanée.",
+        "Traumatisme crânien : tête surélevée à 30°, éviter la compression jugulaire, mannitol sur prescription si signes d'hypertension intracrânienne.",
+        "Radiographies thorax + abdomen, échographie ciblée, réévaluation à 12–24 h (les lésions pulmonaires se révèlent en différé)."
+      ],
+      "pitfalls": [
+        "Sous-estimer une morsure « sans plaie » : c'est l'erreur classique chez les petites races.",
+        "Comprimer le cou avec une laisse pendant le transport d'un traumatisé crânien.",
+        "Renvoyer à domicile sans radiographie de contrôle."
+      ],
+      "ref": "Merck Vet Manual — Trauma / bite wounds"
+    },
+    {
+      "code": "P12",
+      "title": "Suspicion d'occlusion / corps étranger digestif",
+      "icon": "cross",
+      "urgency": "élevée",
+      "indication": "Vomissements répétés, en jet, anorexie, douleur abdominale, absence de selles, jouet ou chaussette manquants.",
+      "steps": [
+        "À jeun, pas d'antiémétique à l'aveugle avant l'imagerie.",
+        "Radiographies abdominales de face et de profil ; échographie plus sensible pour les corps étrangers non radio-opaques et les invaginations.",
+        "Corriger l'hydratation et les électrolytes avant toute anesthésie.",
+        "Corps étranger linéaire (fil, guirlande) : jamais de traction, urgence chirurgicale.",
+        "Chirurgie ou endoscopie selon la localisation et l'ancienneté.",
+        "Différentiel : gastro-entérite, parasitisme, pancréatite, intoxication, entéropathie exsudative du Yorkshire."
+      ],
+      "pitfalls": [
+        "Tirer sur un fil visible à l'anus ou dans la gueule : risque de plicature et de perforation.",
+        "Masquer les vomissements par un antiémétique sans imagerie.",
+        "Anesthésier un animal déshydraté de 2 kg."
+      ],
+      "ref": "Merck Vet Manual — Gastrointestinal obstruction"
+    },
+    {
+      "code": "P13",
+      "title": "Encéphalopathie hépatique (shunt porto-systémique)",
+      "icon": "brain",
+      "urgency": "élevée",
+      "indication": "Yorkshire jeune, retard de croissance, signes neurologiques post-prandiaux (hébétude, pousser au mur, ataxie, convulsions), ptyalisme, cristaux d'urate.",
+      "steps": [
+        "Dosage : acides biliaires pré et post-prandiaux, ammoniémie ; NFS (microcytose), urée basse, albumine basse.",
+        "Traitement de crise : lactulose (PO ou en lavement rétentionnel), correction de la glycémie, arrêt des protéines de mauvaise qualité, antibiothérapie réduisant la flore ammoniogène (métronidazole faible dose, amoxicilline) sur prescription.",
+        "Éviter les sédatifs métabolisés par le foie et les benzodiazépines si possible.",
+        "Régime hépatique à protéines végétales/laitières, hautement digestibles.",
+        "Imagerie : échographie doppler, angio-TDM pour caractériser le shunt (intra ou extra-hépatique) et discuter la fermeture (anneau constricteur améroïde, coil).",
+        "Contrôle de la glycémie : ces animaux décompensent très vite en jeûne."
+      ],
+      "pitfalls": [
+        "Attribuer les crises à une épilepsie primaire.",
+        "Régime hyperprotéique de croissance chez un shunté.",
+        "Anesthésier sans adapter les molécules à l'insuffisance hépatique."
+      ],
+      "ref": "Merck Vet Manual — Portosystemic shunts / hepatic encephalopathy"
+    },
+    {
+      "code": "P14",
+      "title": "Détresse respiratoire d'origine cardiaque (œdème pulmonaire)",
+      "icon": "heart",
+      "urgency": "vitale",
+      "indication": "Chien d'âge moyen à âgé, souffle mitral, toux, tachypnée > 40 /min au repos, intolérance à l'effort. La maladie valvulaire dégénérative est la première cardiopathie du Yorkshire.",
+      "steps": [
+        "Oxygène, stress minimal, position sternale libre.",
+        "Furosémide sur prescription : 1–2 mg/kg IV/IM, répétable selon la réponse et la fonction rénale.",
+        "Radiographie thoracique dès que l'animal la tolère ; échocardiographie ensuite.",
+        "Compter la fréquence respiratoire de repos à domicile (objectif < 30 /min) : meilleur indicateur de suivi.",
+        "Traitement de fond : pimobendane, IEC, spironolactone selon le stade ACVIM.",
+        "Surveiller créatinine et ionogramme sous diurétiques."
+      ],
+      "pitfalls": [
+        "Radiographier un animal en détresse avant de l'oxygéner et de le stabiliser.",
+        "Poursuivre des doses élevées de diurétique sans contrôle rénal.",
+        "Confondre toux trachéale (collapsus) et toux cardiaque : les deux coexistent souvent chez le Yorkshire."
+      ],
+      "ref": "ACVIM consensus — Myxomatous mitral valve disease ; Merck Vet Manual"
+    }
+  ],
+  "drugs": [
+    {
+      "name": "Adrénaline (épinéphrine)",
+      "indication": "Arrêt cardio-respiratoire (asystolie, DEM), anaphylaxie",
+      "dose": [0.01, 0.01],
+      "unit": "mg/kg",
+      "route": "IV / IO (anaphylaxie : 0,01 mg/kg IM)",
+      "conc": 1,
+      "concLabel": "1 mg/ml (1 mg/1 ml)",
+      "note": "Répéter toutes les 3 à 5 min pendant la RCP. La dose élevée (0,1 mg/kg) n'est plus recommandée en routine (RECOVER 2024).",
+      "contra": "Aucune en ACR. Prudence si tachyarythmie."
+    },
+    {
+      "name": "Atropine",
+      "indication": "Bradycardie vagale, asystolie, intoxication aux organophosphorés (doses supérieures)",
+      "dose": [0.04, 0.04],
+      "unit": "mg/kg",
+      "route": "IV / IO / IM",
+      "conc": 1,
+      "concLabel": "1 mg/ml",
+      "note": "Dose de RCP. Vérifier la concentration : il existe aussi des présentations à 0,25 et 0,5 mg/ml.",
+      "contra": "Tachycardie, glaucome."
+    },
+    {
+      "name": "Glucose 50 % (à diluer)",
+      "indication": "Hypoglycémie symptomatique",
+      "dose": [0.5, 1],
+      "unit": "ml/kg de solution diluée à 12,5 %",
+      "route": "IV lente sur 5 min",
+      "conc": null,
+      "concLabel": "Diluer 1 volume de G50 dans 3 volumes de NaCl 0,9 %",
+      "note": "Jamais de G50 pur en périphérique. Recontrôler la glycémie à 30 min puis toutes les heures.",
+      "contra": "Ne rien administrer par la bouche à un animal inconscient."
+    },
+    {
+      "name": "Midazolam",
+      "indication": "Convulsions, état de mal",
+      "dose": [0.2, 0.3],
+      "unit": "mg/kg",
+      "route": "IV / IM / intranasal",
+      "conc": 5,
+      "concLabel": "5 mg/ml",
+      "note": "Répétable 2 fois. Voie intranasale utile sans abord veineux.",
+      "contra": "Dépression respiratoire ; prudence en insuffisance hépatique (shunt)."
+    },
+    {
+      "name": "Diazépam",
+      "indication": "Convulsions",
+      "dose": [0.5, 1],
+      "unit": "mg/kg",
+      "route": "0,5 mg/kg IV — 1 mg/kg par voie rectale",
+      "conc": 5,
+      "concLabel": "5 mg/ml",
+      "note": "Se lie au plastique des perfuseurs ; administration directe.",
+      "contra": "Insuffisance hépatique sévère, encéphalopathie hépatique."
+    },
+    {
+      "name": "Méthadone",
+      "indication": "Analgésie des douleurs modérées à sévères, traumatisme",
+      "dose": [0.1, 0.3],
+      "unit": "mg/kg",
+      "route": "IV / IM",
+      "conc": 10,
+      "concLabel": "10 mg/ml",
+      "note": "Opioïde de choix en urgence traumatique ; réévaluer toutes les 4 h.",
+      "contra": "Dépression respiratoire, traumatisme crânien non surveillé."
+    },
+    {
+      "name": "Butorphanol",
+      "indication": "Sédation légère, antitussif (collapsus trachéal)",
+      "dose": [0.2, 0.4],
+      "unit": "mg/kg",
+      "route": "IV / IM / SC",
+      "conc": 10,
+      "concLabel": "10 mg/ml",
+      "note": "Analgésie viscérale faible et brève (1–2 h), mais excellent antitussif et sédatif chez le trachéal.",
+      "contra": "Ne suffit pas pour une douleur sévère."
+    },
+    {
+      "name": "Maropitant",
+      "indication": "Vomissements, mal des transports",
+      "dose": [1, 1],
+      "unit": "mg/kg",
+      "route": "SC / IV (1 mg/kg) — PO 2 mg/kg",
+      "conc": 10,
+      "concLabel": "10 mg/ml",
+      "note": "Ne pas administrer avant l'imagerie en cas de suspicion d'occlusion.",
+      "contra": "Chiot < 8 semaines (SC) ; prudence en insuffisance hépatique."
+    },
+    {
+      "name": "Meloxicam (vétérinaire)",
+      "indication": "Douleur inflammatoire, luxation rotulienne, post-opératoire",
+      "dose": [0.1, 0.2],
+      "unit": "mg/kg",
+      "route": "SC / PO — 0,2 mg/kg J1 puis 0,1 mg/kg/j",
+      "conc": 1.5,
+      "concLabel": "Suspension orale 1,5 mg/ml",
+      "note": "Toujours après le repas, chien normovolémique, fonction rénale connue.",
+      "contra": "Choc, déshydratation, insuffisance rénale ou hépatique, ulcère, corticoïdes concomitants, chiot < 6 semaines."
+    },
+    {
+      "name": "Furosémide",
+      "indication": "Œdème pulmonaire cardiogénique",
+      "dose": [1, 2],
+      "unit": "mg/kg",
+      "route": "IV / IM, répétable selon réponse",
+      "conc": 10,
+      "concLabel": "10 mg/ml",
+      "note": "Titrer sur la fréquence respiratoire ; surveiller créatinine et kaliémie.",
+      "contra": "Déshydratation, hypokaliémie, obstruction urinaire."
+    },
+    {
+      "name": "Charbon activé",
+      "indication": "Décontamination digestive après ingestion toxique",
+      "dose": [1, 2],
+      "unit": "g/kg",
+      "route": "PO",
+      "conc": null,
+      "concLabel": "Suspension prête à l'emploi ou poudre",
+      "note": "Doses répétées toutes les 4–6 h pour les toxiques à cycle entéro-hépatique. Vérifier l'hydratation (risque d'hypernatrémie).",
+      "contra": "Animal inconscient ou convulsivant, occlusion, caustique, hydrocarbure, absence de protection des voies aériennes."
+    },
+    {
+      "name": "Peroxyde d'hydrogène 3 %",
+      "indication": "Émèse à domicile, uniquement sur avis vétérinaire",
+      "dose": [1, 2],
+      "unit": "ml/kg",
+      "route": "PO, maximum 45 ml, une seule répétition possible",
+      "conc": null,
+      "concLabel": "Solution à 3 % (10 volumes) exclusivement",
+      "note": "L'apomorphine en structure est préférable. Risque de gastrite hémorragique, surtout à concentration plus élevée.",
+      "contra": "Caustique, moussant, hydrocarbure, objet pointu, animal inconscient, convulsivant ou dyspnéique."
+    },
+    {
+      "name": "Vitamine K1",
+      "indication": "Intoxication aux anticoagulants (raticides)",
+      "dose": [2.5, 5],
+      "unit": "mg/kg/j",
+      "route": "PO en 2 prises, avec un repas gras",
+      "conc": null,
+      "concLabel": "Comprimés / solution buvable",
+      "note": "Durée 3 à 4 semaines pour les molécules de 2e génération ; contrôle du temps de Quick 48 h après l'arrêt.",
+      "contra": "Voie IV (risque anaphylactique) à éviter."
+    },
+    {
+      "name": "N-acétylcystéine",
+      "indication": "Intoxication au paracétamol, hépatotoxiques",
+      "dose": [140, 70],
+      "unit": "mg/kg (charge puis entretien)",
+      "route": "IV lente ou PO : 140 mg/kg puis 70 mg/kg toutes les 6 h",
+      "conc": null,
+      "concLabel": "Solution injectable à diluer",
+      "note": "Le paracétamol est toxique chez le chien : pas de dose « pédiatrique » sûre à improviser.",
+      "contra": "Administration IV rapide (bronchospasme)."
+    },
+    {
+      "name": "Diphenhydramine",
+      "indication": "Réaction allergique, urticaire, prémédication",
+      "dose": [2, 2],
+      "unit": "mg/kg",
+      "route": "IM / PO, toutes les 8–12 h",
+      "conc": null,
+      "concLabel": "Vérifier la spécialité : de nombreuses formes humaines associent d'autres molécules",
+      "note": "Ne traite pas un choc anaphylactique constitué : adrénaline d'abord.",
+      "contra": "Associations humaines contenant paracétamol, pseudoéphédrine ou xylitol : toxiques."
+    }
+  ],
+  "toxins": [
+    {
+      "name": "Chocolat (méthylxanthines)",
+      "agent": "Théobromine + caféine",
+      "thresholds": [
+        { "dose": 20, "effect": "Signes digestifs, agitation, polyurie" },
+        { "dose": 40, "effect": "Tachycardie, arythmies, hypertension" },
+        { "dose": 60, "effect": "Convulsions ; décès rapportés dès ≈ 100–200 mg/kg" }
+      ],
+      "unit": "mg/kg de méthylxanthines",
+      "content": [
+        { "label": "Chocolat blanc", "mgPerG": 0.1 },
+        { "label": "Chocolat au lait", "mgPerG": 2.3 },
+        { "label": "Chocolat noir", "mgPerG": 5.5 },
+        { "label": "Chocolat de couverture / pâtisserie", "mgPerG": 16 },
+        { "label": "Cacao en poudre", "mgPerG": 26 }
+      ],
+      "action": "Émèse si < 2 h et dose significative, charbon activé (doses répétées), fluides, ECG, contrôle de la température. Demi-vie longue : surveillance 24–72 h.",
+      "note": "Grande variabilité individuelle : les seuils sont indicatifs, la nature du chocolat compte plus que le poids de la tablette."
+    },
+    {
+      "name": "Xylitol",
+      "agent": "Polyol (chewing-gums, pâtisseries, dentifrices, compléments)",
+      "thresholds": [
+        { "dose": 100, "effect": "Hypoglycémie par libération d'insuline, dans les 30–60 min" },
+        { "dose": 500, "effect": "Nécrose hépatique aiguë, coagulopathie" }
+      ],
+      "unit": "mg/kg",
+      "content": [
+        { "label": "Chewing-gum (par unité, très variable)", "mgPerG": 1000 }
+      ],
+      "action": "Glycémie immédiate puis toutes les 1–2 h pendant 12 h, glucose IV, bilan hépatique à 24, 48 et 72 h, hépatoprotecteurs. Charbon peu efficace.",
+      "note": "Chez un Yorkshire de 2 kg, un seul chewing-gum peut suffire à dépasser le seuil d'hypoglycémie."
+    },
+    {
+      "name": "Raisin / raisin sec",
+      "agent": "Acide tartrique (hypothèse actuelle)",
+      "thresholds": [
+        { "dose": 2800, "effect": "Risque d'insuffisance rénale aiguë (≈ 2,8 g/kg de raisin frais)" },
+        { "dose": 500, "effect": "Raisins secs : risque dès ≈ 0,5 g/kg" }
+      ],
+      "unit": "mg/kg",
+      "content": [],
+      "action": "Décontamination précoce, fluidothérapie 48 h, surveillance urée/créatinine/phosphore et diurèse.",
+      "note": "Pas de dose sûre établie : toute ingestion chez un chien de 2 kg justifie un appel."
+    },
+    {
+      "name": "AINS humains (ibuprofène, naproxène)",
+      "agent": "Inhibiteurs COX non sélectifs",
+      "thresholds": [
+        { "dose": 25, "effect": "Ibuprofène : signes digestifs, ulcères" },
+        { "dose": 175, "effect": "Insuffisance rénale aiguë" },
+        { "dose": 400, "effect": "Signes neurologiques, convulsions" }
+      ],
+      "unit": "mg/kg",
+      "content": [],
+      "action": "Décontamination, charbon répété, protecteurs gastriques (IPP), misoprostol, fluides 48–72 h, contrôle rénal.",
+      "note": "Un comprimé de 200 mg chez un chien de 2 kg = 100 mg/kg : au-delà du seuil digestif. Le naproxène est bien plus toxique."
+    },
+    {
+      "name": "Paracétamol",
+      "agent": "Acétaminophène",
+      "thresholds": [
+        { "dose": 100, "effect": "Chien : hépatotoxicité" },
+        { "dose": 200, "effect": "Méthémoglobinémie, hémolyse" }
+      ],
+      "unit": "mg/kg",
+      "content": [],
+      "action": "N-acétylcystéine (140 mg/kg puis 70 mg/kg/6 h), oxygène, vitamine C, bilan hépatique.",
+      "note": "Un demi-comprimé de 500 mg chez un chien de 2 kg = 125 mg/kg."
+    },
+    {
+      "name": "Anticoagulants (raticides)",
+      "agent": "Bromadiolone, difénacoum, brodifacoum",
+      "thresholds": [
+        { "dose": 0.25, "effect": "Brodifacoum : risque de coagulopathie" },
+        { "dose": 1, "effect": "Coagulopathie sévère différée (2 à 5 jours)" }
+      ],
+      "unit": "mg/kg",
+      "content": [],
+      "action": "Décontamination, vitamine K1 3–4 semaines, contrôle du temps de Quick 48 h après l'arrêt, transfusion de plasma si saignement.",
+      "note": "Les signes apparaissent 2 à 5 jours après l'ingestion : ne jamais se rassurer sur un animal asymptomatique."
+    },
+    {
+      "name": "Éthylène glycol (antigel)",
+      "agent": "Éthylène glycol",
+      "thresholds": [
+        { "dose": 4400, "effect": "Dose létale approximative chez le chien (≈ 4,4 ml/kg)" }
+      ],
+      "unit": "mg/kg",
+      "content": [],
+      "action": "Urgence absolue : antidote (fomépizole, ou éthanol) dans les toutes premières heures, fluides, surveillance rénale et acido-basique.",
+      "note": "Chaque heure perdue diminue les chances : quelques millilitres suffisent chez un chien de 2 kg."
+    },
+    {
+      "name": "Plantes et divers",
+      "agent": "Muguet, laurier-rose, if, ricin, oignon/ail, alcool, cannabis, nicotine",
+      "thresholds": [],
+      "unit": "",
+      "content": [],
+      "action": "Identifier la plante (photo), appeler un centre antipoison, décontamination adaptée, surveillance ciblée (ECG pour les cardiotoxiques, hémolyse pour l'oignon/ail).",
+      "note": "Le cannabis provoque ataxie, mydriase et hypothermie : impressionnant mais rarement mortel — l'ingestion d'edibles au chocolat ou au xylitol, elle, l'est."
+    }
+  ],
+  "pain": {
+    "name": "Échelle de douleur aiguë (adaptée de la Glasgow CMPS-SF)",
+    "note": "Grille comportementale observationnelle : on regarde le chien dans sa cage, puis on le sollicite, puis on palpe la zone concernée. Score maximal 24 (20 si la mobilité ne peut pas être évaluée). Une intervention analgésique est recommandée à partir de 6/24 (ou 5/20). Un outil d'aide à la décision, jamais un diagnostic.",
+    "threshold": 6,
+    "items": [
+      {
+        "category": "Vocalisation",
+        "options": [
+          { "label": "Silencieux", "score": 0 },
+          { "label": "Pleurniche / gémit", "score": 1 },
+          { "label": "Grogne", "score": 2 },
+          { "label": "Crie", "score": 3 }
+        ]
+      },
+      {
+        "category": "Attention portée à la zone douloureuse",
+        "options": [
+          { "label": "Ignore la zone", "score": 0 },
+          { "label": "Regarde la zone", "score": 1 },
+          { "label": "Léche la zone", "score": 2 },
+          { "label": "Frotte / mordille la zone", "score": 3 },
+          { "label": "Vocalise en la protégeant", "score": 4 }
+        ]
+      },
+      {
+        "category": "Mobilité / lever",
+        "options": [
+          { "label": "Se lève et marche normalement", "score": 0 },
+          { "label": "Boiterie légère", "score": 1 },
+          { "label": "Boiterie marquée, se lève difficilement", "score": 2 },
+          { "label": "Refuse de se lever ou de bouger", "score": 3 },
+          { "label": "Ne peut pas être évalué", "score": 0 }
+        ]
+      },
+      {
+        "category": "Réaction à la palpation de la zone",
+        "options": [
+          { "label": "Aucune réaction", "score": 0 },
+          { "label": "Regarde", "score": 1 },
+          { "label": "Se retire / retire le membre", "score": 2 },
+          { "label": "Se retourne, grogne", "score": 3 },
+          { "label": "Crie, essaie de mordre", "score": 4 },
+          { "label": "Reste raide, refuse le contact", "score": 5 }
+        ]
+      },
+      {
+        "category": "Comportement général",
+        "options": [
+          { "label": "Content, interactif", "score": 0 },
+          { "label": "Calme, un peu en retrait", "score": 1 },
+          { "label": "Indifférent, ne répond pas aux stimuli", "score": 2 },
+          { "label": "Nerveux, anxieux, apeuré", "score": 3 },
+          { "label": "Déprimé, ne répond pas à la palpation", "score": 4 }
+        ]
+      },
+      {
+        "category": "Posture / confort",
+        "options": [
+          { "label": "Confortable, détendu", "score": 0 },
+          { "label": "Change souvent de position", "score": 1 },
+          { "label": "Position anormale (prière, dos voussé)", "score": 2 },
+          { "label": "Raide, immobile, tendu", "score": 3 },
+          { "label": "Refuse de bouger, tremble", "score": 4 }
+        ]
+      }
+    ]
+  },
+  "dehydration": [
+    { "label": "< 5 %", "signs": "Non détectable cliniquement", "action": "Boissons libres, surveillance" },
+    { "label": "5 %", "signs": "Muqueuses légèrement sèches, pli de peau normal", "action": "Réhydratation orale ou SC selon le contexte" },
+    { "label": "7 %", "signs": "Pli de peau persistant, muqueuses sèches, TRC limite", "action": "Fluides IV, déficit = % × poids (kg) = litres" },
+    { "label": "10 %", "signs": "Enophtalmie, pli marqué, tachycardie, extrémités froides", "action": "Fluides IV urgents, bolus titrés" },
+    { "label": "≥ 12 %", "signs": "Choc, hypotension, altération de conscience", "action": "Réanimation volémique immédiate, pronostic réservé" }
+  ],
+  "breed": [
+    {
+      "name": "Shunt porto-systémique congénital",
+      "icon": "brain",
+      "signs": "Retard de croissance, signes neurologiques post-prandiaux, ptyalisme, intolérance à l'anesthésie, cristaux d'urate d'ammonium, microcytose.",
+      "workup": "Acides biliaires pré/post-prandiaux, ammoniémie, NFS, albumine, urée ; échographie doppler puis angio-TDM.",
+      "care": "Régime hépatique, lactulose, antibiothérapie ciblée, puis fermeture chirurgicale ou endovasculaire. Prudence anesthésique majeure.",
+      "risk": "Race à prévalence élevée : à évoquer devant tout Yorkshire chiot qui ne grandit pas."
+    },
+    {
+      "name": "Collapsus / hypoplasie trachéale",
+      "icon": "warn",
+      "signs": "Toux « en corne de brume », déclenchée par l'excitation, l'effort, la chaleur, la traction du collier.",
+      "workup": "Radiographies inspiration/expiration, fluoroscopie, trachéoscopie ; gradation I à IV.",
+      "care": "Harnais à vie, contrôle du poids, air non irritant, antitussifs et sédation en crise, stents ou anneaux dans les formes sévères.",
+      "risk": "Une des affections emblématiques de la race, souvent d'expression progressive après 4–6 ans."
+    },
+    {
+      "name": "Luxation médiale de rotule",
+      "icon": "stairs",
+      "signs": "Boiterie intermittente, saut de lapin, membre tenu en flexion quelques pas puis reprise.",
+      "workup": "Palpation comparative, grades de Putnam I–IV, radiographies d'alignement.",
+      "care": "Contrôle du poids, renforcement musculaire progressif, pas de saut ni d'escalier, chirurgie si grade ≥ II ou récidives.",
+      "risk": "Prévalence élevée chez les races toy ; prévention dès le chiot (sol non glissant, pas de saut du canapé)."
+    },
+    {
+      "name": "Hypoglycémie du chiot toy",
+      "icon": "bolt",
+      "signs": "Faiblesse, ataxie, tremblements, hypothermie, convulsions, coma — souvent après un jeûne, un stress ou un transport.",
+      "workup": "Glycémie capillaire, recherche de parasitisme, sepsis, shunt, insuffisance hépatique.",
+      "care": "Repas fractionnés toutes les 3–4 h avant 4 mois, jamais plus de 6 h de jeûne, glucose oral d'urgence, correction IV si troubles de conscience.",
+      "risk": "Le premier risque vital des premières semaines chez un Yorkshire de moins de 1,5 kg."
+    },
+    {
+      "name": "Maladie parodontale et dents persistantes",
+      "icon": "tooth",
+      "signs": "Tartre précoce, halitose, gencives rouges, dents de lait non tombées, malocclusion, fractures mandibulaires spontanées.",
+      "workup": "Examen buccal éveillé puis bilan dentaire sous anesthésie avec radiographies.",
+      "care": "Brossage quotidien dès le chiot, extraction des dents de lait persistantes après 7 mois, détartrages réguliers.",
+      "risk": "Race très prédisposée : la perte osseuse mandibulaire peut devenir irréversible avant 3 ans."
+    },
+    {
+      "name": "Lymphangiectasie / entéropathie exsudative",
+      "icon": "cross",
+      "signs": "Diarrhée chronique, amaigrissement malgré l'appétit, ascite, œdèmes, panniculite.",
+      "workup": "Albumine, protéines totales, cholestérol, calcémie ionisée, α1-PI fécale, échographie, biopsies digestives.",
+      "care": "Régime très pauvre en graisses, corticoïdes, supplémentation, prise en charge des thromboses.",
+      "risk": "Le Yorkshire est la race la plus rapportée pour la lymphangiectasie intestinale primaire."
+    },
+    {
+      "name": "Encéphalite nécrosante du Yorkshire",
+      "icon": "brain",
+      "signs": "Jeune adulte : convulsions, changements comportementaux, déficits centraux d'évolution rapide.",
+      "workup": "IRM encéphalique, analyse du LCS, exclusion des causes infectieuses.",
+      "care": "Immunosuppression (corticoïdes, cytarabine…), anticonvulsivants ; pronostic réservé.",
+      "risk": "Encéphalite nécrosante spécifiquement décrite dans la race (meningo-encéphalite d'origine inconnue)."
+    },
+    {
+      "name": "Instabilité atlanto-axiale",
+      "icon": "warn",
+      "signs": "Douleur cervicale, cri au moindre mouvement du cou, ataxie voire tétraparésie, souvent après un saut ou une traction.",
+      "workup": "Radiographies cervicales prudentes (jamais en flexion forcée), TDM/IRM.",
+      "care": "Immobilisation cervicale, analgésie, avis chirurgical. Harnais obligatoire, jamais de collier.",
+      "risk": "Malformation congénitale fréquente dans les races toy, dont le Yorkshire."
+    },
+    {
+      "name": "Fontanelle persistante / fragilité crânienne",
+      "icon": "shield",
+      "signs": "Défaut d'ossification palpable au sommet du crâne, parfois associé à une hydrocéphalie.",
+      "workup": "Palpation, échographie transfontanellaire, imagerie si signes neurologiques.",
+      "care": "Protéger la tête, éviter les chutes et le port par la nuque, surveiller la croissance.",
+      "risk": "Une fontanelle non fermée impose une vigilance mécanique, mais n'est pas systématiquement pathologique."
+    },
+    {
+      "name": "Trachée, œil et peau",
+      "icon": "eye",
+      "signs": "Kératoconjonctivite sèche, distichiasis, ulcères cornéens, dermatite atopique, alopécie des robes diluées.",
+      "workup": "Test de Schirmer, fluorescéine, cytologie cutanée, allergologie.",
+      "care": "Larmes artificielles, ciclosporine ophtalmique, gestion des poils périoculaires, soins dermatologiques adaptés.",
+      "risk": "Affections chroniques fréquentes, à dépister à chaque visite annuelle."
+    }
+  ],
+  "refs": [
+    "RECOVER — Reassessment Campaign on Veterinary Resuscitation, CPR Guidelines 2024",
+    "MSD / Merck Veterinary Manual (édition en ligne, chapitres urgences, toxicologie, hépatologie, orthopédie)",
+    "WSAVA — Vaccination Guidelines et Global Nutrition Guidelines",
+    "ESCCAP — Recommandations antiparasitaires",
+    "FEDIAF / NRC — Besoins nutritionnels du chien",
+    "Reid J. et al. — Glasgow Composite Measure Pain Scale, Short Form (CMPS-SF)",
+    "ACVIM — Consensus sur la maladie valvulaire mitrale dégénérative",
+    "ASPCA Animal Poison Control Center — protocoles de décontamination"
+  ]
+}

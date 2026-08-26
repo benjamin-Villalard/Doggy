@@ -1,0 +1,335 @@
+[
+ {
+  "title": "Annexe C — 10 améliorations que je propose d'ajouter à ta demande",
+  "icon": "refresh",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Tu m'as autorisé à proposer des améliorations. Les voici, classées par rapport bénéfice/effort. Dis-moi lesquelles tu veux : je les produis."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "#",
+       "Amélioration",
+       "Pourquoi ça change vraiment le résultat",
+       "Ce qu'il me faut de toi"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**1**",
+       "**Module « J-7 : avant l'arrivée »**\n+ questionnaire éleveur",
+       "90 % des difficultés se décident avant l'adoption : âge de séparation, socialisation faite par l'élevage, test des rotules/yeux des parents, sevrage, alimentation en cours. Un chiot toy vendu avant 8 semaines ou non socialisé change tout le programme.",
+       "Date d'arrivée prévue et coordonnées/type d'élevage (particulier, professionnel, LOF ?)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**2**",
+       "**Version interactive avec scoring automatique**\nGoogle Sheets ou app web offline",
+       "La grille 0→5, les 120 items et les journaux se remplissent sur le téléphone ; les totaux, les courbes de progression et les alertes (« propreté stagnante depuis 14 jours ») se calculent seuls. Le papier se perd, l'app se consulte pendant la balade.",
+       "Ta préférence : Google Sheets, app web (un simple fichier HTML à ouvrir sur le téléphone), ou Notion"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**3**",
+       "**Calendrier automatique (.ics)**",
+       "Les séances, bilans M3/M4/M6/M9/M12, échéances vaccinales, paliers de solitude et rendez-vous toiletteur s'ajoutent à ton agenda avec rappels. La régularité est le facteur n°1 de réussite, et c'est exactement ce qui lâche à la semaine 3.",
+       "Date d'arrivée + ton fuseau/agenda (Google, Apple, Outlook)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**4**",
+       "**Protocole d'auto-évaluation vidéo**",
+       "30 s de vidéo par séance + protocole de relecture (timing du marqueur, position de la main, tension de la laisse, signaux de stress). C'est l'outil qui corrige **ton** comportement, la vraie variable. Inclut aussi la caméra pour valider la solitude.",
+       "Rien — je rédige le protocole et la grille de relecture"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**5**",
+       "**Programme personnalisé à ta vie réelle**",
+       "Le planning change du tout au tout selon : appartement/maison, étage et ascenseur, horaires et télétravail, enfants, autre animal, jardin clos ou non, ville dense ou campagne. Je peux réécrire la journée type et le plan de solitude sur mesure au lieu du modèle générique.",
+       "7 réponses courtes : logement, étage, jardin, horaires d'absence, enfants, autres animaux, ville/campagne"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**6**",
+       "**Volet nutrition & croissance chiffré**",
+       "Ration journalière calculée en grammes (et son fractionnement anti-hypoglycémie), budget friandises en kcal, transition alimentaire sur 7 jours, courbe de poids cible imprimée, critères de passage à l'alimentation adulte. Chez un toy, l'à-peu-près alimentaire se paie.",
+       "Marque et type d'aliment prévu (croquettes/ration ménagère), poids actuel du chiot"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**7**",
+       "**Fiche « intervenants » (1 page)**",
+       "Une page unique remise au dog-sitter, aux grands-parents, à la famille : les 6 règles, les mots exacts utilisés, où sont les affaires, ce qui est interdit, les urgences. Les régressions viennent presque toujours d'un tiers bienveillant qui applique d'autres règles.",
+       "Rien — je la produis en A4 recto"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**8**",
+       "**Poster mural A3 « Semaines 1 à 4 »**",
+       "Le programme des 4 premières semaines, illustré, affiché dans la cuisine, visible par tout le foyer. C'est la période où tu n'auras pas le temps d'ouvrir un PDF de 30 pages.",
+       "Rien — format A3 ou A4 paysage, à ton choix"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**9**",
+       "**Module « après 12 mois » : activités & sports adaptés aux toys**",
+       "Un Yorkshire adulte sous-stimulé devient aboyeur et anxieux. Trick dog, rally-obéissance, hoopers, cavaletti, pistage urbain : la suite logique du programme, avec les précautions articulaires propres à la race.",
+       "Tes envies (loisir simple, compétition, balades sportives)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**10**",
+       "**Kit décisionnel : choisir ses pros + budget annuel**",
+       "Grille de questions pour filtrer un éducateur (méthodes positives, refus des colliers coercitifs), un toiletteur (séances fractionnées, pas de contention), une clinique (cooperative care) ; et un budget prévisionnel réaliste sur 12 mois (véto, toilettage 6–8 séances/an, alimentation, matériel, assurance).",
+       "Ta ville/région, pour orienter la recherche"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": "Mes 3 recommandations prioritaires",
+    "icon": "check",
+    "text": "**#2 (version interactive)** parce que le suivi papier tient rarement plus de 3 semaines ; **#3 (calendrier)** parce que la régularité fait 80 % du résultat ; **#5 (personnalisation)** parce que le plan de solitude et le planning propreté dépendent entièrement de tes horaires. Les trois se font dans la même session.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": "Deux limites à assumer",
+    "icon": "warn",
+    "text": "1) Ce document est un cadre d'éducation, pas un avis vétérinaire : rotules, trachée, dents de lait, calendrier vaccinal et stérilisation se décident avec ton vétérinaire.\n\n2) Un chiot n'est pas un protocole : si un comportement d'agressivité, de peur intense ou d'anxiété de séparation apparaît, un professionnel en méthodes positives vaut mieux que trois semaines de plus de bricolage — et coûte moins cher au final.",
+    "blocks": []
+   }
+  ]
+ },
+ {
+  "title": "Fiche à afficher — Semaine 1 en une page",
+  "icon": "sun",
+  "blocks": [
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Les 8 réflexes du quotidien",
+    "icon": null
+   },
+   {
+    "type": "step",
+    "n": "1",
+    "text": "**Sortie pipi** au réveil, après chaque repas, chaque sieste, chaque jeu, et toutes les 45–60 min éveillé. Même endroit, en laisse, silence, puis fête + friandise de luxe **dehors**."
+   },
+   {
+    "type": "step",
+    "n": "2",
+    "text": "**Sommeil sacré** : 18–20 h/24. Un chiot qui mordille comme un fou doit dormir, pas se dépenser."
+   },
+   {
+    "type": "step",
+    "n": "3",
+    "text": "**3 à 5 séances de 2 minutes** par jour, jamais plus. Toujours finir sur une réussite."
+   },
+   {
+    "type": "step",
+    "n": "4",
+    "text": "**60 secondes de manipulation** par jour (une zone du corps à la fois, une friandise par contact)."
+   },
+   {
+    "type": "step",
+    "n": "5",
+    "text": "**Solitude tous les jours**, même en congés : 30 s → 3 min cette semaine, jamais au-delà de ce qu'il supporte calmement."
+   },
+   {
+    "type": "step",
+    "n": "6",
+    "text": "**Une mastication par jour** minimum, avant une sieste ou une absence."
+   },
+   {
+    "type": "step",
+    "n": "7",
+    "text": "**Une nouveauté par jour**, courte et positive (un son, une texture, un humain). S'il ne mange pas : trop fort, recule."
+   },
+   {
+    "type": "step",
+    "n": "8",
+    "text": "**4 pattes au sol** : on ne le porte que sur signal, jamais parce qu'il a peur, réclame ou grogne."
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Les mots officiels de la famille",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Signal",
+       "Mot choisi",
+       "Sens exact"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Marqueur",
+       "OUI / clic",
+       "« C'est ça, la récompense arrive »"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Nom",
+       "",
+       "« Regarde-moi »"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Rappel",
+       "ICI",
+       "« Reviens tout de suite, jackpot »"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Assis",
+       "ASSIS",
+       "Pose les fesses jusqu'au libérateur"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Couché",
+       "COUCHÉ",
+       "Coudes au sol"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Attente",
+       "PAS BOUGER",
+       "Reste jusqu'au libérateur"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Libérateur",
+       "OK",
+       "« C'est fini, tu es libre »"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Renoncement",
+       "LAISSE",
+       "Détourne-toi de ça"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Lâcher",
+       "DONNE",
+       "Ouvre la gueule, on échange"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Aller au tapis",
+       "PANIER",
+       "Va te poser là-bas"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Toilettes",
+       "PIPI",
+       "Fais tes besoins ici"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Être porté",
+       "HOP",
+       "Je te soulève, prépare-toi"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Flair",
+       "CHERCHE",
+       "Fouille et trouve"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Urgence",
+       "STOP",
+       "Arrête-toi net (usage rare)"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "stop",
+    "title": "Interdits absolus, pour tout le monde",
+    "icon": null,
+    "text": "Crier, taper, secouer, plaquer au sol · tirer sur la laisse ou utiliser un collier en traction · punir un pipi ou un grognement · réveiller le chiot · le porter quand il a peur · donner à table · le laisser sauter du canapé · le laisser seul avec un enfant sans adulte · lui laisser accès à un escalier ou à un balcon.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": null,
+    "icon": null,
+    "text": "**La question à se poser 10 fois par jour :** « Là, qu'est-ce que je suis en train de récompenser ? » Ton attention, ta voix, ton regard et tes bras sont des salaires. Paie ce que tu veux revoir.",
+    "blocks": []
+   },
+   {
+    "type": "p",
+    "text": "Programme rédigé pour Benjamin · éducation en renforcement positif · à relire au début de chaque phase.\n\nBonne route avec ton Yorkshire — et rappelle-toi que la seule métrique qui compte à la fin de l'année, c'est un chien **confiant**, pas un chien obéissant."
+   }
+  ]
+ }
+]

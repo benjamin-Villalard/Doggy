@@ -1,0 +1,1599 @@
+[
+ {
+  "title": "Partie V — Carnet de suivi",
+  "icon": "chart",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Ce carnet est le cœur du dispositif : il transforme « j'ai l'impression que ça va » en données. Imprime-le et garde-le près de la laisse."
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "1. Grille de compétences — notation 0 à 5",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Réf.",
+       "Compétence",
+       "Cible d'âge pour un 4/5",
+       "M3",
+       "M4",
+       "M6",
+       "M9",
+       "M12"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T01",
+       "Marqueur chargé",
+       "10 semaines",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T02",
+       "Répond à son nom",
+       "12 semaines",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T03",
+       "Suivi de main",
+       "12 semaines",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T04",
+       "Assis (mot seul)",
+       "4 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T05",
+       "Donne / échange",
+       "4 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T06",
+       "**Propreté**",
+       "5–6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T07",
+       "**Solitude sereine**",
+       "6 mois (3 h)",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T08",
+       "Caisse / sac / voiture",
+       "4 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T09",
+       "Laisse détendue",
+       "6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T10",
+       "**Manipulation / toilettage**",
+       "6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T11",
+       "Mastication autonome",
+       "4 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T12",
+       "Brossage des dents",
+       "5 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T13",
+       "**Rappel**",
+       "9–12 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T14",
+       "Couché",
+       "5 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T15",
+       "Pas bouger (durée/distance)",
+       "9 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T16",
+       "Marche au pied",
+       "9 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T17",
+       "**Laisse ça**",
+       "6–9 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T18",
+       "Tapis / relaxation",
+       "6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T19",
+       "Au panier à distance",
+       "6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T20",
+       "Inhibition de morsure",
+       "5 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T21",
+       "**Croisements calmes**",
+       "9 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T22",
+       "4 pattes au sol / pas de saut",
+       "6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T23",
+       "Stop d'urgence",
+       "12 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T24",
+       "Flair sur signal",
+       "6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T25",
+       "Tug avec règles",
+       "6 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T26",
+       "Rampe / pas de saut en hauteur",
+       "4 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T27",
+       "Véto / toiletteur coopératif",
+       "9 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "T28",
+       "3 tricks utiles",
+       "12 mois",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**TOTAL (sur 140)**",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": null,
+    "icon": null,
+    "text": "**Lecture des bilans.** M3 : ≥ 25/140 et surtout propreté/solitude/manipulation ≥ 2. M4 : ≥ 45. M6 : ≥ 75, aucune compétence en gras < 3. M9 : ≥ 100 (une baisse ponctuelle à M9 est normale : adolescence). M12 : ≥ 120, et 5/5 sur rappel, propreté, solitude, manipulation.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": null,
+    "icon": null,
+    "text": "**Toute compétence en gras notée < 3 au bilan M6** = priorité absolue du mois suivant, avant tout nouvel apprentissage. Ce sont les 6 compétences qui déterminent la qualité de vie du chien et la tienne.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "2. Checklist socialisation — 120 expériences (objectif : 100 cochées avant 5 mois)",
+    "icon": null
+   },
+   {
+    "type": "p",
+    "text": "Règle : coche seulement si l'expérience s'est déroulée **sous le seuil** (il mangeait, il pouvait se détourner, il n'a pas été forcé). Une exposition subie ne compte pas — elle se soustrait."
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Humains (24)",
+    "icon": "people"
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Animaux (16)",
+    "icon": "dog"
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Sons (22)",
+    "icon": "ear"
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Sols & textures (14)",
+    "icon": "paw"
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Lieux & situations (26)",
+    "icon": "home"
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Manipulations & objets (18)",
+    "icon": "hand"
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": null,
+    "icon": null,
+    "text": "**Total coché :** ____/120 à 3 mois · ____/120 à 4 mois · ____/120 à 5 mois. **Objectif :** 60 à 12 semaines, 100 à 5 mois, 120 à 8 mois. Un item peut (et doit) être répété : la socialisation s'entretient toute la vie, sinon elle s'érode.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "3. Journal de propreté — 14 jours",
+    "icon": null
+   },
+   {
+    "type": "p",
+    "text": "Note : **P** = pipi dehors, **C** = caca dehors, **×** = accident intérieur (et note l'heure exacte en marge). Objectif : 7 jours consécutifs sans ×."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Jour",
+       "7 h",
+       "8 h",
+       "9 h",
+       "10 h",
+       "11 h",
+       "12 h",
+       "13 h",
+       "14 h",
+       "15 h",
+       "16 h",
+       "17 h",
+       "18 h",
+       "19 h",
+       "20 h",
+       "21 h",
+       "22 h",
+       "Nuit",
+       "Acc."
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J1",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J2",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J3",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J4",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J5",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J6",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J7",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J8",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J9",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J10",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J11",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J12",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J13",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "J14",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "4. Journal de séances — semaine type (à photocopier)",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Jour",
+       "Séance 1\ntutoriel / niveau",
+       "Séance 2",
+       "Séance 3",
+       "Socialisation du jour",
+       "Réussite /10",
+       "Observations (fatigue, peurs, progrès)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Lun",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Mar",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Mer",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Jeu",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Ven",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Sam",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Dim",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": null,
+    "icon": null,
+    "text": "**Bilan de la semaine :** ce qui a le mieux marché ____________________ · ce qui a échoué et pourquoi (trop dur ? trop de distraction ? chiot fatigué ?) ____________________ · **décision pour la semaine suivante** ____________________",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": null,
+    "icon": null,
+    "text": "**Règle de décision hebdomadaire :** une compétence qui n'a pas progressé en 2 semaines = tu as sauté une étape. Redescends d'un niveau, augmente la valeur de la récompense, réduis la durée de séance de moitié.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "5. Suivi santé, poids & croissance",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Semaine",
+       "Date",
+       "Poids (g)",
+       "Appétit",
+       "Selles",
+       "Remarques"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S8",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S9",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S10",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S11",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S12",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S14",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S16",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "S20",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "M6",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "M8",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "M10",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "M12",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": null,
+    "icon": null,
+    "text": "**Alerte poids :** stagnation ou perte sur 2 pesées consécutives chez un chiot toy = consultation. Repère indicatif : un Yorkshire prend ~50–100 g/semaine entre 2 et 4 mois, et atteint son format adulte vers 8–10 mois.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Calendrier médical",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Acte",
+       "Date prévue",
+       "Fait le"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Visite de contrôle post-adoption",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Vaccin (rappel 1)",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Vaccin (rappel 2)",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Vermifuge (1)",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Vermifuge (2)",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Antiparasitaire externe",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Identification vérifiée (puce)",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Contrôle dents de lait (4–7 mois)",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Contrôle rotules / démarche",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Discussion stérilisation (timing)",
+       "",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Bilan annuel (12 mois)",
+       "",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "type": "h",
+    "level": 4,
+    "text": "Contacts d'urgence (à remplir maintenant)",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": false,
+      "cells": [
+       "Vétérinaire",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Urgences 24 h/24",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Centre antipoison animal",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Éducateur (méthodes positives)",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Toiletteur",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Dog-sitter / garde de secours",
+       ""
+      ]
+     }
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "6. Suivi des aléas (tableau de bord)",
+    "icon": null
+   },
+   {
+    "type": "p",
+    "text": "Compte les occurrences par jour pendant 7 jours avant de lancer un protocole, puis 7 jours après. C'est la seule façon de savoir si ça marche."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Comportement ciblé",
+       "J1",
+       "J2",
+       "J3",
+       "J4",
+       "J5",
+       "J6",
+       "J7",
+       "Protocole appliqué",
+       "Après 7 j"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Accidents pipi/caca",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "A01 / T06",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Dents sur la peau",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "A04 / T20",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Aboiements de demande",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "A05",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Vocalises en absence (min)",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "A06 / T07",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Sauts sur les personnes",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "T22",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Rappels échoués",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "A11 / T13",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Réactions à un chien",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "A13 / T21",
+       ""
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Autre : ______________",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       "",
+       ""
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "Annexe A — Lire son chien : signaux d'apaisement & de stress",
+  "icon": "eye",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Un Yorkshire communique avant de mordre ou de paniquer. Savoir lire ces signaux, c'est pouvoir arrêter une exposition **à temps** — la compétence humaine la plus rentable de tout ce programme."
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": "Chien détendu (on peut continuer)",
+    "icon": "check",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": false,
+      "items": [
+       "Corps souple, mouvements arrondis",
+       "Bouche légèrement ouverte, langue relâchée",
+       "Queue à hauteur neutre, remuement large",
+       "Oreilles mobiles, dirigées vers l'intérêt",
+       "Il mange, il renifle, il explore",
+       "Il choisit d'approcher puis de repartir",
+       "Il s'ébroue puis reprend (décharge normale)"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": "Inconfort / stress léger (baisse l'intensité)",
+    "icon": "warn",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": false,
+      "items": [
+       "Léchage de truffe répété",
+       "Bâillement hors contexte de fatigue",
+       "Détournement de la tête / du regard",
+       "Grattage soudain, ébrouements répétés",
+       "Halètement sans chaleur ni effort",
+       "Patte avant levée, dos arrondi",
+       "Il ralentit, marche en arc de cercle",
+       "Il refuse une friandise **qu'il aime**"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "stop",
+    "title": "Stress fort (stop immédiat, augmente la distance)",
+    "icon": "cross",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": false,
+      "items": [
+       "Figement (immobilité brutale)",
+       "Queue serrée sous le ventre, corps tassé",
+       "Tremblements, tentative de fuite/grimper sur toi",
+       "Oreilles plaquées, œil de baleine (blanc visible)",
+       "Pupilles dilatées, respiration rapide",
+       "Grognement, babines retroussées",
+       "Aboiement aigu répété, salivation",
+       "Miction involontaire"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "Ce qu'il faut faire quand tu vois un signal de la colonne 2 ou 3",
+    "icon": null,
+    "text": null,
+    "blocks": [
+     {
+      "type": "step",
+      "n": "1",
+      "text": "**Augmente la distance** immédiatement (5 à 10 m) — sans porter le chien si possible."
+     },
+     {
+      "type": "step",
+      "n": "2",
+      "text": "**Reprends l'exercice deux niveaux en dessous**, ou termine la séance sur autre chose de facile et connu."
+     },
+     {
+      "type": "step",
+      "n": "3",
+      "text": "**Décompression** : reniflage libre 10 min, mastication, sommeil. Le cortisol met 24–72 h à redescendre après un vrai stress : ne réexpose pas le lendemain au même niveau."
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "stop",
+    "title": "Ne jamais punir un grognement",
+    "icon": "cross",
+    "text": "Le grognement est un avertissement, donc une chance. Le punir apprend au chien à sauter l'étape de l'avertissement : c'est ainsi qu'on fabrique un chien qui « mord sans raison ». On note ce qui l'a déclenché, on retire la contrainte, on travaille le contre-conditionnement.",
+    "blocks": []
+   }
+  ]
+ },
+ {
+  "title": "Annexe B — Sécurité & toxiques",
+  "icon": "shield",
+  "blocks": [
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "Aliments toxiques ou dangereux",
+    "icon": null,
+    "text": "Chocolat · xylitol (chewing-gums, pâtisseries « sans sucre ») · raisin et raisin sec · oignon, ail, poireau, échalote · avocat · alcool · caféine · noix de macadamia · pâte à pain crue · os cuits · aliments très salés/gras · lait en quantité. **Chez un chien de 1–2 kg, une dose minuscule suffit** : appelle immédiatement le vétérinaire ou un centre antipoison, avec le poids et la quantité ingérée.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "Plantes & produits",
+    "icon": null,
+    "text": "Muguet, laurier-rose, dieffenbachia, yucca, ficus, philodendron, if, azalée, tulipe (bulbe) · antigel, produits ménagers, pastilles lave-vaisselle, tabac, cannabis, médicaments humains (paracétamol, ibuprofène = toxiques) · antipuces pour chats (perméthrine).",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "Dangers domestiques spécifiques aux toys",
+    "icon": null,
+    "text": "Être marché/écrasé (cuisine, escaliers) · s'endormir sous un coussin de canapé · fenêtres et balcons (barreaux < 5 cm, moustiquaires renforcées) · lave-linge/sèche-linge ouverts · portes qui claquent · sacs plastiques · petits objets avalables (bouchons, écouteurs, élastiques) · chaises à roulettes.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": "Dehors",
+    "icon": null,
+    "text": "Chaleur (bitume, voiture — jamais seul dedans) · froid (manteau, temps limité) · rapaces et grands chiens en liberté (un Yorkshire peut être pris pour une proie : ne le laisse jamais seul dans un jardin non clos) · épillets dans le poil et les oreilles · appâts et déchets au sol · routes : longe systématique en ville.",
+    "blocks": []
+   }
+  ]
+ }
+]
