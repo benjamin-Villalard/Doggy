@@ -1,0 +1,131 @@
+[
+ {
+  "code": "A01",
+  "title": "Accidents de propreté persistants",
+  "lines": [
+   "**Causes probables :** sorties trop espacées, sortie « ratée » (jeu au lieu de faire), nettoyage insuffisant (odeur résiduelle), accès trop grand au logement, punition antérieure (il se cache), infection urinaire.",
+   "**Protocole :** 1) véto (bandelette urinaire) si fréquence en hausse. 2) Retour à des sorties toutes les 45 min + les 6 moments obligatoires. 3) Journal 14 jours : note heure/lieu de chaque accident et repère la sortie manquante. 4) Restreins l'espace (parc, laisse à la ceinture 3 jours = « laisse ombilicale »). 5) Nettoyant enzymatique sur tous les anciens spots. 6) Récompense niveau 3 **dehors, immédiatement**, jamais à l'intérieur au retour.",
+   "[Ne jamais] gronder, mettre le nez dedans, punir, nettoyer devant lui."
+  ]
+ },
+ {
+  "code": "A02",
+  "title": "Refuse de faire dehors (et fait dedans juste après)",
+  "lines": [
+   "**Causes :** froid/pluie (Yorkshire +++), sol inhabituel (gravier, herbe mouillée), stress de la rue, il a appris que « faire » = rentrer immédiatement (donc il se retient pour rester dehors), tapis-pipi encore présent.",
+   "**Protocole :** manteau imperméable conditionné ; coin abrité ; **rester dehors 5 min après** qu'il ait fait (la balade est la récompense) ; supprimer les tapis progressivement (déplacer le tapis de 30 cm/jour vers la porte, puis dehors, puis retirer) ; lieu très calme au début ; si rien en 5 min → rentrer, parc 10 min, ressortir."
+  ]
+ },
+ {
+  "code": "A03",
+  "title": "Pleure la nuit",
+  "lines": [
+   "**À distinguer :** besoin de sortir (vrai à 8–12 semaines) vs demande d'attention.",
+   "**Protocole :** couchage **dans ta chambre** les premières semaines (la solitude nocturne s'installe après, progressivement) ; dernière sortie tardive ; 1 sortie nocturne **silencieuse et fonctionnelle** (pas de jeu, pas de parole, pas de lumière) ; sur les pleurs de demande : main posée sur la caisse sans parler, ou ignorer 100 % (l'intermittence est le pire) ; mastication au coucher ; journée bien remplie mentalement.",
+   "**Trajectoire normale :** nuits complètes entre 12 et 16 semaines."
+  ]
+ },
+ {
+  "code": "A04",
+  "title": "Mordille fort, pince les chevilles, « crise du soir »",
+  "lines": [
+   "**Cause n°1 :** dette de sommeil (pic 18 h–21 h). **Cause n°2 :** dentition. **Cause n°3 :** jeu renforcé par nos réactions.",
+   "**Protocole :** T20 (redirection + retrait d'attention) ; sieste forcée en caisse dès les premiers signes ; mastication froide ; 2 séances de flair/jour ; pas de jeux de mains, jamais ; prévenir les enfants : on ne court pas, on ne crie pas — on devient un arbre.",
+   "**Disparition attendue :** nette baisse vers 4–5 mois, quasi-nulle à 6 mois."
+  ]
+ },
+ {
+  "code": "A05",
+  "title": "Aboiement (alerte, demande, ennui, fenêtre)",
+  "lines": [
+   "**Identifie le type :**",
+   "• **Demande** (te regarde en aboyant) → extinction totale + payer le silence : attends 2 s de silence → marque + donne. Attention au pic d'extinction (2–4 jours pires).",
+   "• **Alerte/territorial** (sonnette, couloir, fenêtre) → gestion visuelle (film opaque, retirer l'accès au canapé sous la fenêtre), bruit blanc, puis « merci » : tu vas voir, tu marques 1–2 aboiements, tu rappelles au tapis (T19) et tu paies.",
+   "• **Ennui** → besoins : flair, mastication, sommeil, séances.",
+   "• **Détresse en absence** → A06, ne pas traiter comme de l'aboiement ordinaire.",
+   "[Jamais] collier anti-aboiement, spray, cri (ton cri = tu aboies avec lui)."
+  ]
+ },
+ {
+  "code": "A06",
+  "title": "Hurle/panique dès que tu sors (anxiété de séparation)",
+  "lines": [
+   "**Signes de vraie anxiété :** vocalises > 10 min, salivation, destruction des issues, malpropreté, refus de manger en absence, panique dès les rituels de départ.",
+   "**Protocole :** retour à T07 **étape 1**, progression par paliers de 10 % filmés ; ne jamais dépasser le seuil de panique ; désensibiliser les rituels de départ ; enrichissement au départ (tapis de léchage) ; **en attendant**, ne le laisse pas seul plus longtemps que sa capacité (dog-sitter, famille, garderie) — chaque épisode de panique aggrave le trouble.",
+   "**Pro requis** si pas d'amélioration en 3 semaines : vétérinaire comportementaliste (un traitement peut être indiqué en soutien du protocole)."
+  ]
+ },
+ {
+  "code": "A07",
+  "title": "Se fige, refuse d'avancer, ne mange plus dehors",
+  "lines": [
+   "**Lecture :** il est au-dessus de son seuil. Le refus de nourriture est **le** signe fiable.",
+   "**Protocole :** reviens à un environnement plus calme (parking désert, allée, jardin) ; séances de 3 min ; **ne tire jamais sur la laisse** et n'insiste pas ; assieds-toi et attends, laisse-le observer ; paie le moindre pas volontaire ; augmente très progressivement (1 nouveauté par sortie).",
+   "[Jamais] le porter jusqu'au stimulus, ni le forcer à s'en approcher (flooding = aggravation durable)."
+  ]
+ },
+ {
+  "code": "A08",
+  "title": "Refuse le harnais / se secoue, se raidit",
+  "lines": [
+   "**Protocole :** T09-A refait à zéro sur 7 jours : harnais = distributeur de poulet, la tête passe **d'elle-même**, on retire aussitôt. Vérifie le matériel : frottement des aisselles, sangle trop serrée, bruit du clip près de l'oreille, harnais à enfiler par les pattes (souvent mal supporté → préférer un modèle qui se clipse)."
+  ]
+ },
+ {
+  "code": "A09",
+  "title": "Ramasse et avale tout (pica, coprophagie)",
+  "lines": [
+   "**Risque réel** chez un chien de 2 kg : occlusion, toxique, os. **Protocole :** T17 (« laisse ça ») + T05 (échange) entraînés à froid ; longe courte dans les zones à déchets ; jeux de flair **autorisés** pour canaliser le besoin de fouille ; ramassage immédiat des selles ; ne jamais courir vers lui pour lui retirer (il apprend à avaler vite) → échange systématique.",
+   "**Véto** si coprophagie fréquente (parasites, malabsorption, ration inadaptée)."
+  ]
+ },
+ {
+  "code": "A10",
+  "title": "Grogne sur sa gamelle / son jouet / le canapé (gardiennage)",
+  "lines": [
+   "**Règle absolue :** le grognement est une **information précieuse**. On ne le punit jamais — un chien puni pour grogner mord sans prévenir.",
+   "**Protocole :** stop total aux confrontations ; personne n'approche pendant les repas ; ton passage près de la gamelle = tu **ajoutes** quelque chose de meilleur ; échange systématique (T05) ; retirer les objets de haute valeur de l'accès libre ; apprendre « au panier » pour libérer un lieu sans conflit.",
+   "**Pro requis** si raidissement, fixation, morsure, ou gardiennage d'une personne."
+  ]
+ },
+ {
+  "code": "A11",
+  "title": "Ne revient plus au rappel (typique 5–9 mois)",
+  "lines": [
+   "**Protocole :** longe remise **immédiatement** 3–4 semaines (arrêter d'entraîner l'échec) ; changer de mot si l'ancien est usé ; récompenses niveau 3 exclusives ; 5 rappels-surprise/jour payés en jackpot ; ne jamais appeler pour la fin de balade → au contraire, appelle, paie, relâche 10 fois par balade ; rends les retours imprévisibles et payants.",
+   "[Jamais] de reproche au retour, jamais courir après lui, jamais appeler deux fois."
+  ]
+ },
+ {
+  "code": "A12",
+  "title": "Tire en laisse",
+  "lines": [
+   "**Protocole :** T09 rejoué en intérieur ; règle de la statue appliquée par **toute** la famille (une seule personne qui laisse tirer annule le travail) ; paiement fréquent à la couture ; balades divisées en « marche au pied » (courte) et « libre reniflage » (longue, laisse détendue, il choisit) ; harnais en Y correctement ajusté.",
+   "[Jamais] collier étrangleur, coups de laisse, laisse enrouleur (elle enseigne la tension permanente)."
+  ]
+ },
+ {
+  "code": "A13",
+  "title": "Aboie/charge les autres chiens en laisse (réactivité)",
+  "lines": [
+   "**Lecture :** chez un chien de 2 kg, c'est presque toujours de la **peur défensive** ou de la frustration, pas de la « domination ».",
+   "**Protocole :** augmenter la distance (le seul outil qui marche vite) ; T21 (LAT) 3–4 séances/semaine ; demi-tour joyeux préventif ; laisse toujours détendue (la tension crée la réaction) ; interdire les nez-à-nez frontaux en laisse ; 2 copains de jeu stables plutôt que des rencontres au hasard.",
+   "**Pro requis** si dégradation ou morsure. Plus tôt = beaucoup plus facile."
+  ]
+ },
+ {
+  "code": "A14",
+  "title": "Panique chez le vétérinaire / le toiletteur",
+  "lines": [
+   "**Protocole :** T27 (visites à blanc mensuelles) ; entraîner les positions à la maison ; pâte à lécher pendant les soins ; demander une consultation « sans contention forcée », en salle calme, avec tapis antidérapant ; toiletteur choisi pour ses méthodes (visite d'essai de 10 min, séances courtes fractionnées) ; sédation légère à discuter avec le véto plutôt qu'une contention traumatisante."
+  ]
+ },
+ {
+  "code": "A15",
+  "title": "Bonus — « Il a régressé sur tout, d'un coup » (6–9 mois)",
+  "lines": [
+   "**Lecture :** adolescence + période de peur n°2. C'est prévu au programme (phase 4), ce n'est pas un échec de ta part.",
+   "**Protocole :** baisse tous les critères de 50 % pendant 3 semaines, longe partout, récompenses niveau 3, séances plus courtes et plus fréquentes, zéro conflit, entretien du sommeil et de la mastication. Réévalue avec la grille du carnet à la fin du mois : la remontée est presque toujours nette."
+  ]
+ }
+]

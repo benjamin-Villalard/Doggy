@@ -1,0 +1,859 @@
+[
+ {
+  "title": "5. Calendrier des périodes sensibles",
+  "icon": "clock",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "L'ordre du programme n'est pas arbitraire : il suit les fenêtres neurologiques du chiot. Ce qui n'est pas fait dans la fenêtre coûte 10 fois plus d'efforts ensuite."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Âge",
+       "Ce qui se passe dans sa tête",
+       "Priorité absolue",
+       "Erreur classique"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**8–12 sem.**\nfenêtre de socialisation, se referme vite",
+       "Accepte le nouveau sans peur, apprend « le monde est sûr ». Mémoire d'apprentissage maximale.",
+       "Exposition **positive, courte, variée** (checklist 120 items) · propreté · solitude · manipulations · inhibition de morsure",
+       "Confinement total « en attendant les vaccins » → chien peureux à vie"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**8–11 sem.**\npériode de peur n°1",
+       "Une expérience effrayante peut marquer durablement.",
+       "Éviter les traumatismes : pas de grands chiens brutaux, pas de foule dense, pas de vétérinaire douloureux sans contre-conditionnement",
+       "Forcer le contact « pour qu'il s'habitue » (flooding)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**3–4 mois**",
+       "Dentition douloureuse, curiosité maximale, il suit encore naturellement.",
+       "Marche en laisse, rappel facile (à exploiter **maintenant**), obéissance de base, mastication",
+       "Attendre 6 mois pour commencer le rappel"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**4–6 mois**",
+       "Test des limites, découverte de l'indépendance, généralisation.",
+       "Généraliser en 10 lieux, autocontrôles, croisements chiens choisis, rappel en longe",
+       "S'arrêter parce que « il sait déjà à la maison »"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**6–9 mois**\npériode de peur n°2 + puberté",
+       "Réapparition de peurs sur des choses connues ; hormones ; sélectivité auditive.",
+       "Ne rien lâcher, revenir en arrière sans dramatiser, remettre la longe, re-socialiser en douceur",
+       "Croire à de la provocation et durcir → casse la relation"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**9–12 mois**",
+       "Stabilisation progressive, maturité sociale en cours (jusqu'à ~18 mois chez les toys).",
+       "Fiabiliser (proofing), renforcement variable, autonomie, sport léger",
+       "Arrêter tout entraînement : les acquis non entretenus s'érodent"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": "Socialiser avant la fin des vaccins — protocole sûr",
+    "icon": "shield",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": false,
+      "items": [
+       "Le porter en ville / le poser sur une **serviette** à toi (banc, terrasse) : il voit, entend, sent.",
+       "Chiens : uniquement chiens **connus, vaccinés, doux** chez des amis.",
+       "Éviter : parcs à chiens, zones à forte densité canine, sols souillés.",
+       "Faire venir le monde chez toi : 1 visiteur nouveau tous les 2 jours (âges, tailles, tenues variés)."
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Valide toujours le calendrier vaccinal avec ton vétérinaire ; l'objectif est de ne **jamais** perdre la fenêtre 8–12 semaines."
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": "Règle d'or de toute exposition : le chiot choisit",
+    "icon": "eye",
+    "text": "**Séquence LAT (Look At That)** : il regarde le stimulus (à distance) → tu marques → tu récompenses → il se détourne librement. S'il ne mange pas, s'il se fige, s'il tremble ou tire pour partir : **tu es trop près**. Recule de 5 m et recommence. Une exposition ratée vaut moins que pas d'exposition.",
+    "blocks": []
+   }
+  ]
+ },
+ {
+  "title": "Phase 0 — Les 72 premières heures",
+  "icon": "home",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Objectif unique : **installer la sécurité**. On n'éduque rien, on ne montre le chiot à personne, on ne teste rien. Tout ce qui se joue ici conditionne 12 mois."
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Jour 1 — Arrivée",
+    "icon": null
+   },
+   {
+    "type": "step",
+    "n": "1",
+    "text": "Trajet retour : dans un sac de transport, sur un tissu de l'élevage (odeur de la fratrie), **à l'arrière, calé**. Ne pas le tenir dans les bras en voiture."
+   },
+   {
+    "type": "step",
+    "n": "2",
+    "text": "Arrivée : **directement au coin toilettes**. Attendre sans parler jusqu'à 5 min. S'il fait : marqueur + friandise + fête discrète."
+   },
+   {
+    "type": "step",
+    "n": "3",
+    "text": "Découverte libre de la zone de vie, au sol, sans le suivre ni le porter. Pas de visiteurs, pas d'enfants excités, télé baissée."
+   },
+   {
+    "type": "step",
+    "n": "4",
+    "text": "Petit repas identique à celui de l'élevage (transition alimentaire sur 7 jours si tu changes)."
+   },
+   {
+    "type": "step",
+    "n": "5",
+    "text": "Dès les premiers signes de fatigue : caisse, porte ouverte, mastication. Personne ne le dérange."
+   },
+   {
+    "type": "step",
+    "n": "6",
+    "text": "Nuit 1 : caisse ou panier **dans ta chambre**, à côté du lit. On ne laisse pas un chiot de 2 mois seul la nuit — on déplacera le couchage progressivement plus tard si tu le souhaites."
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Jour 2",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "Rythme de la journée type (sorties toutes les 45 min éveillé, après chaque sieste, repas, jeu).",
+     "On installe le **marqueur** (T01) : 2 séances de 10 clics/friandise, 60 secondes chacune.",
+     "On charge son **nom** (T02) : 10 répétitions, jamais utilisé pour gronder.",
+     "Premier toilettage-contact : 20 s de caresses-brosse (T10 étape 1)."
+    ]
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Jour 3",
+    "icon": null
+   },
+   {
+    "type": "list",
+    "ordered": false,
+    "items": [
+     "Première visite vétérinaire « à blanc » si possible : pesée, friandises, pas de soin (T27).",
+     "Premier micro-départ : tu sors 30 s en fermant la porte, il a une mastication (T07 étape 1).",
+     "Premier item de socialisation : aspirateur éteint, puis en marche dans une autre pièce, friandises."
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "stop",
+    "title": "Les 7 erreurs des 72 h",
+    "icon": "cross",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": true,
+      "items": [
+       "Inviter toute la famille et les amis « voir le chiot ».",
+       "Le porter en permanence (il n'apprend jamais à se déplacer, ni à se calmer seul).",
+       "Le laisser seul la première nuit dans une autre pièce (panique = association durable).",
+       "Le réveiller pour jouer ou pour des photos.",
+       "Le gronder pour un pipi (il apprend à se cacher pour uriner).",
+       "Le laisser en accès libre à tout le logement (impossible de surveiller, bêtises entraînées).",
+       "Longue balade / sortie en ville / rencontre avec un grand chien."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": "Le contrat familial (à signer, vraiment)",
+    "icon": "people2",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": true,
+      "items": [
+       "Canapé/lit : autorisé ou non ? (décidez maintenant, définitif — et si oui, **avec une rampe/marche**)",
+       "Aucune nourriture donnée à table, jamais, par personne.",
+       "On ne le porte que sur le signal « hop », jamais quand il a peur ou qu'il grogne.",
+       "Un chiot qui dort est sacré.",
+       "Mêmes mots pour les mêmes signaux (liste affichée).",
+       "On ignore les sauts et les aboiements de demande : on se détourne, on attend 4 pattes au sol / le silence."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "york",
+    "title": "Yorkshire — surveillance hypoglycémie J1–J7",
+    "icon": "paw",
+    "text": "Le stress du changement + un petit estomac = risque d'hypoglycémie. Signes : abattement, démarche titubante, tremblements, gencives pâles, chiot « mou ». **Réponse immédiate** : une petite quantité de miel/glucose sur les gencives et **appel au vétérinaire sans attendre**. Prévention : 4 repas/jour, jamais plus de 5–6 h sans manger le jour.",
+    "blocks": []
+   }
+  ]
+ },
+ {
+  "title": "Phase 1 — 8 à 12 semaines : fondations & socialisation",
+  "icon": "paw",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "**Mission de la phase :** le chiot doit sortir de ces 4 semaines avec : le monde est sûr, les humains sont bons, la solitude est banale, les dents ne se serrent pas sur la peau, et les besoins se font dehors. L'obéissance est secondaire ici."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Semaine",
+       "Colonne 1 · Socialisation",
+       "Colonne 2 · Apprentissages",
+       "Colonne 3 · Vie / besoins",
+       "Critère de fin de semaine"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S8–9**\n(sem. 1)",
+       "Sons maison (aspirateur, mixeur, sonnette, sèche-cheveux à distance) · 3 visiteurs adultes calmes · sols variés (carrelage, parquet, tapis, herbe)",
+       "T01 marqueur · T02 nom · T03 leurre/suivi · T06 propreté (démarrage)",
+       "T07 solitude 30 s→3 min · T10 manipulation 60 s/j · T11 mastication quotidienne · siestes en caisse",
+       "Vient à son nom 8/10 en intérieur ; 0 punition ; ≥ 12 items socialisation cochés"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S9–10**\n(sem. 2)",
+       "Ville portée 10 min (bus, poussettes, vélos vus de loin) · 1 chien adulte doux et vacciné · enfants observés à 5 m · parapluie, casquette, valise à roulettes",
+       "T04 assis (capture) · T05 échange/lâcher · T13 « viens » à 2 m en intérieur",
+       "T08 harnais + caisse-transport à vide · T07 solitude 3→10 min · T12 dents (doigt seul)",
+       "Assis sur leurre 8/10 · accepte le harnais sans se figer · seul 10 min sans vocaliser"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S10–11**\n(sem. 3)",
+       "2 nouveaux lieux extérieurs calmes/jour · hommes à barbe/chapeau, personne âgée, fauteuil roulant · trottinette de loin · voiture (moteur, 2 min à l'arrêt)",
+       "T09 laisse en intérieur puis jardin · T14 couché · T21 gestion croisements (LAT)",
+       "Premier trajet voiture 5 min vers un lieu agréable · brossage complet 90 s · griffes : 1 patte/jour",
+       "Marche 10 pas laisse détendue en intérieur · mange dehors (= sous seuil) · 40 items cochés"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S11–12**\n(sem. 4)",
+       "Terrasse de café 10 min · marché/rue commerçante en bordure · 5 nouveaux humains, dont 1 enfant encadré · 1 séance de jeu avec chiot de taille compatible",
+       "T15 « pas bouger » 3 s · T18 tapis 30 s · T17 « laisse ça » niveau 1",
+       "Solitude 20–30 min · dormir dans son couchage à côté du lit · toilettage : oreilles + pattes",
+       "Bilan M3 (grille du carnet) : ≥ 2/5 sur 8 compétences ; 60 items cochés"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": "Les 5 non-négociables de la phase 1",
+    "icon": "check",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": true,
+      "items": [
+       "**Solitude tous les jours**, même si tu es en congés/télétravail. C'est la seule prévention de l'anxiété de séparation, fléau n°1 du Yorkshire.",
+       "**Manipulation quotidienne** 60 s (T10) : c'est un chien à toilettage à vie.",
+       "**Sorties propreté minutées** (T06) : la vessie est minuscule, la régularité fait tout.",
+       "**Aucune main dans la bouche** : on redirige toujours sur un jouet (T20).",
+       "**Quantité < qualité** en socialisation : 3 expositions calmes valent mieux que 20 subies."
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": "Aléas typiques de la phase 1 (→ fiches)",
+    "icon": "warn",
+    "text": null,
+    "blocks": [
+     {
+      "type": "table",
+      "rows": [
+       {
+        "header": false,
+        "cells": [
+         "Pipi à l'intérieur malgré tout",
+         "A01"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Refus de faire dehors",
+         "A02"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Pleure la nuit",
+         "A03"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Mordille les mains, les chevilles",
+         "A04"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Aboie pour réclamer",
+         "A05"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Hurle dès que tu sors",
+         "A06"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Se fige / refuse d'avancer dehors",
+         "A07"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Refuse le harnais",
+         "A08"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Ne mange pas dehors (stress)",
+         "A07"
+        ]
+       },
+       {
+        "header": false,
+        "cells": [
+         "Avale tout par terre",
+         "A09"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "Phase 2 — 3 à 4 mois : obéissance de base & conquête de l'extérieur",
+  "icon": "leash",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "**Mission :** transformer les fondations en compétences utilisables dehors, et exploiter la « fenêtre du suiveur » (le chiot de 3–4 mois te suit spontanément : c'est **maintenant** qu'on construit un rappel en or)."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Semaine",
+       "Socialisation / exposition",
+       "Compétences",
+       "Vie quotidienne",
+       "Critère"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S13–14**",
+       "3 environnements/semaine : rue passante, parking, gare (extérieur), forêt, ascenseur",
+       "T13 rappel niveau 2 (longe 5 m, jardin) · T09 laisse dehors 20 pas · T16 marche au pied 5 pas",
+       "Dentition : rotation mastications (T11) · brossage dents avec brosse (T12) · 1 h de solitude",
+       "Rappel 8/10 en longe sans distraction · pipis dehors 90 %"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S15–16**",
+       "Rencontres chiens choisies (2/semaine, chiens stables) · enfants proches, encadrés · toiletteur : visite à blanc",
+       "T15 « pas bouger » 10 s · T17 « laisse ça » niveau 2 (nourriture au sol) · T19 « au panier » à distance",
+       "Premier vrai toilettage complet · voiture 15 min · restaurant/terrasse 20 min sur tapis",
+       "Reste couché 10 s à 1 m · laisse un morceau de fromage au sol sur signal"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S17–18**",
+       "Chiot-classe / école du chiot si disponible · vélo, skate à 15 m · autres animaux (chat, chevaux, poules) à distance",
+       "T13 rappel avec distraction faible · T16 marche au pied 15 pas + changements de direction · T22 4 pattes au sol",
+       "Seul 2 h · dort dans son couchage seul dans la pièce · griffes coupées entièrement",
+       "Ne saute plus sur les visiteurs (8/10) · marche 50 m laisse détendue"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "**S19–20**",
+       "1 lieu « difficile » par semaine, toujours sous seuil (marché, école à la sortie, brocante)",
+       "T23 « stop/assis à distance » · T24 jeux de flair structurés · T25 tug avec règles (prendre/lâcher)",
+       "Bilan M4 · révision de tous les T01–T22 en 3 lieux différents",
+       "Bilan M4 : ≥ 3/5 sur 12 compétences · 100 items socialisation"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "york",
+    "title": "Yorkshire — la dentition (3 à 6 mois)",
+    "icon": "tooth",
+    "text": "Les dents de lait tombent, les gencives sont douloureuses : mordillement en hausse, parfois régression de la propreté et perte d'appétit. Solutions : mastications **molles et froides** (carotte réfrigérée, jouet en caoutchouc souple mouillé et congelé 20 min, linge humide congelé), rotation pour ne pas lasser, jamais d'os cuit ni de bois.\n\n**À surveiller et à signaler au vétérinaire :** dent de lait persistante à côté de la définitive (très fréquent chez les toys → tartre et malocclusion), mauvaise haleine, gencive rouge. Le brossage quotidien commence **maintenant**, pas à 2 ans.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": "La règle d'or du rappel (à ne jamais casser)",
+    "icon": "recall",
+    "text": null,
+    "blocks": [
+     {
+      "type": "list",
+      "ordered": true,
+      "items": [
+       "On n'appelle **jamais** pour quelque chose de désagréable (bain, fin de balade, coupe de griffes) → va le chercher.",
+       "On n'appelle jamais deux fois : si pas de réponse, on se rapproche, on aide, on ne répète pas le mot.",
+       "Le retour est **toujours** payé, à vie, même à 8 ans.",
+       "Un rappel ne s'entraîne qu'en dessous du seuil de distraction : longe obligatoire jusqu'à 8/10 dans le contexte."
+      ]
+     },
+     {
+      "type": "p",
+      "text": "Rappel + Yorkshire = enjeu vital : un chien de 2 kg qui part sur une route ou croise un chien de chasse n'a aucune marge d'erreur."
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "title": "Phase 3 — 4 à 6 mois : généralisation & autocontrôles",
+  "icon": "target",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "**Mission :** rendre les acquis valables **partout**, et installer la capacité à se calmer seul (autocontrôle), qui est la vraie compétence d'un chien agréable à vivre."
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Programme de généralisation « 10 × 10 »",
+    "icon": null
+   },
+   {
+    "type": "p",
+    "text": "Chaque compétence acquise est rejouée dans **10 contextes**. Coche dans le carnet."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "#",
+       "Contexte"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "1",
+       "Salon, calme"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "2",
+       "Cuisine, pendant que tu cuisines"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "3",
+       "Jardin / balcon"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "4",
+       "Trottoir devant chez toi"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "5",
+       "Parc, à 20 m d'autres chiens"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "6",
+       "Rue commerçante"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "7",
+       "Chez un ami"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "8",
+       "Terrasse de café"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "9",
+       "Parking / lieu bruyant"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "10",
+       "Devant la porte du vétérinaire"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "neutral",
+    "title": null,
+    "icon": null,
+    "text": "**Position du corps aussi :** assis, debout, dos tourné, accroupi, en marchant, à 5 m, caché derrière une porte. Un chien qui n'obéit que face à toi debout n'a rien généralisé.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Les 5 autocontrôles de la phase 3",
+    "icon": null
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Rappel : le protocole « longe » de 4 à 6 mois",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Niveau",
+       "Contexte",
+       "Réussite requise"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "1",
+       "Longe 5 m, jardin, aucune distraction",
+       "9/10"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "2",
+       "Longe, parc calme, odeurs",
+       "8/10"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "3",
+       "Longe, chien visible à 30 m",
+       "8/10"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "4",
+       "Longe au sol (traînée), parc",
+       "9/10 sur 3 sorties"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "5",
+       "Liberté en lieu clos, distraction faible",
+       "9/10"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "6",
+       "Liberté en lieu ouvert sécurisé (loin des routes)",
+       "uniquement après 5 réussi 2 semaines"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "warn",
+    "title": null,
+    "icon": null,
+    "text": "Régression fréquente à 5–6 mois (« il fait le sourd »). Réponse : **retour au niveau précédent 1 semaine**, augmentation de la valeur des récompenses, jamais de colère au retour.",
+    "blocks": []
+   },
+   {
+    "type": "box",
+    "variant": "york",
+    "title": "Yorkshire — activité physique : combien ?",
+    "icon": "stairs",
+    "text": "Repère prudent chez un chien en croissance : ~**5 min de marche par mois d'âge**, 1 à 2 fois par jour (soit ~20–25 min × 2 à 5 mois), **plus** autant d'exploration libre à son rythme (qui fatigue davantage sans traumatiser les articulations). Interdits jusqu'à ~10–12 mois : course longue à côté d'un vélo/joggeur, sauts répétés, descentes d'escalier à répétition, jeux de lancer avec freinages brusques. Un Yorkshire se fatigue surtout **par la tête** : 10 min de flair = 1 h de marche.",
+    "blocks": []
+   }
+  ]
+ },
+ {
+  "title": "Phase 4 — 6 à 9 mois : l'adolescence (la phase où l'on abandonne… ne l'abandonne pas)",
+  "icon": "refresh",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "Entre 6 et 9 mois, tout semble se défaire : le rappel se dégrade, des peurs nouvelles apparaissent sur des objets connus, l'aboiement territorial s'installe, le marquage urinaire commence, la sélectivité sociale se durcit. **C'est neurologique et hormonal, pas moral.**"
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Les 6 phénomènes attendus & la conduite à tenir",
+    "icon": null
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Phénomène",
+       "Conduite à tenir"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Rappel qui s'effondre",
+       "Longe remise **immédiatement** 3–4 semaines, récompenses niveau 3, jeu de « rappel surprise » 5×/balade"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Peur n°2 : il a peur d'un sac poubelle qu'il connaissait",
+       "Ne pas forcer, ne pas rassurer avec excès : distance + LAT + nourriture. Ça passe en 2–3 semaines si non traumatisé"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Aboiement à la fenêtre / à la porte",
+       "Gestion visuelle (film opaque bas de fenêtre), A05 + T19 (« au panier ») entraînés hors contexte puis en contexte"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Marquage / lever la patte partout, régression propreté",
+       "Reprise du protocole T06 2 semaines, nettoyage enzymatique, sorties minutées. Discuter stérilisation avec le vétérinaire (bénéfices/risques, timing)"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Réactivité en laisse vers d'autres chiens",
+       "Distance, T21, jamais de laisse tendue ni de recadrage : chez un toy, c'est de la peur défensive dans 90 % des cas"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Il « teste » : ignore les signaux connus",
+       "Baisser le critère (redevenir facile), payer plus, raccourcir les séances. Ne jamais répéter un ordre 3 fois"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "tip",
+    "title": null,
+    "icon": null,
+    "text": "**Mantra de la phase 4 :** « Je gère l'environnement, je reviens à l'étape précédente, je paie plus, je ne me fâche pas. » Six semaines de constance et l'adolescence passe.",
+    "blocks": []
+   },
+   {
+    "type": "h",
+    "level": 3,
+    "text": "Plan de la phase 4 (mensuel)",
+    "icon": null
+   }
+  ]
+ },
+ {
+  "title": "Phase 5 — 9 à 12 mois",
+  "icon": "shield",
+  "blocks": [
+   {
+    "type": "p",
+    "text": "**Mission :** fiabiliser (proofing) et rendre le tout durable."
+   },
+   {
+    "type": "table",
+    "rows": [
+     {
+      "header": true,
+      "cells": [
+       "Axe",
+       "Contenu"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Proofing",
+       "Chaque signal testé avec 3 distractions simultanées, à 10 m, par 3 personnes différentes, une fois sur 4 récompensé"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Renforcement variable",
+       "Passage à un paiement imprévisible + « jackpots » aléatoires. Zéro friandise visible dans la main"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Vie sociale",
+       "2 congénères stables réguliers plutôt que des rencontres aléatoires ; parcs à chiens déconseillés pour un toy"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Activité mentale",
+       "Flair (« cherche »), tricks (donne la patte, tourne, slalom, cible), agility **sans saut** avant 12 mois"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Entretien",
+       "1 séance de 5 min/jour à vie + toilettage quotidien 2 min + brossage dents"
+      ]
+     },
+     {
+      "header": false,
+      "cells": [
+       "Bilan M12",
+       "Grille complète : objectif ≥ 4/5 partout, 5/5 sur rappel, propreté, solitude, manipulation"
+      ]
+     }
+    ]
+   },
+   {
+    "type": "box",
+    "variant": "york",
+    "title": "Points santé à ne pas manquer sur l'année",
+    "icon": "vet",
+    "text": "Vaccins & rappels · vermifugation selon protocole véto · **identification** · contrôle des dents de lait persistantes (4–7 mois) · rotules (test véto à chaque visite) · trachée (toux en quinte type « cri d'oie ») · larmoiement/yeux (poils longs) · glandes anales · pesée hebdomadaire, courbe dans le carnet.",
+    "blocks": []
+   }
+  ]
+ }
+]

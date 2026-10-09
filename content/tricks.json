@@ -1,0 +1,698 @@
+[
+  {
+    "code": "TR01",
+    "title": "Touche (cible au nez)",
+    "icon": "touchnose",
+    "category": "Fondations",
+    "stars": 1,
+    "minAgeWeeks": 8,
+    "why": "La brique de base de tous les tours : ta main devient un aimant, tu peux déplacer ton chien sans le toucher.",
+    "gear": "Ta main ouverte + 15 micro-friandises",
+    "cue": "Touche",
+    "steps": [
+      "Présente ta paume à 5 cm de sa truffe. Dès qu'il la renifle : marqueur + friandise.",
+      "Répète 8 fois, en changeant la main de côté à chaque fois.",
+      "Attends qu'il pousse franchement la paume avant de marquer : tu récompenses le contact, pas le regard.",
+      "Ajoute le mot « Touche » juste AVANT de tendre la main, quand il réussit 8 fois sur 10.",
+      "Éloigne la main : il fait un pas, deux pas, puis traverse la pièce pour venir toucher."
+    ],
+    "levels": [
+      { "name": "Palier 1 — Facile", "goal": "Main à 5 cm, pièce calme", "criteria": "8 contacts francs sur 10 essais" },
+      { "name": "Palier 2 — Distance", "goal": "Main à 1 m, puis 2 m", "criteria": "8/10 à 2 m, sans que tu bouges vers lui" },
+      { "name": "Palier 3 — Distraction", "goal": "Dans le jardin ou en balade, jouet au sol", "criteria": "8/10 dehors, avec une distraction visible" }
+    ],
+    "criteria": "Il vient toucher ta paume à 2 m, à la voix seule, 8 fois sur 10.",
+    "fix": [
+      { "problem": "Il mordille la main", "solution": "Ferme le poing et marque uniquement le contact truffe. Baisse la valeur de la friandise dans la main." },
+      { "problem": "Il n'approche pas", "solution": "Frotte une friandise sur ta paume les 5 premiers essais, puis arrête l'odeur." }
+    ],
+    "toy": "Reste accroupi ou assis au sol : un Yorkshire de 1 kg qui saute vers une main haute encaisse tout dans les rotules."
+  },
+  {
+    "code": "TR02",
+    "title": "Donne la patte",
+    "icon": "pawgive",
+    "category": "Sociaux",
+    "stars": 1,
+    "minAgeWeeks": 9,
+    "why": "Le tour qui plaît à tout le monde, et surtout le premier pas vers la coupe des griffes sans bagarre.",
+    "gear": "Friandises molles",
+    "cue": "La patte",
+    "steps": [
+      "Chien assis. Ferme une friandise dans ton poing, poing au niveau de son épaule.",
+      "Il flaire, gratte, lève la patte : marqueur au moment où la patte quitte le sol, puis ouvre la main.",
+      "Répète jusqu'à ce que la patte se lève dès que le poing apparaît.",
+      "Présente le poing VIDE, paume vers le haut : il pose la patte dedans → marqueur + friandise de l'autre main.",
+      "Ajoute « La patte » et augmente le temps où la patte reste posée (1 s, 3 s, 5 s)."
+    ],
+    "levels": [
+      { "name": "Palier 1 — Durée", "goal": "Patte posée dans la main", "criteria": "Patte tenue 3 s, 8/10" },
+      { "name": "Palier 2 — Les deux pattes", "goal": "Différencier droite et gauche", "criteria": "La bonne patte 7/10 sur deux mots différents" },
+      { "name": "Palier 3 — Utile", "goal": "Coupe-griffes posé à côté, puis contact d'une griffe", "criteria": "Il garde la patte, corps détendu, 5 essais d'affilée" }
+    ],
+    "criteria": "Il pose la patte à la voix seule et la laisse 5 s pendant que tu la manipules.",
+    "fix": [
+      { "problem": "Il gratte fort ou saute", "solution": "Baisse le poing plus bas et marque le plus petit mouvement de patte, avant qu'il ne s'énerve." },
+      { "problem": "Il se couche", "solution": "Reprends l'assis d'abord, sur un tapis antidérapant." }
+    ],
+    "toy": "Enchaîne toujours patte → contact griffes → friandise : chez le Yorkshire, la coupe de griffes est mensuelle à vie."
+  },
+  {
+    "code": "TR03",
+    "title": "High five",
+    "icon": "highfive",
+    "category": "Sociaux",
+    "stars": 2,
+    "minAgeWeeks": 12,
+    "why": "La suite naturelle de la patte, avec un geste plus haut et plus spectaculaire.",
+    "gear": "Rien, juste des friandises",
+    "cue": "High five",
+    "steps": [
+      "Demande « La patte » et récompense.",
+      "Remonte ta main de 3 cm et tourne progressivement la paume vers lui.",
+      "Quand sa patte tape la paume verticale : marqueur immédiat.",
+      "Change le mot pour « High five » et enlève complètement l'ancien geste.",
+      "Monte la main de 2 cm toutes les 5 réussites, jamais plus haut que sa poitrine."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Paume verticale à hauteur d'épaule du chien", "criteria": "8/10 sans leurre" },
+      { "name": "Palier 2", "goal": "Paume à hauteur de poitrine", "criteria": "8/10, il reste assis" },
+      { "name": "Palier 3", "goal": "Devant un invité", "criteria": "8/10 avec un inconnu qui tend la main" }
+    ],
+    "criteria": "Tape franche dans la paume, sur mot seul, y compris avec une autre personne.",
+    "fix": [
+      { "problem": "Il se lève pour taper", "solution": "Tu as monté la main trop haut : redescends de 5 cm." },
+      { "problem": "Il confond avec la patte", "solution": "Entraîne les deux dans deux séances séparées pendant une semaine." }
+    ],
+    "toy": "Ne le fais jamais debout au-dessus de lui : il se dresserait sur les postérieurs, mauvais pour ses rotules."
+  },
+  {
+    "code": "TR04",
+    "title": "Tourne (spin droite / gauche)",
+    "icon": "spin",
+    "category": "Mouvement",
+    "stars": 1,
+    "minAgeWeeks": 10,
+    "why": "Excellent échauffement, super pour la proprioception et pour canaliser l'excitation avant une séance.",
+    "gear": "Friandise en leurre",
+    "cue": "Tourne",
+    "steps": [
+      "Debout devant toi. Friandise entre les doigts, contre sa truffe.",
+      "Dessine un cercle lent au ras de sa tête : il suit et tourne sur lui-même. Marqueur au bout du cercle.",
+      "Répète 5 fois, puis fais le cercle avec la main VIDE et récompense de l'autre main.",
+      "Réduis le geste : grand cercle → petit cercle → simple rotation du doigt.",
+      "Ajoute le mot, puis un second mot pour l'autre sens (« Vire »)."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Cercle complet avec grand geste", "criteria": "8/10, sans s'asseoir en cours de route" },
+      { "name": "Palier 2", "goal": "Doigt seulement", "criteria": "8/10 avec micro-geste" },
+      { "name": "Palier 3", "goal": "Les deux sens à la voix", "criteria": "7/10 du bon côté, mot seul" }
+    ],
+    "criteria": "Tour complet dans chaque sens, à la voix, sans geste.",
+    "fix": [
+      { "problem": "Il s'assoit", "solution": "Bouge la main plus vite et un peu vers l'avant, pas vers l'arrière." },
+      { "problem": "Il ne suit que d'un côté", "solution": "Normal, tous les chiens ont un côté préféré : 2 séances de plus du côté faible." }
+    ],
+    "toy": "Sur sol non glissant uniquement : le parquet + petit chien = luxation de rotule."
+  },
+  {
+    "code": "TR05",
+    "title": "Salut (bow)",
+    "icon": "bow",
+    "category": "Mouvement",
+    "stars": 2,
+    "minAgeWeeks": 14,
+    "why": "C'est l'étirement naturel du chien qui invite au jeu : joli, et bon pour le dos.",
+    "gear": "Friandise, tapis",
+    "cue": "Salue",
+    "steps": [
+      "Chien debout. Descends la friandise verticalement entre ses pattes avant.",
+      "Marqueur dès que les coudes touchent le sol, MÊME si l'arrière commence à descendre.",
+      "Si l'arrière tombe : glisse ta main sous son ventre pour soutenir l'arrière-train.",
+      "Récompense au sol, entre ses pattes avant, pour qu'il reste en position.",
+      "Ajoute le mot, puis augmente la durée (2 s, 4 s), puis retire ta main de soutien."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Coudes au sol avec soutien", "criteria": "6/10 avec l'arrière debout" },
+      { "name": "Palier 2", "goal": "Sans main sous le ventre", "criteria": "8/10, tenu 2 s" },
+      { "name": "Palier 3", "goal": "Sur mot seul, tenu 5 s", "criteria": "8/10 dans deux pièces différentes" }
+    ],
+    "criteria": "Salut franc, arrière-train debout, tenu 5 s sur mot seul.",
+    "fix": [
+      { "problem": "Il se couche systématiquement", "solution": "Fais-le contre ta jambe repliée, qui bloque physiquement l'arrière." },
+      { "problem": "Il recule", "solution": "Travaille dos à un mur ou dans un couloir." }
+    ],
+    "toy": "Toujours sur tapis : les carrelages froids sont mal supportés par un Yorkshire."
+  },
+  {
+    "code": "TR06",
+    "title": "Roule",
+    "icon": "rollover",
+    "category": "Mouvement",
+    "stars": 2,
+    "minAgeWeeks": 14,
+    "why": "Un tour de confiance : un chien ne se met sur le dos que s'il est vraiment détendu.",
+    "gear": "Tapis moelleux",
+    "cue": "Roule",
+    "steps": [
+      "Pars du « Couché ». Amène la friandise de sa truffe vers son épaule pour qu'il regarde derrière lui.",
+      "Marqueur quand il bascule sur une hanche, sans exiger le tour complet.",
+      "Continue le mouvement vers son dos : il roule. Marqueur + fête.",
+      "Découpe en 3 étapes récompensées séparément si le tour complet ne vient pas.",
+      "Ajoute le mot, puis réduis le geste à un cercle du doigt."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Bascule sur la hanche", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "Tour complet avec geste", "criteria": "7/10" },
+      { "name": "Palier 3", "goal": "Mot + micro-geste", "criteria": "7/10 sur deux surfaces différentes" }
+    ],
+    "criteria": "Roulade complète sur mot seul, dans les deux sens si possible.",
+    "fix": [
+      { "problem": "Il se relève", "solution": "Tu vas trop vite. Reste 3 séances sur la bascule de hanche uniquement." },
+      { "problem": "Il refuse le dos", "solution": "Ne force jamais : travaille d'abord les câlins sur le dos, hors séance." }
+    ],
+    "toy": "Un chien qui refuse durablement de se mettre sur le dos peut avoir mal (dos, rotules) : à signaler au véto."
+  },
+  {
+    "code": "TR07",
+    "title": "Slalom entre les jambes",
+    "icon": "weave",
+    "category": "Mouvement",
+    "stars": 3,
+    "minAgeWeeks": 18,
+    "why": "Un vrai numéro, et une excellente coordination chien/humain. Fatigue mentalement en 3 minutes.",
+    "gear": "Friandises dans les deux mains",
+    "cue": "Slalom",
+    "steps": [
+      "Grand pas en avant, jambes écartées. Leurre-le pour qu'il passe sous la jambe avancée. Marqueur.",
+      "Répète 10 fois du même côté avant de changer de côté.",
+      "Enchaîne deux passages : jambe droite, puis jambe gauche.",
+      "Réduis le leurre : la main indique juste la direction.",
+      "Fais 3 passages en avançant, puis 5, puis en boucle."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "1 passage sous une jambe, à l'arrêt", "criteria": "8/10 des deux côtés" },
+      { "name": "Palier 2", "goal": "3 passages enchaînés", "criteria": "3 passages sans friandise intermédiaire" },
+      { "name": "Palier 3", "goal": "Slalom en marchant", "criteria": "5 passages en avançant, 2 fois de suite" }
+    ],
+    "criteria": "5 passages enchaînés en marchant, sans friandise entre les passages.",
+    "fix": [
+      { "problem": "Il passe devant au lieu de dessous", "solution": "Écarte davantage les jambes et baisse la main au sol." },
+      { "problem": "Il se déconcentre", "solution": "Séance de 90 s maximum : c'est un exercice très coûteux mentalement." }
+    ],
+    "toy": "Attention aux pieds : à 2 kg, un coup de pied involontaire peut le blesser. Marche lentement."
+  },
+  {
+    "code": "TR08",
+    "title": "Recule",
+    "icon": "back",
+    "category": "Mouvement",
+    "stars": 2,
+    "minAgeWeeks": 16,
+    "why": "Ultra utile au quotidien (porte d'entrée, ascenseur, cuisine) et renforce l'arrière-train.",
+    "gear": "Couloir étroit ou 2 chaises",
+    "cue": "Recule",
+    "steps": [
+      "Place-le dans un couloir, face à toi.",
+      "Avance d'un pas vers lui, épaules droites, sans parler. Il recule d'un pas : marqueur, et va lui porter la friandise.",
+      "Répète, puis exige 2 pas, puis 3.",
+      "Ajoute le mot quand il recule dès que tu avances.",
+      "Sors du couloir : il recule en ligne droite sans les murs."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "2 pas en arrière dans le couloir", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "5 pas, couloir", "criteria": "8/10 en ligne droite" },
+      { "name": "Palier 3", "goal": "3 m sans mur, sur mot", "criteria": "7/10 sans que tu avances" }
+    ],
+    "criteria": "Il recule 3 m en ligne droite sur le mot, sans que tu bouges.",
+    "fix": [
+      { "problem": "Il s'assoit", "solution": "Marque plus tôt : le premier transfert de poids vers l'arrière suffit." },
+      { "problem": "Il part sur le côté", "solution": "Reviens au couloir 3 séances." }
+    ],
+    "toy": "Excellent renforcement musculaire préventif pour les rotules d'un Yorkshire."
+  },
+  {
+    "code": "TR09",
+    "title": "Assis-beauté (sit pretty)",
+    "icon": "sitpretty",
+    "category": "Force",
+    "stars": 3,
+    "minAgeWeeks": 26,
+    "why": "Renforce les abdominaux et le dos. À réserver au chien adulte : demande beaucoup à la colonne.",
+    "gear": "Tapis antidérapant",
+    "cue": "Beauté",
+    "steps": [
+      "Chien assis, dos à un coussin ou un mur pour éviter le déséquilibre.",
+      "Remonte la friandise juste au-dessus de son front, pas plus haut.",
+      "Marqueur dès que les DEUX pattes avant quittent le sol, même 1 s.",
+      "Récompense en position, puis relâche avec ton mot de libération.",
+      "Augmente la durée d'1 s toutes les 3 séances, maximum 10 s."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "1 s, adossé", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "3 s, sans appui", "criteria": "8/10 stable, sans trembler" },
+      { "name": "Palier 3", "goal": "5–8 s sur mot", "criteria": "8/10, redescente contrôlée" }
+    ],
+    "criteria": "5 s en équilibre, dos droit, sur mot seul, sans trembler.",
+    "fix": [
+      { "problem": "Il saute au lieu de s'asseoir", "solution": "La main est trop haute ou trop en avant : garde-la au-dessus du front." },
+      { "problem": "Il tremble", "solution": "Arrête la série : c'est un signe de fatigue musculaire, pas de mauvaise volonté." }
+    ],
+    "toy": "À éviter totalement avant 6 mois et chez un chien avec un antécédent de luxation de rotule ou de dos."
+  },
+  {
+    "code": "TR10",
+    "title": "Rampe",
+    "icon": "crawl",
+    "category": "Force",
+    "stars": 3,
+    "minAgeWeeks": 20,
+    "why": "Un tour très visuel qui exige un contrôle total du corps : le top de la coordination.",
+    "gear": "Tapis + une chaise basse (facultatif)",
+    "cue": "Rampe",
+    "steps": [
+      "Pars du « Couché ». Fais glisser la friandise au sol, à 10 cm devant sa truffe.",
+      "Marqueur au premier centimètre gagné SANS que les coudes se lèvent.",
+      "Répète en augmentant de 10 cm à chaque fois.",
+      "Utilise le dessous d'une chaise basse comme guide s'il se relève.",
+      "Ajoute le mot, puis passe à 1 m, puis 2 m."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "20 cm en rampant", "criteria": "8/10 sans se relever" },
+      { "name": "Palier 2", "goal": "1 m", "criteria": "8/10, sans guide" },
+      { "name": "Palier 3", "goal": "2 m sur mot", "criteria": "7/10" }
+    ],
+    "criteria": "2 m en rampant, ventre au sol, sur mot seul.",
+    "fix": [
+      { "problem": "Il se relève à chaque fois", "solution": "Marque plus vite : tu attends trop longtemps avant le marqueur." },
+      { "problem": "Il rampe de travers", "solution": "Travaille le long d'un mur." }
+    ],
+    "toy": "Sol tempéré et propre : le poil long du Yorkshire ramasse tout."
+  },
+  {
+    "code": "TR11",
+    "title": "Rapporte",
+    "icon": "fetch",
+    "category": "Jeu",
+    "stars": 2,
+    "minAgeWeeks": 12,
+    "why": "Le meilleur exercice pour dépenser un terrier sans lui casser les articulations, s'il est bien construit.",
+    "gear": "Petite balle molle ou peluche légère",
+    "cue": "Rapporte",
+    "steps": [
+      "Lance l'objet à 1 m seulement. Il le prend : marqueur, et fête sans lui reprendre l'objet.",
+      "Recule et appelle-le avec ton mot de rappel : il revient avec l'objet, marqueur.",
+      "Échange contre une friandise plutôt que d'arracher l'objet (« Donne »).",
+      "Passe à 3 m, puis 6 m, puis dehors en longe.",
+      "Termine TOUJOURS la séance quand il en veut encore."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "1–2 m, retour libre", "criteria": "5 aller-retours d'affilée" },
+      { "name": "Palier 2", "goal": "6 m, avec « Donne »", "criteria": "8/10 objet lâché dans ta main" },
+      { "name": "Palier 3", "goal": "Dehors, en longe", "criteria": "5 retours complets avec une distraction" }
+    ],
+    "criteria": "Il rapporte à 6 m et lâche l'objet dans ta main sur mot, dehors.",
+    "fix": [
+      { "problem": "Il part avec l'objet", "solution": "Travaille dans un couloir et paie très cher le retour, jamais le lâcher forcé." },
+      { "problem": "Il ne prend pas l'objet", "solution": "Change d'objet : texture tissu, ou un jouet qui bruite." }
+    ],
+    "toy": "Pas de lancers en hauteur, pas de rattrapé en vol, pas de sol glissant : ce sont les 3 causes de blessures chez les toys."
+  },
+  {
+    "code": "TR12",
+    "title": "Cherche (jeu de flair)",
+    "icon": "seek",
+    "category": "Jeu",
+    "stars": 1,
+    "minAgeWeeks": 9,
+    "why": "10 minutes de flair fatiguent plus qu'une heure de marche, et c'est zéro impact articulaire.",
+    "gear": "3 gobelets ou un tapis de fouille",
+    "cue": "Cherche",
+    "steps": [
+      "Montre-lui une friandise, cache-la sous un gobelet devant lui, dis « Cherche ».",
+      "Laisse-le renverser le gobelet : jackpot.",
+      "Passe à 3 gobelets, une seule friandise.",
+      "Cache 5 friandises dans la pièce, hors de sa vue, puis lâche-le.",
+      "Passe dehors, dans l'herbe : le niveau expert."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "1 gobelet visible", "criteria": "10/10, sans hésiter" },
+      { "name": "Palier 2", "goal": "3 gobelets, hors de sa vue", "criteria": "8/10 sans aide" },
+      { "name": "Palier 3", "goal": "5 caches dans la pièce, puis dehors", "criteria": "Toutes trouvées en moins de 3 min" }
+    ],
+    "criteria": "Il trouve 5 caches dans une pièce, sans aide, en moins de 3 minutes.",
+    "fix": [
+      { "problem": "Il abandonne", "solution": "Rends la cache plus facile : le flair doit toujours payer." },
+      { "problem": "Il utilise les yeux", "solution": "Cache pendant qu'il est dans une autre pièce." }
+    ],
+    "toy": "L'exercice idéal les jours de pluie ou de grand froid, quand un Yorkshire ne doit pas sortir longtemps."
+  },
+  {
+    "code": "TR13",
+    "title": "Range tes jouets",
+    "icon": "tidy",
+    "category": "Utile",
+    "stars": 3,
+    "minAgeWeeks": 24,
+    "why": "Le tour qui impressionne le plus, et qui chaîne trois compétences : prendre, porter, lâcher au bon endroit.",
+    "gear": "Caisse basse + 3 jouets",
+    "cue": "Range",
+    "steps": [
+      "Apprends d'abord « Donne » dans ta main (TR11).",
+      "Tiens la caisse SOUS sa gueule et demande « Donne » : l'objet tombe dedans. Jackpot.",
+      "Descends la caisse au sol, toujours contre tes pieds.",
+      "Éloigne la caisse de 30 cm, puis 1 m, puis 2 m.",
+      "Ajoute « Range » et fais-lui ranger 3 jouets d'affilée."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Lâcher dans la caisse tenue en main", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "Caisse au sol à 1 m", "criteria": "8/10 sans que tu la montres" },
+      { "name": "Palier 3", "goal": "3 jouets à 2 m", "criteria": "3 rangements d'affilée sur un seul mot" }
+    ],
+    "criteria": "3 jouets rangés d'affilée dans la caisse à 2 m, sur un seul mot.",
+    "fix": [
+      { "problem": "Il lâche à côté", "solution": "Reviens à la caisse tenue en main 2 séances, et paie très cher le lâcher dedans." },
+      { "problem": "Il garde le jouet", "solution": "Travaille l'échange (T05) avant de continuer." }
+    ],
+    "toy": "Jouets légers : un Yorkshire ne doit pas porter un objet lourd, c'est mauvais pour sa nuque et ses dents."
+  },
+  {
+    "code": "TR14",
+    "title": "Sonne pour sortir",
+    "icon": "bell",
+    "category": "Utile",
+    "stars": 2,
+    "minAgeWeeks": 12,
+    "why": "Il te prévient au lieu de faire pipi en silence derrière le canapé : un game-changer pour la propreté.",
+    "gear": "Clochette ou grelot suspendu à hauteur de truffe",
+    "cue": "Sonne",
+    "steps": [
+      "Suspends la clochette à la poignée de la porte de sortie, à hauteur de sa truffe.",
+      "Utilise « Touche » (TR01) sur la clochette : marqueur au moindre tintement.",
+      "Chaque sortie propreté : demande « Sonne », il sonne, tu ouvres IMMÉDIATEMENT.",
+      "Arrête de récompenser en friandise : la récompense devient la porte qui s'ouvre.",
+      "S'il sonne pour jouer, sors 30 s en laisse, sans jeu, puis rentre."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Il sonne sur demande", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "Il sonne avant chaque sortie", "criteria": "5 sorties d'affilée" },
+      { "name": "Palier 3", "goal": "Il sonne spontanément pour demander", "criteria": "3 demandes spontanées justifiées en une semaine" }
+    ],
+    "criteria": "Il va sonner spontanément quand il a besoin de sortir.",
+    "fix": [
+      { "problem": "Il sonne sans arrêt", "solution": "Sors quand même, mais en laisse et sans aucun jeu : la sonnette n'ouvre que sur les toilettes." },
+      { "problem": "Il a peur du bruit", "solution": "Commence avec la clochette au sol, dans une serviette, pour l'assourdir." }
+    ],
+    "toy": "Grelot léger et bas : un Yorkshire ne peut pas atteindre une clochette placée à hauteur d'un labrador."
+  },
+  {
+    "code": "TR15",
+    "title": "Parle / Silence",
+    "icon": "speak",
+    "category": "Contrôle",
+    "stars": 2,
+    "minAgeWeeks": 20,
+    "why": "Contre-intuitif mais redoutable : un aboiement sur commande est un aboiement qu'on peut aussi arrêter sur commande.",
+    "gear": "Un déclencheur connu (sonnette, jouet qui pouine)",
+    "cue": "Parle / Silence",
+    "steps": [
+      "Provoque un aboiement avec un déclencheur léger. Marqueur au 1er aboiement seulement.",
+      "Répète 5 fois, puis ajoute le mot « Parle » avant le déclencheur.",
+      "Quand « Parle » marche : demande « Parle », attends le silence naturel, marque le SILENCE et dis « Silence ».",
+      "Allonge le silence : 2 s, 5 s, 10 s avant la récompense.",
+      "Utilise « Silence » sur les vrais aboiements du quotidien, sans jamais crier."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "1 aboiement sur mot", "criteria": "8/10, un seul aboiement" },
+      { "name": "Palier 2", "goal": "Silence 5 s après « Parle »", "criteria": "8/10" },
+      { "name": "Palier 3", "goal": "« Silence » sur un vrai déclencheur", "criteria": "7/10, sonnette réelle" }
+    ],
+    "criteria": "Il aboie une fois sur mot et se tait 10 s sur « Silence », même sur un vrai déclencheur.",
+    "fix": [
+      { "problem": "Il n'arrête plus d'aboyer", "solution": "Ne travaille « Parle » que 2 fois par séance, et jamais dans la semaine qui suit une crise d'aboiements." },
+      { "problem": "Aboiements en série", "solution": "Marque uniquement le tout premier son, jamais le 2e." }
+    ],
+    "toy": "Le Yorkshire est un aboyeur né : cet exercice est un investissement direct sur la paix avec les voisins."
+  },
+  {
+    "code": "TR16",
+    "title": "Va au tapis (à distance)",
+    "icon": "mat",
+    "category": "Contrôle",
+    "stars": 2,
+    "minAgeWeeks": 14,
+    "why": "Le bouton pause de la maison : visiteurs, repas, livreur, tout devient gérable.",
+    "gear": "Tapis dédié",
+    "cue": "Au tapis",
+    "steps": [
+      "Jette une friandise sur le tapis : il y va. Marqueur quand les 4 pattes sont dessus.",
+      "Attends qu'il se couche pour récompenser, sans le demander.",
+      "Recule d'un pas et envoie-le au tapis, puis 2 pas, puis 3 m.",
+      "Ajoute le mot, puis la durée (10 s, 30 s, 2 min).",
+      "Ajoute la difficulté : tu ouvres la porte, tu manges, la sonnette retentit."
+    ],
+    "levels": [
+      { "name": "Palier 1 — Durée", "goal": "Couché sur le tapis 30 s", "criteria": "8/10 sans rappel du mot" },
+      { "name": "Palier 2 — Distance", "goal": "Envoi depuis 3 m", "criteria": "8/10" },
+      { "name": "Palier 3 — Distraction", "goal": "Sonnette / repas / visiteur", "criteria": "Reste 2 min, 7/10" }
+    ],
+    "criteria": "Envoyé depuis 3 m, il reste couché 2 min malgré la sonnette.",
+    "fix": [
+      { "problem": "Il se relève", "solution": "Récompense AVANT qu'il ne craque, et réduis la durée de moitié." },
+      { "problem": "Il ne part pas", "solution": "Reviens à 1 pas de distance et jette la friandise." }
+    ],
+    "toy": "Tapis épais et chaud, hors courant d'air : le Yorkshire cherche la chaleur, il l'utilisera d'autant plus."
+  },
+  {
+    "code": "TR17",
+    "title": "Saute (barre basse)",
+    "icon": "jump",
+    "category": "Force",
+    "stars": 3,
+    "minAgeWeeks": 39,
+    "why": "Dépense physique et coordination — mais uniquement quand la croissance est terminée.",
+    "gear": "Barre au sol puis surélevée, sol souple",
+    "cue": "Saute",
+    "steps": [
+      "Barre POSÉE AU SOL : il la franchit en marchant. Marqueur.",
+      "Répète 10 fois, sur mot « Saute ».",
+      "Surélève de 5 cm maximum, jamais plus haut que son coude.",
+      "5 franchissements par séance, pas plus, sur tapis ou herbe.",
+      "Ajoute une deuxième barre à 2 m pour enchaîner."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Barre au sol", "criteria": "10/10 sur mot" },
+      { "name": "Palier 2", "goal": "Barre à hauteur de carpe (≈5–8 cm)", "criteria": "8/10, réception souple" },
+      { "name": "Palier 3", "goal": "2 barres enchaînées", "criteria": "5 enchaînements propres" }
+    ],
+    "criteria": "Il enchaîne 2 obstacles bas sur mot, avec une réception souple.",
+    "fix": [
+      { "problem": "Il contourne", "solution": "Guide avec deux chaises en entonnoir et baisse la barre au sol." },
+      { "problem": "Il boite après", "solution": "Stop immédiat et véto : douleur = zéro saut." }
+    ],
+    "toy": "Jamais avant la fin de la croissance (≈10–12 mois) et jamais au-dessus du coude : rotules et disques du Yorkshire sont fragiles."
+  },
+  {
+    "code": "TR18",
+    "title": "Passe dans le cerceau",
+    "icon": "hoop",
+    "category": "Jeu",
+    "stars": 2,
+    "minAgeWeeks": 20,
+    "why": "Spectaculaire, facile, et parfait pour désensibiliser à un objet qui bouge autour de lui.",
+    "gear": "Cerceau ou tes bras en cercle",
+    "cue": "Passe",
+    "steps": [
+      "Cerceau POSÉ au sol, contre un mur. Leurre-le pour qu'il le traverse. Marqueur.",
+      "Répète 8 fois : le cerceau doit devenir totalement banal.",
+      "Soulève de 3 cm, il passe au pas.",
+      "Monte progressivement, jamais plus haut que sa poitrine.",
+      "Ajoute le mot et la distance d'élan (1 m maximum)."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Cerceau au sol", "criteria": "10/10 sans hésiter" },
+      { "name": "Palier 2", "goal": "Cerceau à 10 cm", "criteria": "8/10" },
+      { "name": "Palier 3", "goal": "Cerceau à hauteur de poitrine, sur mot", "criteria": "8/10, réception souple" }
+    ],
+    "criteria": "Il traverse le cerceau tenu à hauteur de poitrine, sur mot seul.",
+    "fix": [
+      { "problem": "Il a peur du cerceau", "solution": "Laisse-le au sol dans la pièce toute la journée, avec des friandises autour." },
+      { "problem": "Il passe à côté", "solution": "Cale le cerceau entre un mur et un meuble." }
+    ],
+    "toy": "Cerceau léger : s'il tombe sur un chien de 2 kg, la peur peut coûter des semaines de travail."
+  },
+  {
+    "code": "TR19",
+    "title": "Fais le mort",
+    "icon": "hide",
+    "category": "Mouvement",
+    "stars": 3,
+    "minAgeWeeks": 24,
+    "why": "L'aboutissement du couché-détente : il tient une position immobile sur le flanc, tête au sol.",
+    "gear": "Tapis",
+    "cue": "Bang",
+    "steps": [
+      "Pars du « Couché ». Leurre-le vers son épaule pour qu'il bascule sur le flanc.",
+      "Marqueur en position, récompense au sol pour qu'il reste couché.",
+      "Attends que la TÊTE se pose au sol avant de marquer.",
+      "Ajoute le mot, puis la durée : 3 s, 10 s, 20 s.",
+      "Ajoute le geste théâtral (main en pistolet) une fois le mot solide."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Sur le flanc, 3 s", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "Tête au sol, 10 s", "criteria": "8/10 immobile" },
+      { "name": "Palier 3", "goal": "20 s, sur mot + geste", "criteria": "8/10 avec toi qui bouges autour" }
+    ],
+    "criteria": "Il tient 20 s sur le flanc, tête au sol, sur mot seul.",
+    "fix": [
+      { "problem": "Il relève la tête", "solution": "Récompense au sol, juste devant sa truffe, jamais en hauteur." },
+      { "problem": "Il se relève vite", "solution": "Récompense 3 fois DANS la position avant de libérer." }
+    ],
+    "toy": "Position idéale à entraîner : c'est exactement celle demandée pour une auscultation ou une radio du thorax."
+  },
+  {
+    "code": "TR20",
+    "title": "Cible au sol / plot",
+    "icon": "cone",
+    "category": "Fondations",
+    "stars": 2,
+    "minAgeWeeks": 16,
+    "why": "Envoyer son chien à un endroit précis à distance : la base des tours complexes et du travail à distance.",
+    "gear": "Un plot, un couvercle ou un post-it au sol",
+    "cue": "Plot",
+    "steps": [
+      "Pose la cible au sol, récompense tout contact patte ou truffe.",
+      "Éloigne-toi d'un pas : il y va seul. Marqueur.",
+      "Augmente la distance de 50 cm à chaque palier réussi.",
+      "Ajoute le mot, puis fais le tour de la cible avec lui.",
+      "Envoie-le depuis 5 m, puis avec toi immobile."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Contact à 1 m", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "Envoi depuis 3 m", "criteria": "8/10" },
+      { "name": "Palier 3", "goal": "Envoi depuis 5 m, dehors", "criteria": "7/10 avec une distraction" }
+    ],
+    "criteria": "Il file toucher la cible à 5 m, dehors, sur mot seul.",
+    "fix": [
+      { "problem": "Il revient vers toi", "solution": "Jette la friandise SUR la cible, jamais dans ta main." },
+      { "problem": "Il ignore la cible", "solution": "Reprends « Touche » (TR01) sur la cible tenue en main." }
+    ],
+    "toy": "Cible souple et plate : évite tout objet dur qui pourrait le faire trébucher."
+  },
+  {
+    "code": "TR21",
+    "title": "Tourne autour de moi",
+    "icon": "figure8",
+    "category": "Mouvement",
+    "stars": 2,
+    "minAgeWeeks": 18,
+    "why": "Très joli, et surtout parfait pour le faire se placer proprement à ton pied.",
+    "gear": "Friandises dans les deux mains",
+    "cue": "Autour",
+    "steps": [
+      "Main gauche derrière ta cuisse : il te contourne. Marqueur derrière toi.",
+      "Passe la friandise en main droite pour terminer le tour devant toi.",
+      "Répète 8 fois, puis retire les friandises intermédiaires.",
+      "Ajoute le mot, puis fais des 8 autour de tes deux jambes.",
+      "Fais-le en marchant lentement."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Tour complet avec 2 leurres", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "Tour complet sans leurre", "criteria": "8/10 sur mot" },
+      { "name": "Palier 3", "goal": "Un 8 complet, puis en marchant", "criteria": "2 huit d'affilée" }
+    ],
+    "criteria": "Il fait un 8 complet autour de tes jambes, sur mot, en marchant lentement.",
+    "fix": [
+      { "problem": "Il s'arrête derrière toi", "solution": "Tourne le buste pour l'accompagner les 5 premières fois." },
+      { "problem": "Il saute", "solution": "Garde la main basse, au niveau de sa tête." }
+    ],
+    "toy": "Marche très lentement : tes pieds sont le principal danger pour un chien de cette taille."
+  },
+  {
+    "code": "TR22",
+    "title": "Fais coucou (salut de la patte)",
+    "icon": "dance",
+    "category": "Sociaux",
+    "stars": 2,
+    "minAgeWeeks": 20,
+    "why": "Le tour qui remplace le saut sur les invités : il salue sans quitter le sol.",
+    "gear": "Friandises",
+    "cue": "Coucou",
+    "steps": [
+      "Demande « High five » mais retire ta main au dernier moment : la patte bat dans le vide. Marqueur.",
+      "Répète en éloignant la main de plus en plus tôt.",
+      "Remplace la main par un petit signe de ta propre main.",
+      "Ajoute le mot « Coucou ».",
+      "Demande-le à l'arrivée d'un invité, AVANT qu'il ne saute."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Battement de patte avec amorce de main", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "Sur signe seul", "criteria": "8/10 assis" },
+      { "name": "Palier 3", "goal": "À l'arrivée d'un invité", "criteria": "7/10 sans sauter" }
+    ],
+    "criteria": "Il fait coucou assis, sur signe, y compris quand un invité entre.",
+    "fix": [
+      { "problem": "Il saute quand même", "solution": "Demande le « Coucou » AVANT que l'invité entre, pas après." },
+      { "problem": "Patte trop basse", "solution": "Reviens 2 séances sur le high five." }
+    ],
+    "toy": "C'est LE tour anti-« syndrome du petit chien » : il canalise l'excitation sociale sans porter le chien."
+  },
+  {
+    "code": "TR23",
+    "title": "Équilibre / deux pattes sur un support",
+    "icon": "balance",
+    "category": "Force",
+    "stars": 3,
+    "minAgeWeeks": 26,
+    "why": "Travail proprioceptif : renforce précisément les muscles qui stabilisent les rotules.",
+    "gear": "Livre épais ou coussin ferme antidérapant",
+    "cue": "Monte",
+    "steps": [
+      "Support stable, très bas (3–5 cm), collé au sol.",
+      "Leurre-le pour qu'il pose les DEUX pattes avant dessus. Marqueur.",
+      "Récompense en position, tête légèrement haute.",
+      "Augmente la durée : 5 s, 15 s, 30 s.",
+      "Ajoute des transferts de poids : friandise lentement à gauche puis à droite."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "2 pattes dessus, 5 s", "criteria": "8/10" },
+      { "name": "Palier 2", "goal": "20 s stable", "criteria": "8/10 sans descendre" },
+      { "name": "Palier 3", "goal": "Transferts de poids gauche/droite", "criteria": "5 transferts lents contrôlés" }
+    ],
+    "criteria": "20 s en position avec 5 transferts de poids contrôlés.",
+    "fix": [
+      { "problem": "Le support glisse", "solution": "Tapis en dessous, obligatoire." },
+      { "problem": "Il monte les 4 pattes", "solution": "Support plus petit, ou dos à un mur." }
+    ],
+    "toy": "Excellent en prévention rotulienne, mais support BAS uniquement, et jamais de descente en sautant."
+  },
+  {
+    "code": "TR24",
+    "title": "Copie-moi (mimétisme)",
+    "icon": "mirror",
+    "category": "Expert",
+    "stars": 3,
+    "minAgeWeeks": 32,
+    "why": "Le niveau expert : il apprend en te regardant faire. Ça ouvre la porte à des tours appris en 2 séances.",
+    "gear": "3 tours déjà solides + 2 objets",
+    "cue": "Fais comme moi",
+    "steps": [
+      "Choisis 3 comportements qu'il maîtrise et que tu peux imiter (toucher un objet, tourner, se coucher).",
+      "Fais l'action toi-même, puis dis « Fais comme moi » et demande l'action connue. Récompense.",
+      "Alterne les 3 actions au hasard, avec la même phrase.",
+      "Teste une action jamais entraînée : touche un objet nouveau et demande l'imitation.",
+      "Récompense toute tentative d'imitation, même approximative."
+    ],
+    "levels": [
+      { "name": "Palier 1", "goal": "Imitation de 3 actions connues", "criteria": "7/10 sur les 3, en alternance" },
+      { "name": "Palier 2", "goal": "Imitation d'une action nouvelle simple", "criteria": "Réussie 3 fois sur 10 essais" },
+      { "name": "Palier 3", "goal": "2 nouvelles actions par imitation", "criteria": "2 actions apprises sans leurre" }
+    ],
+    "criteria": "Il reproduit une action nouvelle après démonstration, sans leurre.",
+    "fix": [
+      { "problem": "Il propose toujours la même chose", "solution": "Normal : ignore, redémontre, et récompense uniquement la variation." },
+      { "problem": "Il décroche", "solution": "Séances de 2 minutes maximum : c'est l'exercice le plus coûteux du programme." }
+    ],
+    "toy": "Le Yorkshire est très observateur de son humain : c'est souvent la race qui accroche le mieux à cet exercice."
+  }
+]

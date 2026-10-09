@@ -1,0 +1,189 @@
+{
+  "tutorials": {
+    "T01": {
+      "game": "Le jeu du bouton magique",
+      "pitch": "Tu vas apprendre à {name} qu'un tout petit bruit veut dire « bravo, tu as gagné ». C'est la télécommande de toute son éducation.",
+      "mission": "Faire 20 fois : bruit → {treat}. Sans rien demander en échange.",
+      "win": "Quand le bruit résonne, {name} tourne la tête aussi vite qu'un frigo qui s'ouvre."
+    },
+    "T02": {
+      "game": "Le jeu du prénom qui claque",
+      "pitch": "Le prénom de {name} n'est pas un ordre : c'est une promesse de bonne nouvelle.",
+      "mission": "10 fois : « {name} ! » → {il} regarde → marqueur + {treat}.",
+      "win": "{name} lève la tête à son prénom même au milieu d'une odeur passionnante."
+    },
+    "T03": {
+      "game": "La main télécommande",
+      "pitch": "Ta main devient un aimant : {name} suit, et tu peux le guider partout sans le toucher.",
+      "mission": "5 cercles, 5 huit, 5 demi-tours, à la main puis sans {treat} dans la main.",
+      "win": "{name} colle ton poing comme s'il était en jambon."
+    },
+    "T04": {
+      "game": "Le distributeur d'assis",
+      "pitch": "« Assis » n'est pas de la discipline : c'est le bouton pause le plus utile du quotidien.",
+      "mission": "3 séances de 2 min : assis avant la gamelle, avant la porte, avant les câlins.",
+      "win": "{name} s'assoit tout seul quand {il} veut quelque chose. La classe."
+    },
+    "T05": {
+      "game": "Le grand troc",
+      "pitch": "On apprend à {name} que rendre un objet fait gagner encore mieux. Zéro bras de fer.",
+      "mission": "10 échanges avec des objets sans valeur, puis un jouet moyen.",
+      "win": "{name} lâche et vient te voir avec l'objet au lieu de filer sous le canapé."
+    },
+    "T06": {
+      "game": "La quête de la propreté",
+      "pitch": "Un chiot toy a une vessie de la taille d'une noix : ce n'est pas de la désobéissance, c'est de la plomberie.",
+      "mission": "Sortie après chaque réveil, repas, jeu. Fête nationale dehors, silence total dedans.",
+      "win": "7 jours d'affilée sans accident. Tu peux ranger la serpillière."
+    },
+    "T07": {
+      "game": "Le jeu du départ invisible",
+      "pitch": "On construit un {name} qui trouve la solitude normale et ennuyeuse — le plus beau cadeau qu'on puisse lui faire.",
+      "mission": "Sortir 2 secondes, revenir. Puis 5, 10, 30. Toujours sans cérémonie.",
+      "win": "{name} soupire et se rendort quand tu prends tes clés."
+    },
+    "T08": {
+      "game": "La caisse-cabane",
+      "pitch": "La caisse n'est pas une prison : c'est la chambre à coucher, l'ambulance et le billet de voyage de {name}.",
+      "mission": "20 {treat}s jetées dedans, porte ouverte. Puis repas dedans.",
+      "win": "{name} y entre tout seul pour faire la sieste."
+    },
+    "T09": {
+      "game": "La laisse molle",
+      "pitch": "Harnais obligatoire chez un Yorkshire : sa trachée est aussi fine qu'une paille.",
+      "mission": "Marcher 3 minutes en récompensant chaque laisse détendue.",
+      "win": "La laisse fait un sourire (un U mou) pendant tout le trottoir."
+    },
+    "T10": {
+      "game": "Le spa du consentement",
+      "pitch": "On apprend à {name} à dire oui aux soins. Un chien qui a le choix ne se débat pas.",
+      "mission": "3 touchers de 2 secondes : pattes, oreilles, babines. Chaque fois : {treat}.",
+      "win": "{name} pose sa patte dans ta main quand tu la présentes."
+    },
+    "T11": {
+      "game": "Le chantier à mâcher",
+      "pitch": "Un terrier qui ne mâche pas s'occupe... de tes plinthes. On lui donne un chantier légal.",
+      "mission": "Proposer 3 textures différentes, 10 minutes de mastication par jour.",
+      "win": "{name} choisit son jouet et pas la pantoufle."
+    },
+    "T12": {
+      "game": "Mission dents blanches",
+      "pitch": "Le Yorkshire est champion du tartre. 30 secondes de brossage par jour valent une anesthésie évitée.",
+      "mission": "Doigt + dentifrice vétérinaire, 3 dents aujourd'hui. On ajoute une dent par jour.",
+      "win": "{name} vient chercher la brosse à dents."
+    },
+    "T13": {
+      "game": "Le boomerang",
+      "pitch": "Le rappel se paie en jackpot, jamais en reproche. C'est l'assurance-vie de {name}.",
+      "mission": "5 rappels surprises dans la journée, 5 {treat}s données une par une à chaque retour.",
+      "win": "{name} revient au galop même quand un pigeon décolle."
+    },
+    "T14": {
+      "game": "Le toboggan du couché",
+      "pitch": "« Couché » est la position du calme : elle transforme les salles d'attente et les terrasses.",
+      "mission": "10 leurres vers le sol, puis on retire la main et on garde le mot.",
+      "win": "{name} se couche sur un simple geste, même debout."
+    },
+    "T15": {
+      "game": "Les 3 D",
+      "pitch": "Durée, Distance, Distraction : on n'en augmente qu'un seul à la fois, sinon ça casse.",
+      "mission": "3 essais à 3 secondes, 3 à 5 secondes, 3 à 8 secondes.",
+      "win": "{name} tient 30 secondes pendant que tu fais 3 pas de côté."
+    },
+    "T16": {
+      "game": "Le scotch invisible",
+      "pitch": "La marche au pied, c'est une position payée, pas une punition. On la construit en 2 mètres.",
+      "mission": "10 pas, marqueur à chaque pas où l'épaule de {name} reste à ta hauteur.",
+      "win": "{name} garde la position sur 20 pas en ville."
+    },
+    "T17": {
+      "game": "Le pouvoir du renoncement",
+      "pitch": "« Laisse ça » peut littéralement sauver la vie de {name} : un chargeur, un os cuit, un médicament au sol.",
+      "mission": "5 essais main fermée, 5 essais au sol avec ta main en bouclier.",
+      "win": "{name} détourne la tête et te regarde au lieu de plonger."
+    },
+    "T18": {
+      "game": "Le bouton pause",
+      "pitch": "Le tapis devient l'interrupteur « off » : où qu'il soit posé, {name} se détend.",
+      "mission": "Tapis au sol, chaque contact = {treat}. 2 minutes, pas un mot.",
+      "win": "{name} s'écroule sur le tapis dès que tu le déroules."
+    },
+    "T19": {
+      "game": "La téléportation au {mat}",
+      "pitch": "Sonnette, apéro, repas : {name} a un endroit à lui où il gagne plus qu'à tes pieds.",
+      "mission": "5 envois à 1 m, 5 à 2 m, en payant sur place.",
+      "win": "{name} file au {mat} quand la sonnette retentit."
+    },
+    "T20": {
+      "game": "Le contrôle des piranhas",
+      "pitch": "Mordiller est normal à 2 mois. On ne le supprime pas : on le calibre.",
+      "mission": "Dès que les dents touchent la peau : le jeu s'arrête 10 secondes. Puis on relance avec un jouet.",
+      "win": "{name} attrape le jouet et plus les mains."
+    },
+    "T21": {
+      "game": "Le jeu du « je l'ai vu ! »",
+      "pitch": "On paie {name} pour REGARDER un chien, un vélo, une poussette — pas pour aboyer dessus.",
+      "mission": "Distance confortable, marqueur au premier regard, 10 répétitions.",
+      "win": "{name} regarde le chien puis te regarde toi, sans tension dans la laisse."
+    },
+    "T22": {
+      "game": "Les 4 pattes au sol",
+      "pitch": "Porter {name} dès qu'il y a du monde crée le fameux « syndrome du petit chien ». On lui laisse ses pattes.",
+      "mission": "Toutes les interactions se font au sol pendant une semaine.",
+      "win": "{name} affronte un inconnu sur ses 4 pattes, queue haute."
+    },
+    "T23": {
+      "game": "Le frein d'urgence",
+      "pitch": "Un « STOP » figé à distance vaut mieux qu'un rappel raté devant une route.",
+      "mission": "3 essais à 2 m avec récompense apportée SUR PLACE (jamais en le rappelant).",
+      "win": "{name} se stoppe net à 5 m et attend."
+    },
+    "T24": {
+      "game": "Le détective à truffe",
+      "pitch": "10 minutes de flair fatiguent {name} plus qu'une heure de course. Et c'est un terrier : il adore.",
+      "mission": "6 {treat}s cachées dans une pièce, ordre « cherche », zéro aide.",
+      "win": "{name} trouve les 6 caches tout seul et s'endort après."
+    },
+    "T25": {
+      "game": "Le tir à la corde réglementé",
+      "pitch": "Le tug n'apprend pas l'agressivité : il apprend l'autocontrôle, si tu mets des règles.",
+      "mission": "3 rounds : on tire, on demande « donne », on relance en récompense.",
+      "win": "{name} lâche à la demande et attend le signal pour reprendre."
+    },
+    "T26": {
+      "game": "Opération genoux solides",
+      "pitch": "Les rotules d'un Yorkshire n'aiment ni les escaliers ni les sauts du canapé avant 6 mois.",
+      "mission": "Rampe ou portage, tapis antidérapants, zéro saut aujourd'hui.",
+      "win": "{name} utilise la rampe sans hésiter et ne saute plus du canapé."
+    },
+    "T27": {
+      "game": "Le véto sans drame",
+      "pitch": "On répète la consultation à la maison : table, balance, muselière-jouet, examen. Le vrai jour devient une redite.",
+      "mission": "1 mini-examen de 60 secondes : pesée, oreilles, babines, pattes.",
+      "win": "{name} monte sur la balance tout seul et se laisse examiner."
+    },
+    "T28": {
+      "game": "Le show des tricks",
+      "pitch": "Les tricks ne sont pas du cirque : ils construisent la confiance, la coordination et l'envie de bosser avec toi.",
+      "mission": "Choisir 1 trick et faire 3 séances de 2 min cette semaine.",
+      "win": "{name} propose le trick tout seul pour lancer une séance."
+    }
+  },
+  "praise": [
+    "{name} vient de gagner un point de plus. Tu tiens le rythme !",
+    "Joli. {name} progresse plus vite que la moyenne des chiots.",
+    "Encore une brique posée. {name} te remercie en léchant la caméra.",
+    "Bien joué : 2 minutes bien faites valent 20 minutes bâclées.",
+    "Tu viens de rendre la vie d'adulte de {name} plus simple."
+  ],
+  "nudges": [
+    "{name} attend sa séance du jour. 2 minutes, pas plus.",
+    "Une séance courte aujourd'hui, et la série continue.",
+    "Le cerveau de {name} apprend mieux le matin : c'est peut-être le moment.",
+    "Petit rappel : une victoire par jour suffit à construire un chien fiable."
+  ],
+  "levelUp": [
+    "Nouveau niveau débloqué. {name} monte en grade !",
+    "Palier atteint : {name} n'est plus le même chiot qu'à son arrivée."
+  ]
+}
