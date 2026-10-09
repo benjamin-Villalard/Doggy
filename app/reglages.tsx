@@ -1,9 +1,9 @@
 import { useRouter } from 'expo-router';
 import React from 'react';
 import { Alert, Platform, ScrollView, StyleSheet, View } from 'react-native';
-import { EmojiPicker, Field, Segmented, Stepper, Toggle } from '../components/Form';
+import { DateField, EmojiPicker, Field, Segmented, Stepper, Toggle } from '../components/Form';
 import { Button, Card, Row, SectionTitle, Sub } from '../components/UI';
-import { ageLabel, defaultPrefs, useActions, useStore, type Sex, type Tone } from '../lib/store';
+import { ageLabel, defaultPrefs, today, useActions, useStore, type Sex, type Tone } from '../lib/store';
 import { useVoice } from '../lib/voice';
 
 const AVATARS = ['🐶', '🐕', '🦴', '🐾', '🎀', '👑', '⭐️', '🍀', '🧸', '🐻'];
@@ -53,27 +53,49 @@ export default function Reglages() {
           hint="Accorde automatiquement les textes (il / elle)."
         />
         <EmojiPicker label="Avatar" value={p.avatar} options={AVATARS} onChange={(v) => setProfile({ avatar: v })} />
-        <Field
-          label="Date de naissance (AAAA-MM-JJ)"
-          value={p.birthdate ?? ''}
-          onChangeText={(v) => setProfile({ birthdate: /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : v === '' ? null : p.birthdate })}
-          placeholder="2026-06-01"
+        <DateField
+          label="Date de naissance"
+          value={p.birthdate ?? today()}
+          allowFuture={false}
+          onChange={(v) => setProfile({ birthdate: v })}
           hint={`Âge actuel : ${ageLabel(p.birthdate)}`}
         />
-        <Field
+        <DateField
           label="Date d'arrivée à la maison"
-          value={p.arrival ?? ''}
-          onChangeText={(v) => setProfile({ arrival: /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : v === '' ? null : p.arrival })}
-          placeholder="2026-08-01"
+          value={p.arrival ?? today()}
+          allowFuture={false}
+          onChange={(v) => setProfile({ arrival: v })}
         />
+        <Field label="Race" value={p.breed} onChangeText={(v) => setProfile({ breed: v })} placeholder="Yorkshire Biewer" />
         <Field label="Ton prénom" value={p.ownerName} onChangeText={(v) => setProfile({ ownerName: v })} placeholder="ex. Benjamin" />
         <Field
-          label="Poids adulte visé (g)"
+          label="Poids à la naissance (g)"
+          value={p.birthWeightG === null ? '' : String(p.birthWeightG)}
+          onChangeText={(v) => setProfile({ birthWeightG: v.trim() === '' ? null : Number(v.replace(',', '.')) || null })}
+          placeholder="ex. 110"
+          keyboardType="numeric"
+        />
+        <Field
+          label="Poids adulte de la mère (g)"
+          value={p.motherWeightG === null ? '' : String(p.motherWeightG)}
+          onChangeText={(v) => setProfile({ motherWeightG: v.trim() === '' ? null : Number(v.replace(',', '.')) || null })}
+          placeholder="ex. 2300"
+          keyboardType="numeric"
+        />
+        <Field
+          label="Poids adulte du père (g)"
+          value={p.fatherWeightG === null ? '' : String(p.fatherWeightG)}
+          onChangeText={(v) => setProfile({ fatherWeightG: v.trim() === '' ? null : Number(v.replace(',', '.')) || null })}
+          placeholder="ex. 2700"
+          keyboardType="numeric"
+        />
+        <Field
+          label="Poids adulte visé si parents inconnus (g)"
           value={p.adultWeightG === null ? '' : String(p.adultWeightG)}
           onChangeText={(v) => setProfile({ adultWeightG: v.trim() === '' ? null : Number(v.replace(',', '.')) })}
           placeholder="2600"
           keyboardType="numeric"
-          hint="Standard Yorkshire : 2 à 3,2 kg adulte. Sert de repère sur la courbe de poids."
+          hint="La courbe attendue utilise d'abord les parents, puis le poids de naissance, puis ce poids visé."
         />
       </Card>
 

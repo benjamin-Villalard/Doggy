@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import Icon from '../../components/Icon';
-import { Field } from '../../components/Form';
+import { DateField, Field } from '../../components/Form';
+import { exportIcs, type CalEvent } from '../../lib/ics';
 import { Button, Card, Pill, Row, SectionTitle, Sub } from '../../components/UI';
 import { addMonths, frDate, health, nextDeworming, vaccinePlan, type PlanStatus } from '../../lib/health';
 import { ageInWeeks, useActions, useStore } from '../../lib/store';
@@ -25,6 +26,7 @@ export default function Vaccins() {
   const plan = vaccinePlan(state.profile, state.health);
   const worm = nextDeworming(state.profile, state.health);
   const [wormDate, setWormDate] = useState(today());
+  const [doneDates, setDoneDates] = useState<Record<string, string>>({});
   const [wormLabel, setWormLabel] = useState('Vermifuge');
   const [antiDate, setAntiDate] = useState(today());
   const [antiLabel, setAntiLabel] = useState('Antiparasitaire externe');
@@ -38,6 +40,37 @@ export default function Vaccins() {
     <ScrollView contentContainerStyle={s.wrap} keyboardShouldPersistTaps="handled">
       <Card tone="flat">
         <Sub>{health.disclaimer}</Sub>
+      </Card>
+
+      <Card style={{ backgroundColor: colors.accentSoft }}>
+        <Row>
+          <Icon name="calendar" size={18} color={colors.accent} />
+          <View style={{ flex: 1 }}>
+            <Text style={s.h}>Rappels dans ton agenda</Text>
+            <Text style={s.meta}>Exporte les vaccins et vermifuges à venir (.ics) : alerte la veille.</Text>
+          </View>
+        </Row>
+        <Button
+          small
+          icon="calendar"
+          title="Ajouter au calendrier"
+          onPress={() => {
+            const events: CalEvent[] = plan
+              .filter((x) => x.due && x.status !== 'fait')
+              .map((x) => ({
+                uid: `vaccin-${x.vaccine.code}`,
+                date: x.due as string,
+                title: `Vaccin ${x.vaccine.label}`,
+                description: x.vaccine.valences,
+              }));
+            const w = nextDeworming(state.profile, state.health);
+            if (w.due) events.push({ uid: `vermifuge-${w.due}`, date: w.due, title: 'Vermifuge', description: 'Selon protocole ESCCAP' });
+            state.health.entries
+              .filter((e) => e.nextDate)
+              .forEach((e) => events.push({ uid: `rappel-${e.id}`, date: e.nextDate as string, title: e.label }));
+            exportIcs(events);
+          }}
+        />
       </Card>
 
       <SectionTitle icon="syringe">Protocole vaccinal</SectionTitle>
@@ -72,12 +105,19 @@ export default function Vaccins() {
                 />
               </Row>
             ) : (
+              <View style={{ gap: 8 }}>
+                <DateField
+                  label="Date de l'injection"
+                  value={doneDates[p.vaccine.code] ?? today()}
+                  allowFuture={false}
+                  onChange={(v) => setDoneDates((d) => ({ ...d, [p.vaccine.code]: v }))}
+                />
               <Button
                 small
-                title="Marquer comme fait aujourd'hui"
+                title="Marquer comme fait"
                 onPress={() =>
                   addHealthEntry({
-                    date: today(),
+                    date: doneDates[p.vaccine.code] ?? today(),
                     kind: 'vaccin',
                     label: p.vaccine.label,
                     ref: p.vaccine.code,
@@ -85,6 +125,7 @@ export default function Vaccins() {
                   })
                 }
               />
+              </View>
             )}
           </Card>
         );
@@ -118,7 +159,7 @@ export default function Vaccins() {
           Rythme ESSCAP : tous les mois jusqu'à 6 mois, puis tous les 3 mois. Pèse {voice.name} avant chaque
           administration : la dose d'un chien toy se calcule au gramme près.
         </Sub>
-        <Field label="Date" value={wormDate} onChangeText={setWormDate} placeholder="AAAA-MM-JJ" />
+        <DateField label="Date" value={wormDate} onChange={setWormDate} allowFuture={false} />
         <Field label="Produit / note" value={wormLabel} onChangeText={setWormLabel} />
         <Button
           small
@@ -158,7 +199,7 @@ export default function Vaccins() {
           Puces, tiques, aoûtats : produit vétérinaire adapté au poids exact et à l'âge. Jamais de pipette « chat » ni de
           produit à base de perméthrine mal dosé sur un chien de 1 kg.
         </Sub>
-        <Field label="Date" value={antiDate} onChangeText={setAntiDate} placeholder="AAAA-MM-JJ" />
+        <DateField label="Date" value={antiDate} onChange={setAntiDate} allowFuture={false} />
         <Field label="Produit" value={antiLabel} onChangeText={setAntiLabel} />
         <Button
           small

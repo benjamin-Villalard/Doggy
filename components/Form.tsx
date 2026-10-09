@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Platform, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { colors, radiusSm, type } from '../lib/theme';
 import Icon from './Icon';
 
@@ -37,6 +37,78 @@ export function Field({
         autoCapitalize={secure ? 'none' : undefined}
         autoCorrect={secure ? false : undefined}
       />
+      {hint ? <Text style={s.hint}>{hint}</Text> : null}
+    </View>
+  );
+}
+
+const isoDay = (d: Date) => d.toISOString().slice(0, 10);
+const frLong = (v: string) => {
+  const d = new Date(`${v}T12:00:00`);
+  return isNaN(d.getTime()) ? '' : d.toLocaleDateString('fr-FR', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' });
+};
+
+/** Sélecteur de date : calendrier natif du navigateur sur le web, raccourcis + saisie sur mobile. */
+export function DateField({
+  label,
+  value,
+  onChange,
+  hint,
+  allowFuture = true,
+}: {
+  label: string;
+  value: string;
+  onChange: (v: string) => void;
+  hint?: string;
+  allowFuture?: boolean;
+}) {
+  const shortcuts = [
+    { label: "Aujourd'hui", d: 0 },
+    { label: 'Hier', d: -1 },
+    { label: 'Il y a 7 j', d: -7 },
+  ];
+  return (
+    <View style={{ gap: 4 }}>
+      <Text style={s.label}>{label}</Text>
+      {Platform.OS === 'web' ? (
+        <input
+          type="date"
+          value={value}
+          max={allowFuture ? undefined : isoDay(new Date())}
+          onChange={(e) => e.target.value && onChange(e.target.value)}
+          style={{
+            border: `1.5px solid ${colors.line}`,
+            borderRadius: 14,
+            padding: '10px 12px',
+            fontSize: 15,
+            color: colors.ink,
+            background: '#fff',
+            fontFamily: 'inherit',
+          }}
+        />
+      ) : (
+        <TextInput
+          style={s.input}
+          value={value}
+          onChangeText={onChange}
+          placeholder="AAAA-MM-JJ"
+          placeholderTextColor={colors.ink3}
+          keyboardType="numbers-and-punctuation"
+        />
+      )}
+      <View style={{ flexDirection: 'row', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+        {shortcuts.map((sc) => {
+          const d = new Date();
+          d.setDate(d.getDate() + sc.d);
+          const v = isoDay(d);
+          return (
+            <Pressable key={sc.label} onPress={() => onChange(v)} style={[s.dateChip, v === value && s.dateChipOn]}>
+              <Text style={[s.dateChipText, v === value && { color: '#fff' }]}>{sc.label}</Text>
+            </Pressable>
+          );
+        })}
+        <Text style={s.hint}>{frLong(value)}</Text>
+      </View>
       {hint ? <Text style={s.hint}>{hint}</Text> : null}
     </View>
   );
@@ -206,6 +278,9 @@ const s = StyleSheet.create({
     fontSize: 14,
     outlineStyle: 'none',
   } as never,
+  dateChip: { paddingHorizontal: 10, paddingVertical: 5, borderRadius: 999, backgroundColor: colors.accentSoft },
+  dateChipOn: { backgroundColor: colors.accent },
+  dateChipText: { fontSize: 11.5, fontWeight: '700', color: colors.accent },
   segWrap: {
     flexDirection: 'row',
     backgroundColor: '#f1eef8',

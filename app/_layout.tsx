@@ -25,13 +25,10 @@ export default function RootLayout() {
             <Stack.Screen name="onboarding" options={{ title: 'Bienvenue', headerShown: false }} />
             <Stack.Screen name="tutos/[code]" options={{ title: 'Tutoriel' }} />
             <Stack.Screen name="aleas/[code]" options={{ title: 'Aléa' }} />
-            <Stack.Screen name="programme/[index]" options={{ title: 'Phase' }} />
-            <Stack.Screen name="livre/[index]" options={{ title: 'Chapitre' }} />
-            <Stack.Screen name="suivi/competences" options={{ title: 'Compétences' }} />
-            <Stack.Screen name="suivi/socialisation" options={{ title: 'Socialisation' }} />
-            <Stack.Screen name="suivi/proprete" options={{ title: 'Propreté' }} />
-            <Stack.Screen name="suivi/poids" options={{ title: 'Poids & croissance' }} />
-            <Stack.Screen name="suivi/seances" options={{ title: 'Historique des séances' }} />
+            <Stack.Screen name="carnet/poids" options={{ title: 'Poids & croissance' }} />
+            <Stack.Screen name="carnet/selle" options={{ title: 'Noter une selle' }} />
+            <Stack.Screen name="carnet/journal" options={{ title: 'Journal quotidien' }} />
+            <Stack.Screen name="sante/soins" options={{ title: 'Soins & toilettage' }} />
             <Stack.Screen name="sante/vaccins" options={{ title: 'Vaccins & vermifuges' }} />
             <Stack.Screen name="sante/nutrition" options={{ title: 'Nutrition & ration' }} />
             <Stack.Screen name="sante/carnet" options={{ title: 'Carnet de santé' }} />

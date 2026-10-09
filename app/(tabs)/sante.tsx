@@ -1,14 +1,14 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import React from 'react';
-import { Linking, Platform, ScrollView, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Linking, Platform, Pressable, ScrollView, TextInput, StyleSheet, Text, View } from 'react-native';
 import Icon from '../../components/Icon';
 import ScreenHeader from '../../components/ScreenHeader';
 import { Card, Pill, Row, SectionTitle, Sub } from '../../components/UI';
 import { clinical } from '../../lib/clinical';
-import { expectedWeightRange } from '../../lib/coach';
-import { frDate, health, healthAlerts, mealsForAge, nextDeworming, rationPlan, vaccinePlan } from '../../lib/health';
-import { ageInWeeks, formatWeight, lastWeightG, useStore } from '../../lib/store';
+import { centileLabel, fmtG, growthBasis, growthPoints } from '../../lib/growth';
+import { frDate, health, healthAlerts, mealsForAge, nextDeworming, rationPlan, urgencyTone, vaccinePlan } from '../../lib/health';
+import { ageInWeeks, lastWeightG, useStore } from '../../lib/store';
 import { colors, grad, gradients, radius, shadow, type } from '../../lib/theme';
 import { useVoice } from '../../lib/voice';
 
@@ -25,7 +25,27 @@ export default function Sante() {
   const ration = rationPlan(state.weights, weeks, state.health);
   const meals = mealsForAge(weeks);
   const grams = lastWeightG(state.weights);
-  const range = expectedWeightRange(weeks ?? 8);
+  const basis = growthBasis(state.profile);
+  const pts = growthPoints(state.profile.birthdate, state.weights, basis);
+  const lastPt = pts[pts.length - 1];
+  const [q, setQ] = useState('');
+  const norm = (x: string) => x.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const words = norm(q).split(/\s+/).filter((w) => w.length >= 2);
+  const match = (text: string) => words.length > 0 && words.every((w) => norm(text).includes(w));
+  const hits = [
+    ...health.emergency
+      .filter((e) => match(`${e.title} ${JSON.stringify(e)}`))
+      .map((e) => ({ key: `e${e.code}`, title: e.title, tag: 'urgence', tone: 'red' as const, href: '/sante/urgences' })),
+    ...health.signs
+      .filter((x) => match(`${x.title} ${x.why}`))
+      .map((x) => ({
+        key: `s${x.code}`,
+        title: x.title,
+        tag: urgencyTone[x.urgency].label,
+        tone: urgencyTone[x.urgency].tone,
+        href: '/sante/signes',
+      })),
+  ].slice(0, 8);
 
   const call = (phone: string) => {
     const n = phone.replace(/\s/g, '');
@@ -103,6 +123,33 @@ export default function Sante() {
           </Card>
         )}
 
+        <Card>
+          <Row>
+            <Icon name="eye" size={18} color={colors.accent} />
+            <Text style={s.title}>Que se passe-t-il ?</Text>
+          </Row>
+          <TextInput
+            value={q}
+            onChangeText={setQ}
+            placeholder="ex. vomit, boite, diarrhée, chocolat…"
+            placeholderTextColor={colors.ink3}
+            style={s.search}
+          />
+          {q.trim().length >= 2 ? (
+            hits.length ? (
+              hits.map((h) => (
+                <Pressable key={h.key} onPress={() => router.push(h.href as never)} style={s.hit}>
+                  <Pill tone={h.tone}>{h.tag}</Pill>
+                  <Text style={[s.alertText, { flex: 1 }]}>{h.title}</Text>
+                  <Text style={s.chev}>›</Text>
+                </Pressable>
+              ))
+            ) : (
+              <Sub>Rien trouvé. En cas de doute, appelle ton vétérinaire.</Sub>
+            )
+          ) : null}
+        </Card>
+
         <SectionTitle icon="compass">Les pages santé</SectionTitle>
         <Item
           icon="syringe"
@@ -132,6 +179,13 @@ export default function Sante() {
           title="Carnet de santé"
           sub={`${state.health.entries.length} actes · identité, véto, traitements, trousse`}
           onPress={() => router.push('/sante/carnet')}
+        />
+        <Item
+          icon="brush"
+          tone={gradients.amber}
+          title="Soins & toilettage"
+          sub="Dents, griffes, oreilles, yeux, bain, coupe : dernière fois et prochaine"
+          onPress={() => router.push('/sante/soins')}
         />
         <Item
           icon="pulse"
@@ -181,21 +235,17 @@ export default function Sante() {
         )}
 
         <SectionTitle icon="scale">Poids et croissance</SectionTitle>
-        <Card onPress={() => router.push('/suivi/poids')}>
+        <Card onPress={() => router.push('/carnet/poids')}>
           <Row>
             <View style={{ flex: 1 }}>
-              <Text style={s.title}>
-                {grams ? formatWeight(grams, state.prefs.weightUnit) : 'Aucune pesée'}
-              </Text>
-              <Text style={s.meta}>
-                Fourchette indicative à {weeks ?? '—'} semaines : {range[0]}–{range[1]} g
-              </Text>
+              <Text style={s.title}>{grams ? fmtG(grams) : 'Aucune pesée'}</Text>
+              <Text style={s.meta}>Adulte attendu {fmtG(basis.adultG)} · {basis.detail}</Text>
             </View>
-            <Pill tone={!grams ? 'grey' : grams < range[0] ? 'orange' : grams > range[1] ? 'orange' : 'green'}>
-              {!grams ? 'à peser' : grams < range[0] ? 'sous la courbe' : grams > range[1] ? 'au-dessus' : 'dans la norme'}
+            <Pill tone={!lastPt ? 'grey' : Math.abs(lastPt.z) > 1.88 ? 'orange' : 'green'}>
+              {lastPt ? centileLabel(lastPt.z) : 'à peser'}
             </Pill>
           </Row>
-          <Sub>La pesée hebdomadaire est le meilleur indicateur de santé d'un chiot toy. Elle sert aussi à calculer la ration.</Sub>
+          <Sub>La pesée régulière est le meilleur indicateur de santé d'un chiot toy. Elle sert aussi à calculer la ration.</Sub>
         </Card>
 
         <SectionTitle icon="dog">Spécificités Yorkshire</SectionTitle>
@@ -252,6 +302,17 @@ function Item({
 }
 
 const s = StyleSheet.create({
+  search: {
+    borderWidth: 1.5,
+    borderColor: colors.line,
+    borderRadius: 14,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    fontSize: 15,
+    color: colors.ink,
+    backgroundColor: '#fff',
+  },
+  hit: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 6 },
   wrap: { paddingBottom: 36 },
   body: { paddingHorizontal: 14, paddingTop: 14, gap: 10 },
   title: { fontSize: 14.5, fontWeight: '700', color: colors.ink, letterSpacing: -0.2 },

@@ -1,10 +1,8 @@
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import React from 'react';
-import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import Icon from '../../components/Icon';
 import Rich from '../../components/Rich';
-import ScorePicker from '../../components/ScorePicker';
-import SessionRunner from '../../components/SessionRunner';
 import { Card, Pill, Row, SectionTitle, Sub } from '../../components/UI';
 import { issueByCode, skillByCode, tutorialByCode } from '../../lib/content';
 import { useActions, useStore } from '../../lib/store';
@@ -16,15 +14,14 @@ export default function TutoDetail() {
   const { code } = useLocalSearchParams<{ code: string }>();
   const t = code ? tutorialByCode(code) : undefined;
   const { state } = useStore();
-  const { setSkill, setNote } = useActions();
+  const { toggleWish, setNote } = useActions();
   const router = useRouter();
   const voice = useVoice();
 
   if (!t) return <Text style={s.wrap}>Tutoriel introuvable.</Text>;
   const skill = skillByCode(t.code);
-  const score = state.skills[t.code] ?? 0;
+  const wished = state.wishlist.includes(t.code);
   const linkedIssues = [...new Set((t.alea ?? '').match(/A\d\d/g) ?? [])];
-  const flavor = voice.flavor(t.code);
 
   return (
     <ScrollView contentContainerStyle={s.wrap} keyboardShouldPersistTaps="handled">
@@ -39,48 +36,21 @@ export default function TutoDetail() {
             <Text style={s.heroTitle}>{t.title}</Text>
             <Text style={s.heroMeta}>
               {t.code}
-              {skill ? ` · cible 4/5 : ${skill.target}` : ''}
+              {skill ? ` · objectif : ${skill.target}` : ''}
             </Text>
           </View>
         </Row>
         {t.block ? <Text style={s.heroMeta}>{t.block}</Text> : null}
+        <Pressable onPress={() => toggleWish(t.code)} style={s.wish}>
+          <Text style={s.wishText}>{wished ? '★ Dans ma liste « à lui apprendre »' : '☆ Ajouter à « à lui apprendre »'}</Text>
+        </Pressable>
       </LinearGradient>
-
-      {flavor ? (
-        <Card style={{ backgroundColor: colors.accentSoft }}>
-          <Row>
-            <Icon name="sparkle" size={18} color={colors.accent} />
-            <Text style={[s.h, { color: colors.accentDeep }]}>
-              {flavor.game} {voice.emoji('\u{1F3AF}')}
-            </Text>
-          </Row>
-          <Rich text={flavor.pitch} />
-          <View style={s.missionRow}>
-            <Pill tone="accent" solid>
-              Mission du jour
-            </Pill>
-          </View>
-          <Rich text={flavor.mission} />
-          <Row style={{ alignItems: 'flex-start' }}>
-            <Icon name="trophy" size={16} color={colors.green} />
-            <Rich text={`**C'est gagné quand :** ${flavor.win}`} style={{ flex: 1 }} />
-          </Row>
-        </Card>
-      ) : null}
 
       {t.meta ? (
         <Card>
           <Rich text={t.meta} />
         </Card>
       ) : null}
-
-      <Card>
-        <Row>
-          <Text style={s.h}>Où j'en suis</Text>
-          <Pill tone={score >= 4 ? 'green' : score >= 2 ? 'orange' : 'grey'}>{score}/5</Pill>
-        </Row>
-        <ScorePicker value={score} onChange={(v) => setSkill(t.code, v)} />
-      </Card>
 
       <SectionTitle icon="check">Étapes</SectionTitle>
       <Card>
@@ -136,9 +106,6 @@ export default function TutoDetail() {
         );
       })}
 
-      <SectionTitle icon="clock">S'entraîner</SectionTitle>
-      <SessionRunner code={t.code} />
-
       <Card>
         <Text style={s.h}>Mes notes</Text>
         <TextInput
@@ -157,6 +124,8 @@ export default function TutoDetail() {
 }
 
 const s = StyleSheet.create({
+  wish: { alignSelf: 'flex-start', backgroundColor: '#ffffff33', borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7, marginTop: 6 },
+  wishText: { color: '#fff', fontWeight: '800', fontSize: 13 },
   wrap: { padding: 14, gap: 11, paddingBottom: 40 },
   hero: { borderRadius: radius, padding: 16, gap: 7, overflow: 'hidden', ...shadow.lift },
   heroBlob: {

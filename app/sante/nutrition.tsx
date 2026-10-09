@@ -3,7 +3,9 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Field, Stepper, Toggle } from '../../components/Form';
 import Icon from '../../components/Icon';
 import { Card, Pill, Row, SectionTitle, Stat, Sub } from '../../components/UI';
-import { energyNeeds, health, mealsForAge, ration } from '../../lib/health';
+import { foodPlan, waterPlan } from '../../lib/daily';
+import { growthBasis, growthPoints, projectedAdult } from '../../lib/growth';
+import { health, mealsForAge } from '../../lib/health';
 import { ageInWeeks, lastWeightG, useActions, useStore } from '../../lib/store';
 import { colors, type } from '../../lib/theme';
 import { useVoice } from '../../lib/voice';
@@ -14,11 +16,14 @@ export default function Nutrition() {
   const voice = useVoice();
   const weeks = ageInWeeks(state.profile.birthdate);
   const grams = lastWeightG(state.weights);
-  const needs = energyNeeds(grams, weeks, state.health.sterilized);
   const meals = state.health.meals || mealsForAge(weeks).meals;
-  const perDay = needs ? ration(needs.kcal, state.health.foodKcal) : null;
-  const perMeal = perDay ? Math.round(perDay / meals) : null;
-  const treats = perDay ? Math.max(1, Math.round(perDay * 0.1)) : null;
+  const basis = growthBasis(state.profile);
+  const adult = projectedAdult(growthPoints(state.profile.birthdate, state.weights, basis), basis) ?? basis.adultG;
+  const needs = foodPlan(grams, adult, weeks, state.health, meals);
+  const water = waterPlan(grams, weeks);
+  const perDay = needs ? needs.kibbleG : null;
+  const perMeal = needs ? needs.perMealG : null;
+  const treats = needs ? needs.treatsG : null;
 
   return (
     <ScrollView contentContainerStyle={s.wrap} keyboardShouldPersistTaps="handled">
@@ -36,13 +41,18 @@ export default function Nutrition() {
               <Stat label="Repas" value={`${meals}/j`} tone="accent" />
             </Row>
             <Sub>
-              Calcul : RER = 70 × ({(grams as number) / 1000} kg)^0,75 = {needs.rer} kcal, puis {needs.phase}.
+              Calcul : RER = 70 × ({(grams as number) / 1000} kg)^0,75 = {needs.rer} kcal, puis {needs.factorLabel} (poids adulte attendu {adult} g). Croquettes = 90 % des kcal à {needs.density} kcal/100 g{needs.densityEstimated ? ' (valeur moyenne, renseigne ton paquet)' : ''}, fourchette {needs.low}-{needs.high} g. Ajuste selon sa silhouette.
             </Sub>
             {perDay ? (
               <Card tone="flat">
                 <Text style={s.big}>
                   {perDay} g par jour → {perMeal} g par repas
                 </Text>
+                {water ? (
+                  <Text style={s.big}>
+                    Eau : {water.low}-{water.high} ml par jour ({water.perKg}), toujours à volonté
+                  </Text>
+                ) : null}
                 <Sub>
                   Les friandises d'éducation comptent dans la ration : garde environ {treats} g par jour prélevés sur les
                   croquettes de {voice.name}, sinon la balance grimpe vite chez un toy.

@@ -2,11 +2,16 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
-import { EmojiPicker, Segmented } from '../components/Form';
+import { DateField, EmojiPicker, Segmented } from '../components/Form';
+
+const gramsOrNull = (v: string) => {
+  const n = Number(v.replace(',', '.'));
+  return v.trim() && n > 0 ? Math.round(n) : null;
+};
 import Icon from '../components/Icon';
 import { Button, Card, FadeIn, Row, Sub } from '../components/UI';
 import { issues, socialization, tutorials } from '../lib/content';
-import { useActions, type Sex, type Tone } from '../lib/store';
+import { today, useActions, type Sex, type Tone } from '../lib/store';
 import { colors, grad, gradients, type } from '../lib/theme';
 
 const isoValid = (v: string) => /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(new Date(v).getTime());
@@ -20,6 +25,9 @@ export default function Onboarding() {
   const [birth, setBirth] = useState('');
   const [arrival, setArrival] = useState('');
   const [owner, setOwner] = useState('');
+  const [bw, setBw] = useState('');
+  const [mw, setMw] = useState('');
+  const [fw, setFw] = useState('');
   const [sex, setSex] = useState<Sex>('inconnu');
   const [avatar, setAvatar] = useState('🐶');
   const [tone, setTone] = useState<Tone>('fun');
@@ -62,24 +70,15 @@ export default function Onboarding() {
               placeholder="Ex. Nino"
               placeholderTextColor={colors.ink3}
             />
-            <Text style={s.label}>Date de naissance (AAAA-MM-JJ)</Text>
-            <TextInput
-              style={s.input}
-              value={birth}
-              onChangeText={setBirth}
-              placeholder="2026-06-14"
-              placeholderTextColor={colors.ink3}
-              keyboardType="numbers-and-punctuation"
-            />
-            <Text style={s.label}>Date d'arrivée à la maison (optionnel)</Text>
-            <TextInput
-              style={s.input}
-              value={arrival}
-              onChangeText={setArrival}
-              placeholder="2026-08-14"
-              placeholderTextColor={colors.ink3}
-              keyboardType="numbers-and-punctuation"
-            />
+            <DateField label="Date de naissance" value={birth || today()} onChange={setBirth} allowFuture={false} />
+            <DateField label="Arrivée à la maison (optionnel)" value={arrival || today()} onChange={setArrival} allowFuture={false} />
+            <Text style={s.label}>Poids à la naissance, en g (optionnel)</Text>
+            <TextInput style={s.input} value={bw} onChangeText={setBw} placeholder="ex. 110" placeholderTextColor={colors.ink3} keyboardType="numeric" />
+            <Text style={s.label}>Poids adulte de la mère / du père, en g (optionnel)</Text>
+            <View style={{ flexDirection: 'row', gap: 8 }}>
+              <TextInput style={[s.input, { flex: 1 }]} value={mw} onChangeText={setMw} placeholder="Mère" placeholderTextColor={colors.ink3} keyboardType="numeric" />
+              <TextInput style={[s.input, { flex: 1 }]} value={fw} onChangeText={setFw} placeholder="Père" placeholderTextColor={colors.ink3} keyboardType="numeric" />
+            </View>
             <Text style={s.label}>Ton prénom (optionnel)</Text>
             <TextInput
               style={s.input}
@@ -111,9 +110,9 @@ export default function Onboarding() {
               onChange={setTone}
               hint="Modifiable à tout moment dans les réglages, avec 15 autres options."
             />
-            <Sub>L'âge sert à placer automatiquement la phase en cours, les objectifs du jour et les rappels.</Sub>
+            <Sub>La date de naissance et les poids servent à tracer sa courbe de croissance attendue et à calculer vaccins et rations.</Sub>
             <Button
-              title="Commencer l'aventure"
+              title="Ouvrir son carnet"
               icon="paw"
               full
               disabled={!ok}
@@ -125,6 +124,10 @@ export default function Onboarding() {
                   ownerName: owner.trim(),
                   sex,
                   avatar,
+                  breed: 'Yorkshire Biewer',
+                  birthWeightG: gramsOrNull(bw),
+                  motherWeightG: gramsOrNull(mw),
+                  fatherWeightG: gramsOrNull(fw),
                 });
                 setPrefs({ tone });
                 finishOnboarding();

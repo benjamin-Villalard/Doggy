@@ -4,8 +4,7 @@ import React from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import Icon from '../../components/Icon';
 import Rich from '../../components/Rich';
-import SessionRunner from '../../components/SessionRunner';
-import { Button, Card, Pill, Progress, Row, SectionTitle, Sub } from '../../components/UI';
+import { Card, Pill, Row, SectionTitle, Sub } from '../../components/UI';
 import { trickByCode } from '../../lib/content';
 import { ageInWeeks, useActions, useStore } from '../../lib/store';
 import { boxStyles, colors, grad, gradients, radius, radiusSm, shadow, type } from '../../lib/theme';
@@ -15,12 +14,12 @@ export default function TrickDetail() {
   const { code } = useLocalSearchParams<{ code: string }>();
   const t = code ? trickByCode(code) : undefined;
   const { state } = useStore();
-  const { setTrickLevel, setNote } = useActions();
+  const { toggleWish, setNote } = useActions();
   const voice = useVoice();
 
   if (!t) return <Text style={s.wrap}>Tour introuvable.</Text>;
 
-  const level = state.tricks[t.code] ?? 0;
+  const wished = state.wishlist.includes(t.code);
   const weeks = ageInWeeks(state.profile.birthdate);
   const tooYoung = weeks !== null && weeks < t.minAgeWeeks;
 
@@ -42,12 +41,9 @@ export default function TrickDetail() {
             </Text>
           </View>
         </Row>
-        <View style={{ marginTop: 4 }}>
-          <Progress value={level} max={3} height={12} gradient={['#ffffff', '#ffe9ff']} hideValue label=" " />
-        </View>
-        <Text style={s.heroMeta}>
-          Palier {level}/3 {level === 3 ? '· maîtrisé 🏆' : ''}
-        </Text>
+        <Pressable onPress={() => toggleWish(t.code)} style={s.wish}>
+          <Text style={s.wishText}>{wished ? '★ Dans ma liste « à lui apprendre »' : '☆ Ajouter à « à lui apprendre »'}</Text>
+        </Pressable>
       </LinearGradient>
 
       <Card style={{ backgroundColor: colors.accentSoft }}>
@@ -89,36 +85,18 @@ export default function TrickDetail() {
         ))}
       </Card>
 
-      <SectionTitle icon="stairs">Les 3 paliers</SectionTitle>
-      {t.levels.map((lv, i) => {
-        const done = level >= i + 1;
-        const current = level === i;
-        return (
-          <Pressable key={i} onPress={() => setTrickLevel(t.code, done ? i : i + 1)}>
-            <View
-              style={[
-                s.level,
-                done && { backgroundColor: colors.greenSoft, borderColor: colors.green },
-                current && !done && { borderColor: colors.accent },
-              ]}
-            >
-              <View style={[s.levelDot, done && { backgroundColor: colors.green }]}>
-                <Icon name={done ? 'check' : 'target'} size={15} color={done ? '#fff' : colors.accent} />
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text style={s.levelName}>{lv.name}</Text>
-                <Text style={s.levelGoal}>{lv.goal}</Text>
-                <Row style={{ marginTop: 4, alignItems: 'flex-start' }}>
-                  <Icon name="trophy" size={14} color={colors.orange} />
-                  <Text style={s.levelCrit}>{lv.criteria}</Text>
-                </Row>
-              </View>
-              {current && !done ? <Pill tone="accent">en cours</Pill> : null}
-            </View>
-          </Pressable>
-        );
-      })}
-      <Sub>Touche un palier pour le valider (ou l'annuler). On ne monte de palier qu'à partir de 8 réussites sur 10.</Sub>
+      <SectionTitle icon="stairs">Progression conseillée</SectionTitle>
+      <Card>
+        {t.levels.map((lv, i) => (
+          <View key={i} style={{ gap: 2, marginBottom: 6 }}>
+            <Text style={s.levelName}>
+              {i + 1}. {lv.name}
+            </Text>
+            <Text style={s.levelGoal}>{lv.goal}</Text>
+            <Text style={s.levelCrit}>On passe à la suite quand : {lv.criteria}</Text>
+          </View>
+        ))}
+      </Card>
 
       <Card style={{ backgroundColor: boxStyles.tip.bg, borderColor: boxStyles.tip.border }}>
         <Row>
@@ -146,9 +124,6 @@ export default function TrickDetail() {
         </Card>
       ) : null}
 
-      <SectionTitle icon="clock">S'entraîner</SectionTitle>
-      <SessionRunner code={t.code} />
-
       <Card>
         <Text style={s.h}>Mes notes</Text>
         <TextInput
@@ -161,22 +136,14 @@ export default function TrickDetail() {
         />
       </Card>
 
-      {level < 3 ? (
-        <Button
-          title={`Valider le palier ${level + 1}`}
-          icon="check"
-          tone="green"
-          onPress={() => setTrickLevel(t.code, level + 1)}
-        />
-      ) : (
-        <Button title="Recommencer la progression" tone="ghost" onPress={() => setTrickLevel(t.code, 0)} />
-      )}
       <View style={{ height: 26 }} />
     </ScrollView>
   );
 }
 
 const s = StyleSheet.create({
+  wish: { alignSelf: 'flex-start', backgroundColor: '#ffffff33', borderRadius: 999, paddingHorizontal: 12, paddingVertical: 7, marginTop: 6 },
+  wishText: { color: '#fff', fontWeight: '800', fontSize: 13 },
   wrap: { padding: 14, gap: 11, paddingBottom: 40 },
   hero: { borderRadius: radius, padding: 16, gap: 7, overflow: 'hidden', ...shadow.lift },
   heroBlob: {

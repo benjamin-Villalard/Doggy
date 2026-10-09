@@ -1,24 +1,27 @@
 # Doggy — Mon Yorkshire
 
-Application mobile (iOS / Android / Web) d'éducation d'un Yorkshire Terrier de 2 à 12 mois, construite à partir du
-livre PDF `docs/Programme-education-Yorkshire.pdf` (43 pages).
+Application mobile (iOS / Android / Web) hors ligne : **carnet de santé d'un Yorkshire Biewer** en page d'accueil,
+santé détaillée et fiches d'éducation.
 
-## Contenu embarqué (hors ligne)
+## 3 onglets
 
-- 6 phases chronologiques (Phase 0 : 72 h → Phase 5 : 9–12 mois)
-- 28 tutoriels T01–T28 (étapes, critères de réussite, encadrés spécifiques toy)
-- 15 fiches d'aléas A01–A15 + arbre de décision
-- Grille de 28 compétences notées 0–5, checklist de 120 expériences de socialisation
-- Journaux propreté, poids, séances ; chapitres du livre consultables et cherchables
+- **Carnet** (accueil) : identité, alertes, courbe de croissance type pédiatrie, rappels vaccins/vermifuge,
+  croquettes et eau du jour, compteur pipis/selles, saisie rapide (pipi, selle détaillée, eau, repas).
+- **Santé** : recherche « que se passe-t-il ? », urgences, vaccins (date au choix, export calendrier `.ics`),
+  nutrition, soins et toilettage, carnet véto, signes cliniques, mode clinicien.
+- **Éducation** : 24 tours, 28 bases, 15 soucis de comportement, avec étapes et astuces ; étoile « à lui apprendre ».
 
-## Fonctions interactives
+## Modèles de calcul (indicatifs)
 
-- Détection automatique de la phase selon la date de naissance, 3 priorités du jour
-- Minuteur de séance 2 min avec comptage réussites/échecs et historique
-- Détection des créneaux horaires à risque d'accident, jours sans accident
-- Courbe de poids avec fourchette de référence, alertes de retard sur compétences clés
-- Notes personnelles par tutoriel, compteur d'occurrences par aléa sur 7 jours
-- Persistance locale via AsyncStorage, aucun backend
+- Croissance (`lib/growth.ts`) : courbe de Gompertz W(t) = A·exp(ln(W0/A)·e^(−k·t)), k = 0,0161/j ;
+  A = moyenne des poids des parents (± 4 % selon le sexe), sinon poids de naissance × 22, sinon poids visé ;
+  couloirs P3/P15/P50/P85/P97 dont la largeur croît avec l'âge ; poids adulte reprojeté sur les pesées réelles ;
+  alertes perte de poids, stagnation, cassure d'un couloir, hors P3-P97.
+- Ration (`lib/daily.ts`) : RER = 70·kg^0,75 × 3 (< 50 % du poids adulte), 2,5 (< 80 %), 2 (croissance), 1,6/1,4 adulte.
+- Eau : 60-90 ml/kg/j chiot, 50-70 adulte, alerte > 100 ml/kg/j.
+- Selles : 8 couleurs et échelle de consistance 1-7, alertes (noir, sang, diarrhées répétées, vers…).
+
+Persistance locale via AsyncStorage (clé `mon-yorkshire-v1`, anciennes données conservées), aucun backend.
 
 ## Sauvegarde automatique sur GitHub (facultative)
 

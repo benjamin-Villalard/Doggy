@@ -41,13 +41,9 @@ export default function TabsLayout() {
         tabBarItemStyle: { paddingVertical: 2 },
       }}
     >
-      <Tabs.Screen name="index" options={{ title: "Aujourd'hui", tabBarIcon: tab('sun') }} />
-      <Tabs.Screen name="programme" options={{ title: 'Programme', tabBarIcon: tab('target') }} />
-      <Tabs.Screen name="tutos" options={{ title: 'Tutos', tabBarIcon: tab('clicker') }} />
-      <Tabs.Screen name="aleas" options={{ title: 'Aléas', tabBarIcon: tab('warn') }} />
-      <Tabs.Screen name="suivi" options={{ title: 'Suivi', tabBarIcon: tab('chart') }} />
-      <Tabs.Screen name="sante" options={{ title: 'Santé', tabBarIcon: tab('heart') }} />
-      <Tabs.Screen name="livre" options={{ title: 'Livre', tabBarIcon: tab('book') }} />
+      <Tabs.Screen name="index" options={{ title: 'Carnet', tabBarIcon: tab('heart') }} />
+      <Tabs.Screen name="sante" options={{ title: 'Santé', tabBarIcon: tab('stethoscope') }} />
+      <Tabs.Screen name="tutos" options={{ title: 'Éducation', tabBarIcon: tab('clicker') }} />
     </Tabs>
   );
 }

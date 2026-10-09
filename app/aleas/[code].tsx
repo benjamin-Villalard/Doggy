@@ -12,22 +12,10 @@ export default function IssueDetail() {
   const { code } = useLocalSearchParams<{ code: string }>();
   const issue = code ? issueByCode(code) : undefined;
   const { state } = useStore();
-  const { bumpIssue } = useActions();
   const router = useRouter();
 
   if (!issue) return <Text style={s.wrap}>Fiche introuvable.</Text>;
 
-  const counts = state.issueCounts[issue.code] ?? {};
-  const days = Array.from({ length: 7 }, (_, k) => {
-    const d = new Date(Date.now() - k * 86400000).toISOString().slice(0, 10);
-    return { date: d, n: counts[d] ?? 0 };
-  });
-  const todayN = counts[today()] ?? 0;
-  const week = days.reduce((a, d) => a + d.n, 0);
-  const prevWeek = Array.from({ length: 7 }, (_, k) => {
-    const d = new Date(Date.now() - (k + 7) * 86400000).toISOString().slice(0, 10);
-    return counts[d] ?? 0;
-  }).reduce((a, b) => a + b, 0);
   const linkedTutos = [...new Set(issue.lines.join(' ').match(/T\d\d/g) ?? [])];
 
   return (
@@ -62,50 +50,6 @@ export default function IssueDetail() {
         </Card>
       ) : null}
 
-      <Card>
-        <Row>
-          <Icon name="chart" size={20} />
-          <Text style={s.h}>Compteur 7 jours</Text>
-          <Pill tone={week === 0 ? 'green' : week < prevWeek ? 'blue' : 'orange'}>
-            {week} cette semaine
-          </Pill>
-        </Row>
-        <Sub>
-          Le livre est clair : sans chiffre, impossible de savoir si le protocole marche. Compte 7 jours avant, 7 jours
-          après.
-        </Sub>
-        <Row>
-          <View style={{ flex: 1 }}>
-            <Button small tone="ghost" title="−" onPress={() => bumpIssue(issue.code, -1)} />
-          </View>
-          <Text style={s.count}>{todayN}</Text>
-          <View style={{ flex: 1 }}>
-            <Button small title="+ 1 aujourd'hui" onPress={() => bumpIssue(issue.code, 1)} />
-          </View>
-        </Row>
-        <View style={s.bars}>
-          {days
-            .slice()
-            .reverse()
-            .map((d) => (
-              <View key={d.date} style={{ alignItems: 'center', flex: 1, gap: 3 }}>
-                <View
-                  style={[
-                    s.bar,
-                    { height: Math.max(3, Math.min(60, d.n * 10)), backgroundColor: d.n ? colors.orange : colors.line },
-                  ]}
-                />
-                <Text style={s.barLabel}>{d.date.slice(8)}</Text>
-              </View>
-            ))}
-        </View>
-        {prevWeek > 0 ? (
-          <Sub>
-            Semaine précédente : {prevWeek} · évolution {week - prevWeek >= 0 ? '+' : ''}
-            {week - prevWeek}.
-          </Sub>
-        ) : null}
-      </Card>
       <View style={{ height: 24 }} />
     </ScrollView>
   );

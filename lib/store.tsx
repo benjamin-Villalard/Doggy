@@ -4,7 +4,20 @@ import React, { createContext, useContext, useEffect, useMemo, useState } from '
 const KEY = 'mon-yorkshire-v1';
 
 export type PottyKind = 'pipi' | 'caca' | 'accident-pipi' | 'accident-caca';
-export type PottyEntry = { id: string; ts: string; kind: PottyKind };
+/** Couleur des selles (guide vétérinaire simplifié). */
+export type StoolColor = 'brun' | 'brunClair' | 'jaune' | 'vert' | 'noir' | 'rouge' | 'gris' | 'blanc';
+export type PottyEntry = {
+  id: string;
+  ts: string;
+  kind: PottyKind;
+  /** Selles uniquement : couleur, consistance (échelle 1-7 de Purina, 2 = idéal) et signes associés. */
+  color?: StoolColor;
+  consistency?: number;
+  flags?: string[];
+  note?: string;
+};
+export type WaterEntry = { id: string; ts: string; ml: number };
+export type MealEntry = { id: string; ts: string; grams: number };
 export type WeightEntry = { id: string; date: string; grams: number };
 export type SessionEntry = {
   id: string;
@@ -28,6 +41,10 @@ export type Profile = {
   avatar: string;
   ownerName: string;
   adultWeightG: number | null;
+  breed: string;
+  birthWeightG: number | null;
+  motherWeightG: number | null;
+  fatherWeightG: number | null;
 };
 
 /** Tout ce que l'utilisateur peut personnaliser (mots, objectifs, affichage). */
@@ -118,6 +135,10 @@ export type State = {
   social: Record<string, string>;
   potty: PottyEntry[];
   weights: WeightEntry[];
+  water: WaterEntry[];
+  meals: MealEntry[];
+  /** Tours et apprentissages mis de côté « à lui apprendre ». */
+  wishlist: string[];
   sessions: SessionEntry[];
   issueCounts: Record<string, Record<string, number>>;
   watchedIssues: string[];
@@ -172,6 +193,10 @@ const defaultProfile: Profile = {
   avatar: '🐶',
   ownerName: '',
   adultWeightG: 2600,
+  breed: 'Yorkshire Biewer',
+  birthWeightG: null,
+  motherWeightG: null,
+  fatherWeightG: null,
 };
 
 const initial: State = {
@@ -183,6 +208,9 @@ const initial: State = {
   social: {},
   potty: [],
   weights: [],
+  water: [],
+  meals: [],
+  wishlist: [],
   sessions: [],
   issueCounts: {},
   watchedIssues: [],
@@ -197,6 +225,9 @@ function hydrate(raw: unknown): State {
     ...initial,
     ...saved,
     tricks: saved.tricks ?? {},
+    water: saved.water ?? [],
+    meals: saved.meals ?? [],
+    wishlist: saved.wishlist ?? [],
     profile: { ...defaultProfile, ...(saved.profile ?? {}) },
     prefs: { ...defaultPrefs, ...(saved.prefs ?? {}) },
     health: { ...defaultHealth, ...(saved.health ?? {}) },
@@ -308,10 +339,29 @@ export function useActions() {
           else next[key] = today();
           return { ...s, social: next };
         }),
-      addPotty: (kind: PottyKind) =>
+      addPotty: (kind: PottyKind, extra?: Partial<Omit<PottyEntry, 'id' | 'kind'>>) =>
         update((s) => ({
           ...s,
-          potty: [{ id: uid(), ts: new Date().toISOString(), kind }, ...s.potty].slice(0, 2000),
+          potty: [{ id: uid(), ts: new Date().toISOString(), kind, ...extra }, ...s.potty]
+            .sort((a, b) => (a.ts < b.ts ? 1 : -1))
+            .slice(0, 3000),
+        })),
+      addWater: (ml: number, ts?: string) =>
+        update((s) => ({
+          ...s,
+          water: [{ id: uid(), ts: ts ?? new Date().toISOString(), ml }, ...s.water].slice(0, 3000),
+        })),
+      removeWater: (id: string) => update((s) => ({ ...s, water: s.water.filter((w) => w.id !== id) })),
+      addMeal: (grams: number, ts?: string) =>
+        update((s) => ({
+          ...s,
+          meals: [{ id: uid(), ts: ts ?? new Date().toISOString(), grams }, ...s.meals].slice(0, 3000),
+        })),
+      removeMeal: (id: string) => update((s) => ({ ...s, meals: s.meals.filter((m) => m.id !== id) })),
+      toggleWish: (code: string) =>
+        update((s) => ({
+          ...s,
+          wishlist: s.wishlist.includes(code) ? s.wishlist.filter((c) => c !== code) : [...s.wishlist, code],
         })),
       removePotty: (id: string) =>
         update((s) => ({ ...s, potty: s.potty.filter((p) => p.id !== id) })),
